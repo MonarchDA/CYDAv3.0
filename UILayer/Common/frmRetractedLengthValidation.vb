@@ -69,6 +69,7 @@ Public Class frmRetractedLengthValidation
     'ANUP 22-03-2010 01.58
     Dim _strCounterboredClevisPlateCode As String
     '*******************
+    Private _strClevisPlateCodeForPlateCleivs As String   'Neeraja 19-09-2014
 
     'TODO: ANUP 06-04-2010 04.45
     Dim _dblCounterBoreClevisPlateThickness As Double
@@ -273,8 +274,14 @@ Public Class frmRetractedLengthValidation
                 dblStandardClevisPlateRodStopDistance = oCounterBoreClevisPlatesDataRow("StandardClevisPlateRodStopDistance")
                 _strCounterboredClevisPlateCode = oCounterBoreClevisPlatesDataRow("CounterboredClevisPlateCode")
 
-                ' MANJULA 09-02-2012
-                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ClevisPlateCode = oCounterBoreClevisPlatesDataRow("StandardClevisPlateCode")
+                _strClevisPlateCodeForPlateCleivs = oCounterBoreClevisPlatesDataRow("ClevisPlateCode")                                      'Neeraja 19-09-2014 Start
+                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfiguration = "Plate Clevis" Then
+                    ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ClevisPlateCode = _strClevisPlateCodeForPlateCleivs
+                Else
+                    ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ClevisPlateCode = oCounterBoreClevisPlatesDataRow("StandardClevisPlateCode")
+                End If                                                                                                                       'Neeraja 19-09-2014 End         
+                '' MANJULA 09-02-2012
+                'ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ClevisPlateCode = oCounterBoreClevisPlatesDataRow("StandardClevisPlateCode")   'Neeraja Commented on 19-09-2014
                 '*************
                 '28_12_2011   RAGAVA
                 'TODO: ANUP 06-04-2010 04.45
