@@ -1,0 +1,1072 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF88D5CC-59BC-40A9-AC0C-13D48128CE7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Monarch_WeldedCylinder_01_09_09.My.MyApplication</StartupObject>
+    <RootNamespace>Monarch_WeldedCylinder_01_09_09</RootNamespace>
+    <AssemblyName>Monarch_WeldedCylinder_01-09-09</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>idola.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>E2016D70E37F290CFD2DAC560A33BD603B1F6163</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Monarch_WeldedCylinder_01-09-09_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <PublishUrl>http://localhost/Monarch_WeldedCylinder_01-09-09/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Monarch_WeldedCylinder_01-09-09.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Monarch_WeldedCylinder_01-09-09.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IFLBaseDataLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IFLBaseDataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IFLBusinessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IFLBusinessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IFLCommonLayer, Version=1.0.3460.26616, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IFLCommonLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IFLCustomUILayer, Version=1.0.3454.18668, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IFLCustomUILayer.dll</HintPath>
+    </Reference>
+    <Reference Include="LabelGradient, Version=1.0.1062.37025, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\LabelGradient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CMS_INTEGRATION\clsManufactured_Purchased_CMS.vb" />
+    <Compile Include="clsMaterial_CMS.vb" />
+    <Compile Include="CMS_INTEGRATION\clsMETHE_Process.vb" />
+    <Compile Include="CMS_INTEGRATION\CMC_MTHL_RodTools.vb" />
+    <Compile Include="CMS_INTEGRATION\CMSUtil.vb" />
+    <Compile Include="CMS_INTEGRATION\CMS_METHDR.vb" />
+    <Compile Include="CMS_INTEGRATION\CMS_MTHL.vb" />
+    <Compile Include="CMS_INTEGRATION\CMS_Process.vb" />
+    <Compile Include="CMS_INTEGRATION\CVSFileUtil.vb" />
+    <Compile Include="CMS_INTEGRATION\ICMS_Process.vb" />
+    <Compile Include="CMS_INTEGRATION\METHDR_CompleteCylinderProcess.vb" />
+    <Compile Include="CMS_INTEGRATION\METHDR_LugProcess.vb" />
+    <Compile Include="CMS_INTEGRATION\METHDR_RodProcess.vb" />
+    <Compile Include="CMS_INTEGRATION\METHDR_TubeProcess.vb" />
+    <Compile Include="CMS_INTEGRATION\MTHL_CylinderProcess.vb" />
+    <Compile Include="CMS_INTEGRATION\MTHL_RodProcess.vb" />
+    <Compile Include="CMS_INTEGRATION\MTHL_TubeProcess.vb" />
+    <Compile Include="CNC Code\clsCNCUtil.vb" />
+    <Compile Include="CNC Code\CYL_Rod.vb" />
+    <Compile Include="CNC Code\CYL_RodService.vb" />
+    <Compile Include="CNC Code\StringConstants.vb" />
+    <Compile Include="CNC Code\ThreadingSpeeds.vb" />
+    <Compile Include="DataBaseLayer\clsOperationDMC.vb" />
+    <Compile Include="DataBaseLayer\clsRodOperationsDMC.vb" />
+    <Compile Include="DataBaseLayer\clsWeldedDataClass.vb" />
+    <Compile Include="ExcelLayer\ExcelClass.vb" />
+    <Compile Include="ExcelUtil\ExcelUtil.vb" />
+    <Compile Include="ExcelUtil\ReadExcel.vb" />
+    <Compile Include="FunctionalLayer\clsListViewMIL.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalLayer\clsWeldedCylinderFunctionalClass.vb" />
+    <Compile Include="FunctionalLayer\clsWeldedGlobalVariables.vb" />
+    <Compile Include="FunctionalLayer\Contants.vb" />
+    <Compile Include="FunctionalLayer\IFLGetSetUIClass.vb" />
+    <Compile Include="FunctionalLayer\modWeldedCylinder.vb" />
+    <Compile Include="FunctionalLayer\PopulatingBackClass.vb" />
+    <Compile Include="ReleasedCylinderClasses\clsReleaseCylinderFunctionality.vb" />
+    <Compile Include="SwingClearanceCalculation.vb" />
+    <Compile Include="UILayer\Common\frmContractDetails.Designer.vb">
+      <DependentUpon>frmContractDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmContractDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmGenerate.designer.vb">
+      <DependentUpon>frmGenerate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmGenerate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmMonarchRevision.Designer.vb">
+      <DependentUpon>frmMonarchRevision.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmMonarchRevision.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPin_Port_PaintAccessories.Designer.vb">
+      <DependentUpon>frmPin_Port_PaintAccessories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPin_Port_PaintAccessories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRetractedLengthValidation.Designer.vb">
+      <DependentUpon>frmRetractedLengthValidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRetractedLengthValidation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRevisionTable.designer.vb">
+      <DependentUpon>frmRevisionTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRevisionTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRodEndConfiguration.designer.vb">
+      <DependentUpon>frmRodEndConfiguration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmRodEndConfiguration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmStartUpScreen.Designer.vb">
+      <DependentUpon>frmStartUpScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmStartUpScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolidWorksLayer\IFLSolidWorksBaseClass.vb" />
+    <Compile Include="SolidWorksLayer\IFLSolidWorksClass.vb" />
+    <Compile Include="UILayer\Common\frmHeadDesign.Designer.vb">
+      <DependentUpon>frmHeadDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmHeadDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPortDetails.Designer.vb">
+      <DependentUpon>frmPortDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPortDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmTubeDetails.Designer.vb">
+      <DependentUpon>frmTubeDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmTubeDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmUpdateDatabaseRecords.designer.vb">
+      <DependentUpon>frmUpdateDatabaseRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmUpdateDatabaseRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportBaseEnd.Designer.vb">
+      <DependentUpon>frmImportBaseEnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportBaseEnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPlateClevis.Designer.vb">
+      <DependentUpon>frmImportPlateClevis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPlateClevis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPorts.Designer.vb">
+      <DependentUpon>frmImportPorts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportPorts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportRodEnd.Designer.vb">
+      <DependentUpon>frmImportRodEnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\Import Options Screens\frmImportRodEnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingNoPortIntegral.Designer.vb">
+      <DependentUpon>frmBasePlugCastingNoPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingNoPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingYes.designer.vb">
+      <DependentUpon>frmBasePlugCastingYes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingYes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingYesPortIntegral.designer.vb">
+      <DependentUpon>frmBasePlugCastingYesPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingYesPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugPortIntegral.designer.vb">
+      <DependentUpon>frmBasePlugPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugPortInTube.designer.vb">
+      <DependentUpon>frmBasePlugPortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugPortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmDesignABasePlug.Designer.vb">
+      <DependentUpon>frmDesignABasePlug.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmDesignABasePlug.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingNo_PortIntegral.Designer.vb">
+      <DependentUpon>frmBHCastingNo_PortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingNo_PortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingNo_PortInTube.Designer.vb">
+      <DependentUpon>frmBHCastingNo_PortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingNo_PortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingYes.Designer.vb">
+      <DependentUpon>frmBHCastingYes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingYes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHDesignACasting.Designer.vb">
+      <DependentUpon>frmBHDesignACasting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHDesignACasting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHFabrication.Designer.vb">
+      <DependentUpon>frmBHFabrication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHFabrication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHPortIntegral.Designer.vb">
+      <DependentUpon>frmBHPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHPortInTube.Designer.vb">
+      <DependentUpon>frmBHPortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmBHPortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmFabricatedBH_RetractedLength.Designer.vb">
+      <DependentUpon>frmFabricatedBH_RetractedLength.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\BH\frmFabricatedBH_RetractedLength.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingNo_PortIntegral.designer.vb">
+      <DependentUpon>frmCTCastingNo_PortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingNo_PortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingNo_PortInTube.designer.vb">
+      <DependentUpon>frmCTCastingNo_PortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingNo_PortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingYes.designer.vb">
+      <DependentUpon>frmCTCastingYes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingYes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTDesignACasting.designer.vb">
+      <DependentUpon>frmCTDesignACasting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTDesignACasting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTFabrication.designer.vb">
+      <DependentUpon>frmCTFabrication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTFabrication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTFabricationNew.Designer.vb">
+      <DependentUpon>frmCTFabricationNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTFabricationNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTPortIntegral.designer.vb">
+      <DependentUpon>frmCTPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTPortInTube.designer.vb">
+      <DependentUpon>frmCTPortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTPortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLDesignACasting.Designer.vb">
+      <DependentUpon>frmDLDesignACasting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLDesignACasting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingNo_PortIntegral.Designer.vb">
+      <DependentUpon>frmDLCastingNo_PortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingNo_PortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingNo_PortInTube.Designer.vb">
+      <DependentUpon>frmDLCastingNo_PortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingNo_PortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingYes.Designer.vb">
+      <DependentUpon>frmDLCastingYes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingYes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPistonDesign.Designer.vb">
+      <DependentUpon>frmPistonDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPistonDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLPortIntegral.Designer.vb">
+      <DependentUpon>frmDLPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLPortInTube.Designer.vb">
+      <DependentUpon>frmDLPortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLPortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPrimaryInputs.Designer.vb">
+      <DependentUpon>frmPrimaryInputs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\frmPrimaryInputs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Common\mdiWeldedCylinder.Designer.vb">
+      <DependentUpon>mdiWeldedCylinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Common\mdiWeldedCylinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLFabrication.Designer.vb">
+      <DependentUpon>frmDLFabrication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLFabrication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\UserControls\ucBrowsePlateClevis.Designer.vb">
+      <DependentUpon>ucBrowsePlateClevis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\DoubleLug\UserControls\ucBrowsePlateClevis.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\PlateClevis\frmConPlateClevis.Designer.vb">
+      <DependentUpon>frmConPlateClevis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\PlateClevis\frmConPlateClevis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmFabricatedSingleLug_RetractedLength.Designer.vb">
+      <DependentUpon>frmFabricatedSingleLug_RetractedLength.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmFabricatedSingleLug_RetractedLength.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingNo_PortIntegral.Designer.vb">
+      <DependentUpon>frmSLCastingNo_PortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingNo_PortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingNo_PortInTube.Designer.vb">
+      <DependentUpon>frmSLCastingNo_PortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingNo_PortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingYes.Designer.vb">
+      <DependentUpon>frmSLCastingYes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingYes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLDesignACasting.Designer.vb">
+      <DependentUpon>frmSLDesignACasting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLDesignACasting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLFabrication.Designer.vb">
+      <DependentUpon>frmSLFabrication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLFabrication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLPortIntegral.Designer.vb">
+      <DependentUpon>frmSLPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLPortinTube.Designer.vb">
+      <DependentUpon>frmSLPortinTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLPortinTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmBEThreadedEndCastingNo_PortIntegral.Designer.vb">
+      <DependentUpon>frmBEThreadedEndCastingNo_PortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmBEThreadedEndCastingNo_PortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmDesignAThreadedCasting.Designer.vb">
+      <DependentUpon>frmDesignAThreadedCasting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmDesignAThreadedCasting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndCastingYes.designer.vb">
+      <DependentUpon>frmThreadedEndCastingYes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndCastingYes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndCastingYes_PortIntegral.designer.vb">
+      <DependentUpon>frmThreadedEndCastingYes_PortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndCastingYes_PortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndPortIntegral.designer.vb">
+      <DependentUpon>frmThreadedEndPortIntegral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndPortIntegral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndPortInTube.designer.vb">
+      <DependentUpon>frmThreadedEndPortInTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndPortInTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmCastingNo_RECT.Designer.vb">
+      <DependentUpon>frmCastingNo_RECT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmCastingNo_RECT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmCastingYes_RECT.Designer.vb">
+      <DependentUpon>frmCastingYes_RECT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmCastingYes_RECT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmDesignACasting_RECT.Designer.vb">
+      <DependentUpon>frmDesignACasting_RECT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmDesignACasting_RECT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmFabrication_RECT.Designer.vb">
+      <DependentUpon>frmFabrication_RECT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmFabrication_RECT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmRECrossTube.Designer.vb">
+      <DependentUpon>frmRECrossTube.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\CrossTube\frmRECrossTube.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLCasting.Designer.vb">
+      <DependentUpon>frmREDLCasting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLCasting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLExistingDesign.designer.vb">
+      <DependentUpon>frmREDLExistingDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLExistingDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLNewDesign.designer.vb">
+      <DependentUpon>frmREDLNewDesign.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLNewDesign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLThreaded.designer.vb">
+      <DependentUpon>frmREDLThreaded.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLThreaded.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLWelded.Designer.vb">
+      <DependentUpon>frmREDLWelded.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLWelded.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\temp.Designer.vb">
+      <DependentUpon>temp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DoubleLug\temp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DrilledPinHole\frmREDrilledPinHole.Designer.vb">
+      <DependentUpon>frmREDrilledPinHole.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\DrilledPinHole\frmREDrilledPinHole.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\FlatWithChamfer\frmFlatWithChamfer.Designer.vb">
+      <DependentUpon>frmFlatWithChamfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\FlatWithChamfer\frmFlatWithChamfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\SingleLug\frmRESingleLugDetails.designer.vb">
+      <DependentUpon>frmRESingleLugDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\SingleLug\frmRESingleLugDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\SingleLug\frmRESingleLugExistingNotSelected.designer.vb">
+      <DependentUpon>frmRESingleLugExistingNotSelected.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\SingleLug\frmRESingleLugExistingNotSelected.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\ThreadedRod\frmREThreadedRod.Designer.vb">
+      <DependentUpon>frmREThreadedRod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\Conventional Design\RodEnd\ThreadedRod\frmREThreadedRod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UILayer\New Design\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UILayer\New Design\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeldedCosting\clsAddExistingCodes.vb" />
+    <Compile Include="WeldedCosting\clsCostingExcelFunctionality.vb" />
+    <Compile Include="DataBaseLayer\clsCostingMILDB.vb" />
+    <Compile Include="WeldedCosting\clsFindCastingCost.vb" />
+    <Compile Include="WeldedCosting\clsFormFinalCostingList.vb" />
+    <Compile Include="DataBaseLayer\clsWeldedCostingDataBaseClass.vb" />
+    <Compile Include="WeldedCosting\clsList.vb" />
+    <Compile Include="WeldedCosting\RodWeldment\clsRodOperations.vb" />
+    <Compile Include="WeldedCosting\RodWeldment\clsRodRulesSequence.vb" />
+    <Compile Include="WeldedCosting\TubeWeldment\clsOperations.vb" />
+    <Compile Include="WeldedCosting\TubeWeldment\clsRulesSequence.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UILayer\Common\frmContractDetails.resx">
+      <DependentUpon>frmContractDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmGenerate.resx">
+      <DependentUpon>frmGenerate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmMonarchRevision.resx">
+      <DependentUpon>frmMonarchRevision.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPin_Port_PaintAccessories.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPin_Port_PaintAccessories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmRetractedLengthValidation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRetractedLengthValidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmRevisionTable.resx">
+      <DependentUpon>frmRevisionTable.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmRodEndConfiguration.resx">
+      <DependentUpon>frmRodEndConfiguration.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmStartUpScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmStartUpScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmHeadDesign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHeadDesign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPortDetails.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPortDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmTubeDetails.resx">
+      <DependentUpon>frmTubeDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmUpdateDatabaseRecords.resx">
+      <DependentUpon>frmUpdateDatabaseRecords.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportBaseEnd.resx">
+      <DependentUpon>frmImportBaseEnd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportPlateClevis.resx">
+      <DependentUpon>frmImportPlateClevis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportPorts.resx">
+      <DependentUpon>frmImportPorts.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\Import Options Screens\frmImportRodEnd.resx">
+      <DependentUpon>frmImportRodEnd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingNoPortIntegral.resx">
+      <DependentUpon>frmBasePlugCastingNoPortIntegral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingYes.resx">
+      <DependentUpon>frmBasePlugCastingYes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugCastingYesPortIntegral.resx">
+      <DependentUpon>frmBasePlugCastingYesPortIntegral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugPortIntegral.resx">
+      <DependentUpon>frmBasePlugPortIntegral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmBasePlugPortInTube.resx">
+      <DependentUpon>frmBasePlugPortInTube.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BasePlug\frmDesignABasePlug.resx">
+      <DependentUpon>frmDesignABasePlug.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingNo_PortIntegral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBHCastingNo_PortIntegral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingNo_PortInTube.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBHCastingNo_PortInTube.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmBHCastingYes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBHCastingYes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmBHDesignACasting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBHDesignACasting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmBHFabrication.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBHFabrication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmBHPortIntegral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBHPortIntegral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmBHPortInTube.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBHPortInTube.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\BH\frmFabricatedBH_RetractedLength.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFabricatedBH_RetractedLength.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingNo_PortIntegral.resx">
+      <DependentUpon>frmCTCastingNo_PortIntegral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingNo_PortInTube.resx">
+      <DependentUpon>frmCTCastingNo_PortInTube.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTCastingYes.resx">
+      <DependentUpon>frmCTCastingYes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTDesignACasting.resx">
+      <DependentUpon>frmCTDesignACasting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTFabrication.resx">
+      <DependentUpon>frmCTFabrication.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTFabricationNew.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCTFabricationNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTPortIntegral.resx">
+      <DependentUpon>frmCTPortIntegral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\CrossTube\frmCTPortInTube.resx">
+      <DependentUpon>frmCTPortInTube.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLDesignACasting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDLDesignACasting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingNo_PortIntegral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDLCastingNo_PortIntegral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingNo_PortInTube.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDLCastingNo_PortInTube.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLCastingYes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDLCastingYes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPistonDesign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPistonDesign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLPortIntegral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDLPortIntegral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLPortInTube.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDLPortInTube.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\frmPrimaryInputs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrimaryInputs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Common\mdiWeldedCylinder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>mdiWeldedCylinder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\frmDLFabrication.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDLFabrication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\DoubleLug\UserControls\ucBrowsePlateClevis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ucBrowsePlateClevis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\PlateClevis\frmConPlateClevis.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConPlateClevis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmFabricatedSingleLug_RetractedLength.resx">
+      <DependentUpon>frmFabricatedSingleLug_RetractedLength.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingNo_PortIntegral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSLCastingNo_PortIntegral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingNo_PortInTube.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSLCastingNo_PortInTube.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLCastingYes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSLCastingYes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLDesignACasting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSLDesignACasting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLFabrication.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSLFabrication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLPortIntegral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSLPortIntegral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\SingleLug\frmSLPortinTube.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSLPortinTube.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmBEThreadedEndCastingNo_PortIntegral.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBEThreadedEndCastingNo_PortIntegral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmDesignAThreadedCasting.resx">
+      <DependentUpon>frmDesignAThreadedCasting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndCastingYes.resx">
+      <DependentUpon>frmThreadedEndCastingYes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndCastingYes_PortIntegral.resx">
+      <DependentUpon>frmThreadedEndCastingYes_PortIntegral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndPortIntegral.resx">
+      <DependentUpon>frmThreadedEndPortIntegral.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\BaseEnd\ThreadedEnd\frmThreadedEndPortInTube.resx">
+      <DependentUpon>frmThreadedEndPortInTube.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\CrossTube\frmCastingNo_RECT.resx">
+      <DependentUpon>frmCastingNo_RECT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\CrossTube\frmCastingYes_RECT.resx">
+      <DependentUpon>frmCastingYes_RECT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\CrossTube\frmDesignACasting_RECT.resx">
+      <DependentUpon>frmDesignACasting_RECT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\CrossTube\frmFabrication_RECT.resx">
+      <DependentUpon>frmFabrication_RECT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\CrossTube\frmRECrossTube.resx">
+      <DependentUpon>frmRECrossTube.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLCasting.resx">
+      <DependentUpon>frmREDLCasting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLExistingDesign.resx">
+      <DependentUpon>frmREDLExistingDesign.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLNewDesign.resx">
+      <DependentUpon>frmREDLNewDesign.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLThreaded.resx">
+      <DependentUpon>frmREDLThreaded.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\DoubleLug\frmREDLWelded.resx">
+      <DependentUpon>frmREDLWelded.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\DoubleLug\temp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>temp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\DrilledPinHole\frmREDrilledPinHole.resx">
+      <DependentUpon>frmREDrilledPinHole.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\FlatWithChamfer\frmFlatWithChamfer.resx">
+      <DependentUpon>frmFlatWithChamfer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\SingleLug\frmRESingleLugDetails.resx">
+      <DependentUpon>frmRESingleLugDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\SingleLug\frmRESingleLugExistingNotSelected.resx">
+      <DependentUpon>frmRESingleLugExistingNotSelected.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILayer\Conventional Design\RodEnd\ThreadedRod\frmREThreadedRod.resx">
+      <DependentUpon>frmREThreadedRod.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>
+      </SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="idola.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SldWorks">
+      <Guid>{83A33D31-27C5-11CE-BFD4-00400513BB57}</Guid>
+      <VersionMajor>17</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SolidWorks">
+      <Guid>{801A0000-A66C-11D3-A8BD-0000861EBBD6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SwCommands">
+      <Guid>{0AC1DE9F-3FBC-4C25-868D-7D4E9139CCE0}</Guid>
+      <VersionMajor>17</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="SwConst">
+      <Guid>{4687F359-55D0-4CD3-B6CF-2EB42C11F989}</Guid>
+      <VersionMajor>17</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

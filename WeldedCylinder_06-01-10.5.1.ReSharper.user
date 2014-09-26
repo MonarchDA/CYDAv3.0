@@ -1,0 +1,37 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:CNC Code/f:CYL_RodService.vb" caret="1643" fromTop="6" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:FunctionalLayer/f:clsWeldedGlobalVariables.vb" caret="17744" fromTop="17" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:CMS_INTEGRATION/f:CVSFileUtil.vb" caret="4119" fromTop="22" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:CMS_INTEGRATION/f:clsMETHE_Process.vb" caret="9276" fromTop="13" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:FunctionalLayer/f:clsListViewMIL.vb" caret="316" fromTop="11" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:CMS_INTEGRATION/f:METHDR_CompleteCylinderProcess.vb" caret="1406" fromTop="20" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:CMS_INTEGRATION/f:CMS_Process.vb" caret="807" fromTop="5" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:UILayer/d:Common/f:frmTubeDetails.vb" caret="97578" fromTop="7" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:UILayer/d:Common/f:frmTubeDetails.vb" caret="135612" fromTop="22" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:UILayer/d:Common/f:frmTubeDetails.vb" caret="135520" fromTop="22" />
+      <File id="FF88D5CC-59BC-40A9-AC0C-13D48128CE7E/d:UILayer/d:Common/f:frmTubeDetails.vb" caret="136054" fromTop="29" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

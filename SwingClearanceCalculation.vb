@@ -1,0 +1,59 @@
+
+Public Class SwingClearanceCalculation
+
+
+    Public Sub Validation_Main()
+
+        'BEC_FL_PI_GR_DOUBLELUG    and   BEC_NO_PO_GR_DOUBLELUG and BEC_RA_PI_FI_DOUBLELUG and BEC_RA_PI_FI_DOUBLELUG_90
+        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfiguration = "Double Lug" Then
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndFabricationSelected = False Then
+                If (ObjClsWeldedCylinderFunctionalClass.IsPortIntegral_or_PortInTube = "Port In Tube" AndAlso _
+                                  ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonLocation = "OUTSIDE" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "GROOVE") OrElse _
+                                  (UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PortInsertion) = "FLUSHED" AndAlso _
+                                       ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonLocation = "INSIDE" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "GROOVE") OrElse _
+                                       (UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PortInsertion) = "RAISED" AndAlso _
+                                       ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonLocation = "INSIDE" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "FILLET" AndAlso _
+                     (ObjClsWeldedCylinderFunctionalClass.strPortAngle_BaseEnd = "Straight" OrElse Not (ObjClsWeldedCylinderFunctionalClass.strPortAngle_BaseEnd = "Straight"))) Then
+                    ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.SwingClearance += 0.0625
+                End If
+            End If
+        End If
+
+
+        ''BEC_FL_PI_GR_SINGLELUG and BEC_NO_PO_GR_SINGLELUG and BEC_RA_PI_FI_SINGLELUG and BEC_RA_PI_FI_SINGLELUG_90
+        If Trim(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfigurationDesign) <> "Existing" Then
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfiguration = "Single Lug" _
+            OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfiguration = "BH" Then 'MANJULA ADDED
+                If (ObjClsWeldedCylinderFunctionalClass.IsPortIntegral_or_PortInTube = "Port In Tube" AndAlso _
+                  ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonLocation = "OUTSIDE" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "GROOVE") OrElse _
+                                                     (UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PortInsertion) = "FLUSHED" AndAlso _
+                                                      ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonLocation = "INSIDE" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "GROOVE") OrElse _
+                                                      (UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PortInsertion) = "RAISED" AndAlso _
+                                      ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonLocation = "INSIDE" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "FILLET" AndAlso _
+                    (ObjClsWeldedCylinderFunctionalClass.strPortAngle_BaseEnd = "Straight" OrElse Not (ObjClsWeldedCylinderFunctionalClass.strPortAngle_BaseEnd = "Straight"))) Then
+                    ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.SwingClearance += 0.0625
+
+                End If
+            End If
+        End If
+
+
+
+
+        'ROD_END_SINGLE_LUG_CAST
+        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationDesign_RodEnd <> "Existing" Then
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndConfiguration = "Single Lug" _
+OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndConfiguration = "BH" Then 'MANJULA ADDED
+                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.SwingClearance += 0.0625
+            End If
+        End If
+
+        'ROD_END_DOUBLE_LUG_CASTING
+        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndConfiguration = "Double Lug" AndAlso Not (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConnectionType = "Threaded") Then
+            If ObjClsWeldedCylinderFunctionalClass.strRE_Cast_Fabricated = "Cast" Then
+                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.SwingClearance += 0.0625
+            End If
+        End If
+    End Sub
+
+End Class
