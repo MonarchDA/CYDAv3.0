@@ -1102,6 +1102,11 @@ Public Class frmRetractedLengthValidation
                 chkCounterBoreClevisPlate.Checked = False
             Else
                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.CounterBoreClevisPlateCode = _strCounterboredClevisPlateCode
+
+                If ((ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.chkDoubleLugFabricationRequired.Checked = True) And (ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.rdbExactMatchYes.Checked = True)) Then  'Neeraja 30-09-2014 start
+                    ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ClevisPlateCode2 = _strCounterboredClevisPlateCode
+                End If                                                                                                                                                                                                          'Neeraja 30-09-2014 End
+
                 ObjClsWeldedCylinderFunctionalClass.AddGeneralInformationValues("ClevisPlate Code", _strCounterboredClevisPlateCode)
                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.CounterBoreClevisPlateThickness = _dblCounterBoreClevisPlateThickness
                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.CounterboredClevisPlateRodStopDistance = _dblCounterboredClevisPlateRodStopDistance
@@ -1113,7 +1118,7 @@ Public Class frmRetractedLengthValidation
                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndDistanceFromPinholetoRodStop = _dblCounterBoreClevisPlateThickness - _dblCounterboredClevisPlateRodStopDistance
                 '*****************************
 
-            End If
+        End If
 
         Else
             'TODO:Sunny 13-04-10 12:10pm
