@@ -1,38 +1,6 @@
-Error 1 :   Unable to close Documents Some files are not saved Properly .System Generated Error: Object reference not set to an instance of an object.   Time : 10/1/2014 12:00:00 AM
+Error 1 :   Unable to open Documents check file format .System Generated Error: The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT))   Time : 10/14/2014 12:00:00 AM
   
-Error 2 :   Unable to open Documents check file format .System Generated Error: The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT))   Time : 10/1/2014 12:00:00 AM
+Error 2 :   Unable to open Documents check file format .System Generated Error: The server threw an exception. (Exception from HRESULT: 0x80010105 (RPC_E_SERVERFAULT))   Time : 10/14/2014 12:00:00 AM
   
-Error 3 :   Unable to close Documents Some files are not saved Properly .System Generated Error: The remote procedure call failed. (Exception from HRESULT: 0x800706BE)   Time : 10/1/2014 12:00:00 AM
-  
-Error 4 :   Unable to close Documents Some files are not saved Properly .System Generated Error: The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)   Time : 10/1/2014 12:00:00 AM
-  
-Error 5 :   Unable to open Documents check file format .System Generated Error: The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)   Time : 10/1/2014 12:00:00 AM
-  
-Error 6 :   Error in Overwritting Dimensions    Time : 10/1/2014 12:00:00 AM
-  
-Error 7 :   Error in Overwritting Dimensions    Time : 10/1/2014 12:00:00 AM
-  
-Error 8 :   Unable to open Documents check file format .System Generated Error: The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)   Time : 10/1/2014 12:00:00 AM
-  
-Error 9 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 10 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 11 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 12 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 13 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 14 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 15 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 16 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 17 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 18 :   Error in Deleting Sketch    Time : 10/1/2014 12:00:00 AM
-  
-Error 19 :   Unable to open Documents check file format .System Generated Error: The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)   Time : 10/1/2014 12:00:00 AM
+Error 3 :   Error in Shuffling CMS Files   Time : 10/14/2014 12:00:00 AM
   

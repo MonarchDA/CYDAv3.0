@@ -218,7 +218,7 @@ Partial Class frmGenerate
         Me.LabelGradient3.GradientColorTwo = System.Drawing.Color.Honeydew
         Me.LabelGradient3.Location = New System.Drawing.Point(0, 19)
         Me.LabelGradient3.Name = "LabelGradient3"
-        Me.LabelGradient3.Size = New System.Drawing.Size(20, 881)
+        Me.LabelGradient3.Size = New System.Drawing.Size(20, 880)
         Me.LabelGradient3.TabIndex = 82
         Me.LabelGradient3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -230,7 +230,7 @@ Partial Class frmGenerate
         Me.LabelGradient2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.LabelGradient2.GradientColorOne = System.Drawing.Color.Olive
         Me.LabelGradient2.GradientColorTwo = System.Drawing.Color.Honeydew
-        Me.LabelGradient2.Location = New System.Drawing.Point(20, 890)
+        Me.LabelGradient2.Location = New System.Drawing.Point(20, 889)
         Me.LabelGradient2.Name = "LabelGradient2"
         Me.LabelGradient2.Size = New System.Drawing.Size(1029, 10)
         Me.LabelGradient2.TabIndex = 83
@@ -246,7 +246,7 @@ Partial Class frmGenerate
         Me.LabelGradient4.GradientColorTwo = System.Drawing.Color.Honeydew
         Me.LabelGradient4.Location = New System.Drawing.Point(1027, 19)
         Me.LabelGradient4.Name = "LabelGradient4"
-        Me.LabelGradient4.Size = New System.Drawing.Size(22, 871)
+        Me.LabelGradient4.Size = New System.Drawing.Size(22, 870)
         Me.LabelGradient4.TabIndex = 84
         Me.LabelGradient4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '

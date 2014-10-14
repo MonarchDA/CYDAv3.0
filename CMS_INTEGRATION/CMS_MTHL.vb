@@ -630,6 +630,33 @@ Public Class CMS_MTHL_TubeTools
     Public Sub GetTools_55_Logics()
         Try
             '07_12_2010   RAGAVA
+            'TubeToolList.Add("55&WI09-E-91")
+            'If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
+            '    TubeToolList.Add("55&O0695")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.75 Then
+            '    TubeToolList.Add("55&O0696")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2 Then
+            '    TubeToolList.Add("55&O0665")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.25 Then
+            '    TubeToolList.Add("55&O0674")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.5 Then
+            '    TubeToolList.Add("55&O0705")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
+            '    TubeToolList.Add("55&O0677")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
+            '    TubeToolList.Add("55&O0701")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.25 Then
+            '    TubeToolList.Add("55&O1041")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.5 Then
+            '    TubeToolList.Add("55&O1052")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.75 Then
+            '    TubeToolList.Add("55&O1053")
+            'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.5 Then
+            '    TubeToolList.Add("55&O1060")
+            'End If
+            ''Till   Here
+
+
             TubeToolList.Add("55&WI09-E-91")
             If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
                 TubeToolList.Add("55&O0695")
@@ -643,18 +670,29 @@ Public Class CMS_MTHL_TubeTools
                 TubeToolList.Add("55&O0705")
             ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
                 TubeToolList.Add("55&O0677")
-            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.TubeWallThickness <= 1.88 Then
                 TubeToolList.Add("55&O0701")
-            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.25 Then
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.TubeWallThickness <= 0.25 Then
                 TubeToolList.Add("55&O1041")
-            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.5 Then
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.25 Then
                 TubeToolList.Add("55&O1052")
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.5 Then
+                TubeToolList.Add("55&O0038")
             ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.75 Then
-                TubeToolList.Add("55&O1053")
+                TubeToolList.Add("55&O1097")
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4 Then
+                TubeToolList.Add("55&O1093")
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.25 Then
+                TubeToolList.Add("55&O1094")
             ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.5 Then
-                TubeToolList.Add("55&O1060")
+                TubeToolList.Add("55&O1095")
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 5 Then
+                TubeToolList.Add("55&O1138")
             End If
-            'Till   Here
+            
+
+
+
         Catch ex As Exception
 
         End Try

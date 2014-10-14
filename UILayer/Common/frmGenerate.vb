@@ -142,11 +142,12 @@ Public Class frmGenerate
                 ChkPins.Text = "PINS ARE 90° TO PORTS"
             ElseIf Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPortDetails.txtFirstPortOrientationBaseEnd.Text).IndexOf("0") <> -1 Then
                 ChkPins.Text = "PINS ARE IN LINE WITH PORTS"
-            Else
-                ChkPins.Text = "PINS ARE AS SHOWN"  'vamsi 08thAugust2013
+                ' else
+                'ChkPins.Text = "PINS ARE AS SHOWN"  'vamsi 08thAugust2013 'commented by Neeraja
             End If
         Else
-            ChkPins.Text = "Rod End Port " & Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPortDetails.txtFirstPortOrientationRodEnd.Text) & ", Base End Port " & Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPortDetails.txtFirstPortOrientationBaseEnd.Text)
+            ' ChkPins.Text = "Rod End Port " & Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPortDetails.txtFirstPortOrientationRodEnd.Text) & ", Base End Port " & Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPortDetails.txtFirstPortOrientationBaseEnd.Text) 'commented by Neeraja
+            ChkPins.Text = "PINS ARE AS SHOWN"                          'Neeraja 13-10-2014
         End If
 
         'If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strSetScrew <> "" Then  vamsi 12 august 2013
