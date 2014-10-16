@@ -10,471 +10,6 @@ Monarch_WeldedCylinder_01-09-09
 ###################
  
 
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.ConnectSolidWorks">
-	<summary>
- Opens the solidworks Session.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseAllDocuments">
-	<summary>
-	</summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseDocument(System.String)">
-	<summary>
- Closes the specified document.
- </summary>
-	<param name="docName"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.openDocument(System.String)">
-	<summary>
- Opens the document.
- </summary>
-	<param name="_strDocName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.CheckFileType(System.String)">
-	<summary>
- Checks the type of the documet[i.e , part or assembly or drawing]
- </summary>
-	<param name="_strPartAssemblyFileName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.killSolidWorks(System.String)">
-	<summary>
- SolidWorks session process will be killed in case of unhandled exception case.
- </summary>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.AssemblyRunStandardValue(System.String)">
-	<summary>
- AssemblyRunStandardValue Function:::::
- This function calculates the Assembly Run Standard Value 
- by sending all the required values to the excel
- </summary>
-	<returns>AssemblyRunStandardValue</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.RRTypeHead_Validation">
-	<summary>
- RRTypeHead_Validation Function:::::
- If the Head Type is Threaded then the function
- returns 1 else 0
- </summary>
-	<returns>RRTypeHead_Validation</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.RodClevis_Validation">
-	<summary>
- RodClevis_Validation Function:::::
- If Double Lug configuration is selected with Threaded Connection Type
- at RodEnd then the function returns1 else 0
- </summary>
-	<returns>RodClevis_Validation</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.ToolB_Validation">
-	<summary>
- ToolB_Validation Function:::::
- If Stroke Length is less than 6 then the function
- returns 1 else 0
- </summary>
-	<returns>ToolB_Validation</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.Bushing_Validation">
-	<summary>
- Bushing_Validation Function:::::
- This Function adds the Number of bushings selected at the BaseEnd and RodEnd
- and returns the added value
- </summary>
-	<returns>Bushing_Validation</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.OilTestStandardValue">
-	<summary>
- OilTestStandardValue Function ::::::
- This function calculates the Oil Test Standard Value 
- by sending all the required values to the excel
- </summary>
-	<returns>OilTestStandardValue</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts">
-	<summary>
- NumberOfPorts Function:::::
- This function adds the NUMBER  OF PORTS selected at both BaseEnd and RodEnd
- and returns the added value.
- </summary>
-	<returns>NumberOfPorts</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.Breather">
-	<summary>
- Breather Function:::::
- If Port Accessory Type is BREATHER at both BaseEnd and RodEnd the function returns 2,
-  if Breather is selected at any one end then it returns 1,
- if no breather selected then it returns 0.
- </summary>
-	<returns>Breather</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.ThreadProtectorOnRod">
-	<summary>
- ThreadProtectorOnRod Function:::::
- If Threaded Rod Configuration is selected at RodEnd side 
- then the function returns 'Y' (yes)
- else 'n' (no) 
- </summary>
-	<returns>ThreadProtectorOnRod</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.BothPortsSameSize">
-	<summary>
- BothPortsSameSize Function:::::
- If Port Sizes at BaseEnd and RodEnd are same
- then the function returns 'Y' else 'N'
- </summary>
-	<returns>BothPortsSameSize</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.Ports_90Degrees">
-	<summary>
- Ports_90Degrees Function:::::
- If Port Angle is 90 at either BaseEnd or RodEnd side
- then the function returns 'Y' else 'N'
- </summary>
-	<returns>Ports_90Degrees</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NPTPorts">
-	<summary>
- NPTPorts Function:::::
- If Port Type is 'NPTF' at either BaseEnd or RodEnd side
- then the function returns 'Y' else 'N'
- </summary>
-	<returns>NPTPorts</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.AngleBetweenPorts">
-	<summary>
- AngleBetweenPorts Function:::::
- Based on the Number of Ports selected on BaseEnd and RodEnd side
- the Port orientation Values are passed to the functions called 
- to calculate the difference between the angles.
- </summary>
-	<returns>AngleBetweenPorts</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_2_2(System.Double,System.Double,System.Double,System.Double)">
-	<summary>
- NumberOfPorts_2_2 Function:::::
- This Function is used if selected number of ports are 2 each at both sides
- Difference between the angles are found 
- and the highest value is returned
- </summary>
-	<param name="dblFirst_Base">First Port Orientation at Base End</param>
-	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
-	<param name="dblSecond_Base">Second Port Orientation at Base End</param>
-	<param name="dblSecond_Rod">Second Port Orientation at Rod End</param>
-	<returns>NumberOfPorts_2_2</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_2_1(System.Double,System.Double,System.Double)">
-	<summary>
- NumberOfPorts_2_1 Function:::::
- This Function is used if selected number of ports are 2 at BaseEnd and 1 at RodEnd
- Difference between the angles are found 
- and the highest value is returned
- </summary>
-	<param name="dblFirst_Base">First Port Orientation at Base End</param>
-	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
-	<param name="dblSecond_Base">Second Port Orientation at Base End</param>
-	<returns>NumberOfPorts_2_1</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_1_2(System.Double,System.Double,System.Double)">
-	<summary>
- NumberOfPorts_1_2 Function:::::
- This Function is used if selected number of ports are 1 at BaseEnd and 2 at RodEnd
- Difference between the angles are found 
- and the highest value is returned
- </summary>
-	<param name="dblFirst_Base">First Port Orientation at Base End</param>
-	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
-	<param name="dblSecond_Rod">Second Port Orientation at Rod End</param>
-	<returns>NumberOfPorts_1_2</returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_1_1(System.Double,System.Double)">
-	<summary>
- NumberOfPorts_1_1 Function:::::
- This Function is used if selected number of ports are 1 at BaseEnd and 1 at RodEnd
- Difference between the angles are found 
- and the value is returned
- </summary>
-	<param name="dblFirst_Base">First Port Orientation at Base End</param>
-	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
-	<returns>NumberOfPorts_1_1</returns>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ErrorMessage">
-	<summary>
- This property is used to assign the error message.
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ErrorObject">
-	<summary>
- This property is used to assign the error object.
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.IsCurrentSolidWorks">
-	<summary>
- gets the Current Solidworks object.
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.SwSelMgr">
-	<summary>
- sets the Selection manger object.
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.SwFeature">
-	<summary>
- gets the feature object of the model document.
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DxfConversion1(System.String,System.String)">
-	<summary>
- Converts the Drawing document to DXF.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.deleteUnattached_Dimensions">
-	<summary>
- Deletes the unattached dimensions in the drawing document.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DrawBox">
-	<summary>
- Creates the Envelop box to the model document.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.getMassProperties(System.Double@,System.Double@,System.Double@,System.Double@)">
-	<summary>
- Gets or sets the mass properties of the model document.
- </summary>
-	<param name="cg_x"></param>
-	<param name="cg_y"></param>
-	<param name="cg_z"></param>
-	<param name="mass"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.mateConstraints(System.String,System.String,System.Int32,System.String)">
-	<summary>
- mates  components in an assembly document.
- </summary>
-	<param name="_strPlane1"></param>
-	<param name="_strPlane2"></param>
-	<param name="_strmate1"></param>
-	<param name="_strmate2"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ReplaceComponentWithInstance(System.String,System.String,System.String,System.String)">
-	<summary>
- Replacement of the component in an assembly document.
- </summary>
-	<param name="_strCompName"></param>
-	<param name="_strReplaceCompName"></param>
-	<param name="_strTransformerType"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ReferenceCutLogics(System.String,System.String,System.String,System.String,System.String)">
-	<summary>
- performs the reference cut of the component.
- </summary>
-	<param name="_strCompName"></param>
-	<param name="_strPlaneName"></param>
-	<param name="_strSketchName"></param>
-	<param name="_strTransformerType"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.FeatureSuppression(System.Object)">
-	<summary>
- sets the feature suppression of the model document.
- </summary>
-	<param name="_SearchStr"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DistanceMating(System.String,System.String,System.String,System.String,System.Double,System.Boolean)">
-	<summary>
- Performs the distance matings of the two components.
- </summary>
-	<param name="_strPlane1"></param>
-	<param name="_strPlane2"></param>
-	<param name="_strmate1"></param>
-	<param name="_strmate2"></param>
-	<param name="_dblDistance"></param>
-	<param name="_blnFlip"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.EnableConfigurations(System.String,System.String)">
-	<summary>
- Enables the Configurations of the model document.
- </summary>
-	<param name="_strconfigName"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteConfiguration(System.String)">
-	<summary>
- Deletes the Given configuration.
- </summary>
-	<param name="_strConfigName"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.deleteSuppressParts(System.Collections.ArrayList)">
-	<summary>
- Deletes the suppression parts.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.Common_TraversAndDeletions_And_SuppressionParts">
-	<summary>
- Traverses the components and 
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ViewScaling(System.Decimal,System.String,System.String)">
-	<summary>
- Updating the scaling dimensions to the individual views of the drawing document.
- </summary>
-	<param name="_dScaleRatio"></param>
-	<param name="_strDrawigFileName"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ScalingForOneView(System.String,System.String,System.Decimal)">
-	<summary>
- Sets the individual view scaling for the views.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.AutoBallooning(System.String,System.String)">
-	<summary>
- Sets the auto ballooning for the selected view
- </summary>
-	<param name="_strSheetName"></param>
-	<param name="_strViewName"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.AutoBallooning">
-	<summary>
- gets the Auto ballooning for the drawing document.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.getPartNumber(System.String)">
-	<summary>
- Gets the part number of the document.
- </summary>
-	<param name="_strPartPath"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.GetParameters(System.String)">
-	<summary>
- Gets the parameters of the modele document.
- </summary>
-	<param name="_strPartAssemblyFileName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteDesignTable(System.String)">
-	<summary>
- Deletes the design table.
- </summary>
-	<param name="strPartFileName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteEquation(System.String)">
-	<summary>
- Deletes the equation of model document.
- </summary>
-	<param name="_strPartAssemblyFileName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.SetCurrentWorkingDirectory(System.String)">
-	<summary>
- sets the current working directory.
- </summary>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.createEnvelop">
-	<summary>
- Creates the Envelop for the assembly document.
- </summary>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.GetCurrentConfigName">
-	<summary>
- Gets the configuration name of the model document.
- </summary>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DecimalToFeetInches(System.Object,System.Int32)">
-	<summary>
- Convertion of Decimal to feet inches for creating the envelop box boundaries.
- </summary>
-	<param name="oDecimalLength"></param>
-	<param name="_iDenominator"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.FractUp(System.Int32,System.Int32,System.Int32,System.Int32)">
-	<summary>
-  Measures the inches for creating the envelop box boundaries.
- </summary>
-	<param name="_iInputFt"></param>
-	<param name="_iInputInch"></param>
-	<param name="_iInputNum"></param>
-	<param name="_iInputDenom"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.TraverseComponentForInstance(SldWorks.Component2,System.Int64)">
-	<summary>
- Gets the instance number of the model by traverses the model tree.
- </summary>
-	<param name="oSwComp"></param>
-	<param name="_nLevel"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.getInstanceNumber(System.String)">
-	<summary>
- Gets the maximum number of instance number of the model document.
- </summary>
-	<param name="_strReplacedComponent"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.TraverseComponent(SldWorks.Component2,System.Int64,SldWorks.Component2)">
-	<summary>
- Traverses the entire tree and returns the maximum instance number of the component.
- </summary>
-	<param name="oSwComp"></param>
-	<param name="_nLevel"></param>
-	<param name="oSwComp1"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteFeatures(System.String)">
-	<summary>
- Deletes the Feature.
- </summary>
-	<param name="_strFeatureName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="T:Monarch_WeldedCylinder_01_09_09.ExcelUtil">
-	<summary>
- ExcelUtil Class is the utility class for excel operations.
- </summary>
-	<remarks></remarks>
-</member><member name="T:Monarch_WeldedCylinder_01_09_09.ReadExcel">
-	<summary>
- Reads the HookUP information from the given Excel
- </summary>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.Department">
-	<summary>
- set the department value with 'C01' defaultly
- </summary>
-	<value>department name only</value>
-	<remarks></remarks>
-</member><member name="T:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.SubTypes">
-	<summary>
- Sub Types of Main Types for _lagTime variable.
- </summary>
-	<remarks></remarks>
 </member><member name="F:Monarch_WeldedCylinder_01_09_09.IFLGetSetUI.IFLGetSetUIClass._oTable">
  -----------------------------------------------------------------------------
  <summary>
@@ -749,6 +284,471 @@ Monarch_WeldedCylinder_01-09-09
  </history>
  -----------------------------------------------------------------------------
 
+</member><member name="T:Monarch_WeldedCylinder_01_09_09.ExcelUtil">
+	<summary>
+ ExcelUtil Class is the utility class for excel operations.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.Department">
+	<summary>
+ set the department value with 'C01' defaultly
+ </summary>
+	<value>department name only</value>
+	<remarks></remarks>
+</member><member name="T:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.SubTypes">
+	<summary>
+ Sub Types of Main Types for _lagTime variable.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.ConnectSolidWorks">
+	<summary>
+ Opens the solidworks Session.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseAllDocuments">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseDocument(System.String)">
+	<summary>
+ Closes the specified document.
+ </summary>
+	<param name="docName"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.openDocument(System.String)">
+	<summary>
+ Opens the document.
+ </summary>
+	<param name="_strDocName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.CheckFileType(System.String)">
+	<summary>
+ Checks the type of the documet[i.e , part or assembly or drawing]
+ </summary>
+	<param name="_strPartAssemblyFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.killSolidWorks(System.String)">
+	<summary>
+ SolidWorks session process will be killed in case of unhandled exception case.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Monarch_WeldedCylinder_01_09_09.ReadExcel">
+	<summary>
+ Reads the HookUP information from the given Excel
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.AssemblyRunStandardValue(System.String)">
+	<summary>
+ AssemblyRunStandardValue Function:::::
+ This function calculates the Assembly Run Standard Value 
+ by sending all the required values to the excel
+ </summary>
+	<returns>AssemblyRunStandardValue</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.RRTypeHead_Validation">
+	<summary>
+ RRTypeHead_Validation Function:::::
+ If the Head Type is Threaded then the function
+ returns 1 else 0
+ </summary>
+	<returns>RRTypeHead_Validation</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.RodClevis_Validation">
+	<summary>
+ RodClevis_Validation Function:::::
+ If Double Lug configuration is selected with Threaded Connection Type
+ at RodEnd then the function returns1 else 0
+ </summary>
+	<returns>RodClevis_Validation</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.ToolB_Validation">
+	<summary>
+ ToolB_Validation Function:::::
+ If Stroke Length is less than 6 then the function
+ returns 1 else 0
+ </summary>
+	<returns>ToolB_Validation</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.Bushing_Validation">
+	<summary>
+ Bushing_Validation Function:::::
+ This Function adds the Number of bushings selected at the BaseEnd and RodEnd
+ and returns the added value
+ </summary>
+	<returns>Bushing_Validation</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.OilTestStandardValue">
+	<summary>
+ OilTestStandardValue Function ::::::
+ This function calculates the Oil Test Standard Value 
+ by sending all the required values to the excel
+ </summary>
+	<returns>OilTestStandardValue</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts">
+	<summary>
+ NumberOfPorts Function:::::
+ This function adds the NUMBER  OF PORTS selected at both BaseEnd and RodEnd
+ and returns the added value.
+ </summary>
+	<returns>NumberOfPorts</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.Breather">
+	<summary>
+ Breather Function:::::
+ If Port Accessory Type is BREATHER at both BaseEnd and RodEnd the function returns 2,
+  if Breather is selected at any one end then it returns 1,
+ if no breather selected then it returns 0.
+ </summary>
+	<returns>Breather</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.ThreadProtectorOnRod">
+	<summary>
+ ThreadProtectorOnRod Function:::::
+ If Threaded Rod Configuration is selected at RodEnd side 
+ then the function returns 'Y' (yes)
+ else 'n' (no) 
+ </summary>
+	<returns>ThreadProtectorOnRod</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.BothPortsSameSize">
+	<summary>
+ BothPortsSameSize Function:::::
+ If Port Sizes at BaseEnd and RodEnd are same
+ then the function returns 'Y' else 'N'
+ </summary>
+	<returns>BothPortsSameSize</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.Ports_90Degrees">
+	<summary>
+ Ports_90Degrees Function:::::
+ If Port Angle is 90 at either BaseEnd or RodEnd side
+ then the function returns 'Y' else 'N'
+ </summary>
+	<returns>Ports_90Degrees</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NPTPorts">
+	<summary>
+ NPTPorts Function:::::
+ If Port Type is 'NPTF' at either BaseEnd or RodEnd side
+ then the function returns 'Y' else 'N'
+ </summary>
+	<returns>NPTPorts</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.AngleBetweenPorts">
+	<summary>
+ AngleBetweenPorts Function:::::
+ Based on the Number of Ports selected on BaseEnd and RodEnd side
+ the Port orientation Values are passed to the functions called 
+ to calculate the difference between the angles.
+ </summary>
+	<returns>AngleBetweenPorts</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_2_2(System.Double,System.Double,System.Double,System.Double)">
+	<summary>
+ NumberOfPorts_2_2 Function:::::
+ This Function is used if selected number of ports are 2 each at both sides
+ Difference between the angles are found 
+ and the highest value is returned
+ </summary>
+	<param name="dblFirst_Base">First Port Orientation at Base End</param>
+	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
+	<param name="dblSecond_Base">Second Port Orientation at Base End</param>
+	<param name="dblSecond_Rod">Second Port Orientation at Rod End</param>
+	<returns>NumberOfPorts_2_2</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_2_1(System.Double,System.Double,System.Double)">
+	<summary>
+ NumberOfPorts_2_1 Function:::::
+ This Function is used if selected number of ports are 2 at BaseEnd and 1 at RodEnd
+ Difference between the angles are found 
+ and the highest value is returned
+ </summary>
+	<param name="dblFirst_Base">First Port Orientation at Base End</param>
+	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
+	<param name="dblSecond_Base">Second Port Orientation at Base End</param>
+	<returns>NumberOfPorts_2_1</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_1_2(System.Double,System.Double,System.Double)">
+	<summary>
+ NumberOfPorts_1_2 Function:::::
+ This Function is used if selected number of ports are 1 at BaseEnd and 2 at RodEnd
+ Difference between the angles are found 
+ and the highest value is returned
+ </summary>
+	<param name="dblFirst_Base">First Port Orientation at Base End</param>
+	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
+	<param name="dblSecond_Rod">Second Port Orientation at Rod End</param>
+	<returns>NumberOfPorts_1_2</returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.clsCostingExcelFunctionality.NumberOfPorts_1_1(System.Double,System.Double)">
+	<summary>
+ NumberOfPorts_1_1 Function:::::
+ This Function is used if selected number of ports are 1 at BaseEnd and 1 at RodEnd
+ Difference between the angles are found 
+ and the value is returned
+ </summary>
+	<param name="dblFirst_Base">First Port Orientation at Base End</param>
+	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
+	<returns>NumberOfPorts_1_1</returns>
+	<remarks></remarks>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ErrorMessage">
+	<summary>
+ This property is used to assign the error message.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ErrorObject">
+	<summary>
+ This property is used to assign the error object.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.IsCurrentSolidWorks">
+	<summary>
+ gets the Current Solidworks object.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.SwSelMgr">
+	<summary>
+ sets the Selection manger object.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.SwFeature">
+	<summary>
+ gets the feature object of the model document.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DxfConversion1(System.String,System.String)">
+	<summary>
+ Converts the Drawing document to DXF.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.deleteUnattached_Dimensions">
+	<summary>
+ Deletes the unattached dimensions in the drawing document.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DrawBox">
+	<summary>
+ Creates the Envelop box to the model document.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.getMassProperties(System.Double@,System.Double@,System.Double@,System.Double@)">
+	<summary>
+ Gets or sets the mass properties of the model document.
+ </summary>
+	<param name="cg_x"></param>
+	<param name="cg_y"></param>
+	<param name="cg_z"></param>
+	<param name="mass"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.mateConstraints(System.String,System.String,System.Int32,System.String)">
+	<summary>
+ mates  components in an assembly document.
+ </summary>
+	<param name="_strPlane1"></param>
+	<param name="_strPlane2"></param>
+	<param name="_strmate1"></param>
+	<param name="_strmate2"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ReplaceComponentWithInstance(System.String,System.String,System.String,System.String)">
+	<summary>
+ Replacement of the component in an assembly document.
+ </summary>
+	<param name="_strCompName"></param>
+	<param name="_strReplaceCompName"></param>
+	<param name="_strTransformerType"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ReferenceCutLogics(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ performs the reference cut of the component.
+ </summary>
+	<param name="_strCompName"></param>
+	<param name="_strPlaneName"></param>
+	<param name="_strSketchName"></param>
+	<param name="_strTransformerType"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.FeatureSuppression(System.Object)">
+	<summary>
+ sets the feature suppression of the model document.
+ </summary>
+	<param name="_SearchStr"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DistanceMating(System.String,System.String,System.String,System.String,System.Double,System.Boolean)">
+	<summary>
+ Performs the distance matings of the two components.
+ </summary>
+	<param name="_strPlane1"></param>
+	<param name="_strPlane2"></param>
+	<param name="_strmate1"></param>
+	<param name="_strmate2"></param>
+	<param name="_dblDistance"></param>
+	<param name="_blnFlip"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.EnableConfigurations(System.String,System.String)">
+	<summary>
+ Enables the Configurations of the model document.
+ </summary>
+	<param name="_strconfigName"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteConfiguration(System.String)">
+	<summary>
+ Deletes the Given configuration.
+ </summary>
+	<param name="_strConfigName"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.deleteSuppressParts(System.Collections.ArrayList)">
+	<summary>
+ Deletes the suppression parts.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.Common_TraversAndDeletions_And_SuppressionParts">
+	<summary>
+ Traverses the components and 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ViewScaling(System.Decimal,System.String,System.String)">
+	<summary>
+ Updating the scaling dimensions to the individual views of the drawing document.
+ </summary>
+	<param name="_dScaleRatio"></param>
+	<param name="_strDrawigFileName"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ScalingForOneView(System.String,System.String,System.Decimal)">
+	<summary>
+ Sets the individual view scaling for the views.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.AutoBallooning(System.String,System.String)">
+	<summary>
+ Sets the auto ballooning for the selected view
+ </summary>
+	<param name="_strSheetName"></param>
+	<param name="_strViewName"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.AutoBallooning">
+	<summary>
+ gets the Auto ballooning for the drawing document.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.getPartNumber(System.String)">
+	<summary>
+ Gets the part number of the document.
+ </summary>
+	<param name="_strPartPath"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.GetParameters(System.String)">
+	<summary>
+ Gets the parameters of the modele document.
+ </summary>
+	<param name="_strPartAssemblyFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteDesignTable(System.String)">
+	<summary>
+ Deletes the design table.
+ </summary>
+	<param name="strPartFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteEquation(System.String)">
+	<summary>
+ Deletes the equation of model document.
+ </summary>
+	<param name="_strPartAssemblyFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.SetCurrentWorkingDirectory(System.String)">
+	<summary>
+ sets the current working directory.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.createEnvelop">
+	<summary>
+ Creates the Envelop for the assembly document.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.GetCurrentConfigName">
+	<summary>
+ Gets the configuration name of the model document.
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DecimalToFeetInches(System.Object,System.Int32)">
+	<summary>
+ Convertion of Decimal to feet inches for creating the envelop box boundaries.
+ </summary>
+	<param name="oDecimalLength"></param>
+	<param name="_iDenominator"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.FractUp(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+  Measures the inches for creating the envelop box boundaries.
+ </summary>
+	<param name="_iInputFt"></param>
+	<param name="_iInputInch"></param>
+	<param name="_iInputNum"></param>
+	<param name="_iInputDenom"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.TraverseComponentForInstance(SldWorks.Component2,System.Int64)">
+	<summary>
+ Gets the instance number of the model by traverses the model tree.
+ </summary>
+	<param name="oSwComp"></param>
+	<param name="_nLevel"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.getInstanceNumber(System.String)">
+	<summary>
+ Gets the maximum number of instance number of the model document.
+ </summary>
+	<param name="_strReplacedComponent"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.TraverseComponent(SldWorks.Component2,System.Int64,SldWorks.Component2)">
+	<summary>
+ Traverses the entire tree and returns the maximum instance number of the component.
+ </summary>
+	<param name="oSwComp"></param>
+	<param name="_nLevel"></param>
+	<param name="oSwComp1"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.DeleteFeatures(System.String)">
+	<summary>
+ Deletes the Feature.
+ </summary>
+	<param name="_strFeatureName"></param>
+	<returns></returns>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

@@ -8,17 +8,17 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://invilogic011/Monarch_WeldedCylinder_01-09-09/Monarch_WeldedCylinder_01-09-09.application" />
+    <deploymentProvider codebase="http://invilogic010/Monarch_WeldedCylinder_01-09-09/Monarch_WeldedCylinder_01-09-09.application" />
   </deployment>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Monarch_WeldedCylinder_01-09-09.exe.manifest" size="12733">
+    <dependentAssembly dependencyType="install" codebase="Monarch_WeldedCylinder_01-09-09.exe.manifest" size="13362">
       <assemblyIdentity name="Monarch_WeldedCylinder_01-09-09.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ycV3H985kQcRmFk6xh/2dqLrrS0=</dsig:DigestValue>
+        <dsig:DigestValue>z2s+4b+VfkLridMSxDU+Oyo/Ycg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

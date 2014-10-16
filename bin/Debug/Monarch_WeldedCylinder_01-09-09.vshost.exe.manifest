@@ -101,6 +101,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.Office.dll" size="442368">
+      <assemblyIdentity name="Interop.Office" version="2.6.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Qmke3D2dXGmfYlshKOeph7Xwnt0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.Scripting.dll" size="32768">
       <assemblyIdentity name="Interop.Scripting" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -180,7 +192,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4r7jmWGEfYbwzv3RgXNrbJkbz8g=</dsig:DigestValue>
+        <dsig:DigestValue>zHRUBc2wYwN8esxoE2r+0hyA5VM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -204,7 +216,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0IG4xwQnrdfKS30C5US+YF+UWhs=</dsig:DigestValue>
+        <dsig:DigestValue>6msQYS6clEqqQzkZp12ZK3tpySA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
