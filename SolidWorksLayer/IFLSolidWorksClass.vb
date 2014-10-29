@@ -2701,7 +2701,15 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
             'Till    Here
 
             'vamsi 06/06/2014 start 
-            If Not (ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.chkDoubleLugFabricationRequired.Checked = True OrElse ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingYes.chkBHFabricationRequired.Checked = True OrElse ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingYes.chkCrossTubeFabricationRequired.Checked = True OrElse ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingYes.chkSingleLugFabricationRequired.Checked = True) Then
+            If Not (ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.chkDoubleLugFabricationRequired.Checked = True OrElse
+                    ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                    ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingYes.chkBHFabricationRequired.Checked = True OrElse
+                    ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                    ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingYes.chkCrossTubeFabricationRequired.Checked = True OrElse
+                    ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                    ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingYes.chkSingleLugFabricationRequired.Checked = True OrElse
+                    ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingNo_PortInTube2.rdbFabrication.Checked = True) Then
+
                 DeleteView("Drawing View12")
             End If
             'end
@@ -2741,7 +2749,7 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
             End Try
             'Till    Here
 
-            
+
 
 
             '17_02_2011   RAGAVA

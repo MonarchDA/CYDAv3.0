@@ -6,11 +6,7 @@ Monarch_WeldedCylinder_01-09-09
 </name>
 </assembly>
 <members>
-<member name="F:Monarch_WeldedCylinder_01_09_09.frmPin_Port_PaintAccessories._dblWorkingLength_BaseEnd">
-###################
- 
-
-</member><member name="F:Monarch_WeldedCylinder_01_09_09.IFLGetSetUI.IFLGetSetUIClass._oTable">
+<member name="F:Monarch_WeldedCylinder_01_09_09.IFLGetSetUI.IFLGetSetUIClass._oTable">
  -----------------------------------------------------------------------------
  <summary>
  This variable is used to get the Datatable from the database.
@@ -284,54 +280,13 @@ Monarch_WeldedCylinder_01-09-09
  </history>
  -----------------------------------------------------------------------------
 
+</member><member name="F:Monarch_WeldedCylinder_01_09_09.frmPin_Port_PaintAccessories._dblWorkingLength_BaseEnd">
+###################
+ 
+
 </member><member name="T:Monarch_WeldedCylinder_01_09_09.ExcelUtil">
 	<summary>
  ExcelUtil Class is the utility class for excel operations.
- </summary>
-	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.Department">
-	<summary>
- set the department value with 'C01' defaultly
- </summary>
-	<value>department name only</value>
-	<remarks></remarks>
-</member><member name="T:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.SubTypes">
-	<summary>
- Sub Types of Main Types for _lagTime variable.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.ConnectSolidWorks">
-	<summary>
- Opens the solidworks Session.
- </summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseAllDocuments">
-	<summary>
-	</summary>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseDocument(System.String)">
-	<summary>
- Closes the specified document.
- </summary>
-	<param name="docName"></param>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.openDocument(System.String)">
-	<summary>
- Opens the document.
- </summary>
-	<param name="_strDocName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.CheckFileType(System.String)">
-	<summary>
- Checks the type of the documet[i.e , part or assembly or drawing]
- </summary>
-	<param name="_strPartAssemblyFileName"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.killSolidWorks(System.String)">
-	<summary>
- SolidWorks session process will be killed in case of unhandled exception case.
  </summary>
 	<remarks></remarks>
 </member><member name="T:Monarch_WeldedCylinder_01_09_09.ReadExcel">
@@ -494,19 +449,40 @@ Monarch_WeldedCylinder_01-09-09
 	<param name="dblFirst_Rod">First Port Orientation at Rod End</param>
 	<returns>NumberOfPorts_1_1</returns>
 	<remarks></remarks>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.ResourceManager">
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.ConnectSolidWorks">
 	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.Culture">
+ Opens the solidworks Session.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseAllDocuments">
 	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources">
+	</summary>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.SaveAndCloseDocument(System.String)">
 	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
+ Closes the specified document.
+ </summary>
+	<param name="docName"></param>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.openDocument(System.String)">
+	<summary>
+ Opens the document.
+ </summary>
+	<param name="_strDocName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.CheckFileType(System.String)">
+	<summary>
+ Checks the type of the documet[i.e , part or assembly or drawing]
+ </summary>
+	<param name="_strPartAssemblyFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksBaseClass.killSolidWorks(System.String)">
+	<summary>
+ SolidWorks session process will be killed in case of unhandled exception case.
+ </summary>
+	<remarks></remarks>
 </member><member name="P:Monarch_WeldedCylinder_01_09_09.IFLSolidWorksClass.ErrorMessage">
 	<summary>
  This property is used to assign the error message.
@@ -748,6 +724,30 @@ Monarch_WeldedCylinder_01-09-09
  </summary>
 	<param name="_strFeatureName"></param>
 	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Monarch_WeldedCylinder_01_09_09.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.Department">
+	<summary>
+ set the department value with 'C01' defaultly
+ </summary>
+	<value>department name only</value>
+	<remarks></remarks>
+</member><member name="T:Monarch_WeldedCylinder_01_09_09.CMS_METHDR.SubTypes">
+	<summary>
+ Sub Types of Main Types for _lagTime variable.
+ </summary>
 	<remarks></remarks>
 </member>
 </members>
