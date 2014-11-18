@@ -2037,7 +2037,7 @@ Public Class IFLSolidWorksClass
                 'Renaming can start here
                 'ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.oRenamingHashTable
                 Dim arrpart As String() = fileName.Split("\")
-                Dim strPart As String = arrpart(UBound(arrpart))
+                Dim strPart As String = arrpart(UBound(arrpart)).ToUpper() 'vamsi 18-1-2014 for cross tube fabricating and casting
                 If Not (strPart.IndexOf("PISTON") <> -1 OrElse strPart.IndexOf("CYL HEAD WIRE RING") <> -1 OrElse strPart.IndexOf("7") <> -1 OrElse strPart.IndexOf("6") <> -1 OrElse strPart.IndexOf("5") <> -1) Then
                     Dim strCodeNumber As String = String.Empty
                     If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.oRenamingHashTable.ContainsKey(strPart.Substring(0, strPart.IndexOf("."))) OrElse (Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.txtCylinderHeadCode.Text) <> "New Design" AndAlso Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.txtCylinderHeadCode.Text) <> "" AndAlso strPart.IndexOf("CYL HEAD") <> -1) Then
@@ -2057,10 +2057,10 @@ Public Class IFLSolidWorksClass
                         '11_10_2010   RAGAVA
                         If strPart.IndexOf("COLLAR") <> -1 Then
                             strCodeNumber = GetCollarCode()
-                        ElseIf strPart.IndexOf("BASE_CROSSTUBE", StringComparison.CurrentCultureIgnoreCase) <> -1 Then
-                            strCodeNumber = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_BaseEnd
-                        ElseIf strPart.IndexOf("ROD_CROSSTUBE", StringComparison.CurrentCultureIgnoreCase) <> -1 Then
-                            strCodeNumber = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_RodEnd
+                            'ElseIf strPart.IndexOf("BASE_CROSSTUBE", StringComparison.CurrentCultureIgnoreCase) <> -1 Then
+                            '    strCodeNumber = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_BaseEnd
+                            'ElseIf strPart.IndexOf("ROD_CROSSTUBE", StringComparison.CurrentCultureIgnoreCase) <> -1 Then
+                            '    strCodeNumber = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_RodEnd
 
                         ElseIf strPart.IndexOf(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName) <> -1 AndAlso Trim(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName) <> "" Then    '12_10_2010   RAGAVA 08-09-2014 vamsi index of second parameter '' StringComparison.CurrentCultureIgnoreCase''
 
