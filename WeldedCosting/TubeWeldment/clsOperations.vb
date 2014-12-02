@@ -40,10 +40,11 @@ Public Class clsOperations
     Private ReadOnly Property ColumnByBoreDia() As Hashtable
         Get
             ColumnByBoreDia = New Hashtable
+
             ColumnByBoreDia.Add(1.5, "[BoreDia_1.50]")
             ColumnByBoreDia.Add(1.75, "[BoreDia_1.75]")
             ColumnByBoreDia.Add(2.0, "[BoreDia_2.00]")
-            ColumnByBoreDia.Add(2.25, "[BoreDia_2.25]")
+            ColumnByBoreDia.Add(2.25, "[BoreDia_2.50]") 'vamsi 19-11-2014 changed 2.25 to 2.50
             ColumnByBoreDia.Add(2.5, "[BoreDia_2.50]")
             ColumnByBoreDia.Add(2.75, "[BoreDia_2.75]")
             If _dblTubeThickness.Equals(0.188) Then
@@ -51,9 +52,12 @@ Public Class clsOperations
             Else
                 ColumnByBoreDia.Add(3.0, "[BoreDia_3.00_0.250]")
             End If
-            ColumnByBoreDia.Add(3.5, "[BoreDia_3.50]")
+            ColumnByBoreDia.Add(3.25, "[BoreDia_3.50]")
+            ColumnByBoreDia.Add(3.5, "[BoreDia_3.50]")  'vamsi 19-11-2014
+            ColumnByBoreDia.Add(3.75, "[BoreDia_4.00]") 'vamsi 19-11-2014
             ColumnByBoreDia.Add(4.0, "[BoreDia_4.00]")
             ColumnByBoreDia.Add(4.5, "[BoreDia_4.50]")
+            ColumnByBoreDia.Add(4.75, "[BoreDia_5.00]") 'vamsi 19-11-2014
             ColumnByBoreDia.Add(5.0, "[BoreDia_5.00]")
             Return ColumnByBoreDia
         End Get
@@ -359,7 +363,7 @@ Public Class clsOperations
                     _dblNoofPorts = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.NoOfPorts_RodEnd
                 End If
             End If
-            _dblRunStandardCost = _oOperationsDMC.getPortWeldingDetailsStandardCost((Math.Round(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.OriginalTubeLength)).ToString, _dblNoofPorts)         '07_12_2010   RAGAVA
+            _dblRunStandardCost = _oOperationsDMC.getPortWeldingDetailsStandardCost(((ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.OriginalTubeLength).ToString * (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter.ToString)), _dblNoofPorts)         '07_12_2010   RAGAVA  '19-11-2014 vamsi added borediameter
             addDataToStructure(_strWorkCenter, _dblRunStandardCost)
             '12_10_2010     RAGAVA
             If ObjClsWeldedCylinderFunctionalClass.TubeSequence_Details.ContainsKey(_strWorkCenter) = False Then

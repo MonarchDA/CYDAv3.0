@@ -1820,11 +1820,11 @@ Public Class IFLSolidWorksClass
                         Common_TraversAndDeletions_And_SuppressionParts()
                         Try
                             oIflBaseSolidWorksClass.SaveAndCloseAllDocuments()       '02_09_2009   ragava
-                            '07_06_2011   ragava
-                            If arrAsmFileEntries(intCount).IndexOf("TUBE_WELDMENT") <> -1 OrElse arrAsmFileEntries(intCount).IndexOf("ROD_WELDMENT") <> -1 Then
-                                oIflBaseSolidWorksClass.SaveAndCloseAllDocuments()
-                            End If
-                            'TILL   HERE
+                            '07_06_2011   ragava  vamsi 25-11-2014 start
+                            'If arrAsmFileEntries(intCount).IndexOf("TUBE_WELDMENT") <> -1 OrElse arrAsmFileEntries(intCount).IndexOf("ROD_WELDMENT") <> -1 Then
+                            '    oIflBaseSolidWorksClass.SaveAndCloseAllDocuments()
+                            'End If
+                            'TILL   HERE  25-11-2014
                         Catch ex As Exception
                         End Try
 
@@ -2680,12 +2680,31 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
             End If
             'Till   Here
 
+
+
             If ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._blnIsBaseEndPinsPresent = False Then
                 DeleteNote("DetailItem553@Drawing View2", "Drawing View2")
             End If
             If ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._blnIsRodEndPinsPresent = False Then
                 DeleteNote("DetailItem557@Drawing View2", "Drawing View2")
             End If
+
+            Try
+                'Dim strPinSize As Double = dblPinSize
+                If (ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._blnIsBaseEndPinsPresent = True OrElse ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._blnIsRodEndPinsPresent = True) AndAlso ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.ChkIncludePinkitPerBom.Checked = True Then          '19_10_2011   RAGAVA
+                    'InsertViewFromexternalPart _
+                    '        (strDrawingFile, "X:\TieRodModels\TIE_ROD_STD_MODELS\UPDATED Pin kit subassembly.SLDASM", _
+                    '        docName, ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._dblPinHoleSize_BaseEnd, ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._dblPinHoleSize_RodEnd, ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_BaseEnd, ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_RodEnd)
+
+                    InsertViewFromexternalPart _
+                            (strDrawingFile, "X:\TieRodModels\TIE_ROD_STD_MODELS\UPDATED Pin kit subassembly.SLDASM", _
+                            docName, ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._dblPinHoleSize_BaseEnd, ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode)
+                End If
+            Catch ex As Exception
+
+            End Try
+
+
             'Till Here 
 
             '25_08_2010    RAGAVA
@@ -3436,4 +3455,32 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
     '        'MsgBox("Error in displaying Part")
     '    End Try
     'End Sub
+    Public Function InsertViewFromexternalPart(ByVal _strDrwgInToWhichViewIsInserted As String, ByVal AssemblyPathWhoseViewToBeInserted As String, ByVal strDrawingName As String, ByVal dblPinSize As Double, ByVal KitCode As String) As Boolean
+        Try
+            'Dim oSwSelMgr As SldWorks.SelectionMgr
+            Dim blnSelection As Boolean
+            Dim MyView As SldWorks.View
+            Dim Errors, nWarnings As Long
+
+            ConnectSolidWorks()
+            If _strDrwgInToWhichViewIsInserted = "" Then
+                _strDrwgInToWhichViewIsInserted = "X:\TieRodModels\TIE_ROD_STD_MODELS\UPDATED Pin kit subassembly.SLDASM"
+            End If
+            SolidWorksModel = SolidWorksApplicationObject.OpenDoc6(AssemblyPathWhoseViewToBeInserted, 2, SwConst.swOpenDocOptions_e.swOpenDocOptions_LoadModel, "", Errors, nWarnings)
+            SolidWorksModel = SolidWorksApplicationObject.OpenDoc6(_strDrwgInToWhichViewIsInserted, 3, SwConst.swOpenDocOptions_e.swOpenDocOptions_LoadModel, "", Errors, nWarnings)
+
+            EnableConfigurations(KitCode, _strDrwgInToWhichViewIsInserted)
+            SolidWorksApplicationObject.ActivateDoc(strDrawingName)
+            SolidWorksDrawingDocument = SolidWorksApplicationObject.ActiveDoc
+            MyView = SolidWorksDrawingDocument.CreateDrawViewFromModelView3(AssemblyPathWhoseViewToBeInserted, "*Right", 0.04447209023402, 0.1546562039322, 0)
+            'blnSelection = SolidWorksModel.Extension.SelectByID2("", "EDGE", 0.04414273496365, 0.1418113483775, -1499.985685927, False, 0, Nothing, 0)
+            blnSelection = SolidWorksModel.Extension.SelectByID2("Point1@Origin@pin subassembly-1@" & MyView.Name, "EXTSKETCHPOINT", 0, 0, 0, False, 0, Nothing, 0)
+            ' Dim strText As String = "PIN KIT" & vbNewLine & "INCLUDES 2 - <MOD-DIAM>" & Format(dblPinSize, "0.00").ToString & " PINS C/W" & vbNewLine & UCase(RodPinClips) & " TYP."
+            ' SolidWorksDrawingDocument.InsertNewNote(strText, True, False, False, 1, 0.125)
+            ' blnSelection = SolidWorksModel.Extension.SelectByID2("Point1@Origin@pin subassembly-1@" & MyView.Name, "EXTSKETCHPOINT", 0, 0, 0, False, 0, Nothing, 0)
+            ' SolidWorksDrawingDocument.InsertNewNote("8", False, True, False, 1, 0.125)
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class

@@ -9,8 +9,8 @@ Public Class frmPin_Port_PaintAccessories
     Private _strPinMaterial As String
     Private _dblWorkingLengthCalculation_BaseEnd As Double
     Private _dblWorkingLengthCalculation_RodEnd As Double
-    Private _dblPinHoleSize_BaseEnd As Double
-    Private _dblPinHoleSize_RodEnd As Double
+    Public _dblPinHoleSize_BaseEnd As Double '21-11-14 vamsi made public
+    Public _dblPinHoleSize_RodEnd As Double '21-11-14 vamsi made public
     Private _strPortSize_RodEnd As String
     Private _strPortSize_BaseEnd As String
     Private _strPortType_BaseEnd As String
@@ -92,13 +92,15 @@ Public Class frmPin_Port_PaintAccessories
     Public ReadOnly Property ControlsData() As ArrayList
         Get
             ControlsData = New ArrayList
-            If _blnIsBaseEndPinsPresent Then
+            ' If _blnIsBaseEndPinsPresent Then 'vamsi 25-11-2014
+            If _blnIsBaseEndPinsPresent AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then
                 ControlsData.Add(New Object(3) {"DB", "Base End Pins", "R3", "Yes"})
             Else
                 ControlsData.Add(New Object(3) {"DB", "Base End Pins", "R3", "No"})
             End If
 
-            If _blnIsRodEndPinsPresent Then
+            'If _blnIsRodEndPinsPresent Then 'vamsi 25-11-2014
+            If _blnIsRodEndPinsPresent AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then
                 ControlsData.Add(New Object(3) {"DB", "Rod End Pins", "R5", "Yes"})
             Else
                 ControlsData.Add(New Object(3) {"DB", "Rod End Pins", "R5", "No"})
@@ -117,11 +119,11 @@ Public Class frmPin_Port_PaintAccessories
                     If _blnIsBaseEndPortAccessories2Present Then
                         ControlsData.Add(New Object(3) {"DB", "Base End Port Accessories 2", "R25", _strPortAccessory2Code_BaseEnd})
                     End If
-                    End If
+                End If
             Else
-                    ControlsData.Add(New Object(3) {"DB", "Base End Port Accessories", "R7", "No"})
-                    ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories Code", "R8", ""})
-                    ControlsData.Add(New Object(3) {"DB", "Base End Port Accessories 2", "R25", ""})
+                ControlsData.Add(New Object(3) {"DB", "Base End Port Accessories", "R7", "No"})
+                ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories Code", "R8", ""})
+                ControlsData.Add(New Object(3) {"DB", "Base End Port Accessories 2", "R25", ""})
             End If
 
 
@@ -139,9 +141,9 @@ Public Class frmPin_Port_PaintAccessories
                     End If
                 End If
             Else
-                    ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories", "R9", "No"})
-                    ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories Code", "R10", ""})
-                    ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories 2", "R26", ""})
+                ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories", "R9", "No"})
+                ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories Code", "R10", ""})
+                ControlsData.Add(New Object(3) {"DB", "Rod End Port Accessories 2", "R26", ""})
             End If
             'ANUP 11-10-2010 TILL HERE
 
@@ -174,13 +176,15 @@ Public Class frmPin_Port_PaintAccessories
             End If
 
             'ANUP 09-11-2010 START
-            If cmbPins_BaseEnd.Text = "Yes" Then
+            'If cmbPins_BaseEnd.Text = "Yes" 25-11-14
+            If cmbPins_BaseEnd.Text = "Yes" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then
                 ControlsData.Add(New Object(3) {"DB", "Base End Pins and Clips Code", "R4", _strPin_ClipCode_BaseEnd})
             Else
                 ControlsData.Add(New Object(3) {"DB", "Base End Pins and Clips Code", "R4", ""})
             End If
 
-            If cmbPins_RodEnd.Text = "Yes" Then
+            'If cmbPins_RodEnd.Text = "Yes" 25-11-14
+            If cmbPins_RodEnd.Text = "Yes" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then
                 ControlsData.Add(New Object(3) {"DB", "Rod End Pins and Clips Code", "R6", _strPin_ClipCode_RodEnd})
             Else
                 ControlsData.Add(New Object(3) {"DB", "Rod End Pins and Clips Code", "R6", ""})
@@ -203,8 +207,9 @@ Public Class frmPin_Port_PaintAccessories
             Try
                 ' clsAddExistingCodes.AddExistingCodeToHashTable(
                 '06_06_2011  RAGAVA
-                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = False AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode <> "" OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode <> "") Then
+                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode <> "" OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode <> "") Then 'changed to true 25-11-14
                     '05_07_2011   RAGAVA
+                    'If ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.chkInstallPinAndClips.Checked = True AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode <> "" OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode <> "") Then
                     If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode Then
                         clsAddExistingCodes.AddExistingCodeToHashTable("BASE/ROD END KIT", ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode, 1, "EA")
                     Else
@@ -218,11 +223,21 @@ Public Class frmPin_Port_PaintAccessories
                     GoTo ESC_Pin_And_clips
                 Else
                     'TILL    HERE
-                    If _strPinCodeBE.Equals(_strPinCodeRE) Then
-                        clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 2, "EA")
-                    Else
-                        clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 1, "EA")
-                        clsAddExistingCodes.AddRodEndPinCode(_strPinCodeRE, 1, "EA")
+                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = False Then 'vamsi added 226 if condition 26-11-2014
+                        'If _strPinCodeBE.Equals(_strPinCodeRE) Then  'vamsi commented 2-12-2014    
+                        '    clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 2, "EA")
+                        'Else
+                        '    clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 1, "EA")
+                        '    clsAddExistingCodes.AddRodEndPinCode(_strPinCodeRE, 1, "EA")
+                        'End If
+                        'vamsi 2-12-2014 start  
+                        If _strClipCodeBE.Equals(_strClipCodeRE) Then
+                            clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 4, "EA")
+                        Else
+                            clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 2, "EA")
+                            clsAddExistingCodes.AddRodEndClipCode(_strClipCodeRE, 2, "EA")
+                        End If
+                        'end
                     End If
                 End If
             Catch ex As Exception
@@ -230,11 +245,21 @@ Public Class frmPin_Port_PaintAccessories
             End Try
 
             Try
-                If _strClipCodeBE.Equals(_strClipCodeRE) Then
-                    clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 4, "EA")
-                Else
-                    clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 2, "EA")
-                    clsAddExistingCodes.AddRodEndClipCode(_strClipCodeRE, 2, "EA")
+                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then 'vamsi added 240 if condition 26-11-2014
+                    'vamsi 2-12-2014 start  
+                    If _strPinCodeBE.Equals(_strPinCodeRE) Then
+                        clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 2, "EA")
+                    Else
+                        clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 1, "EA")
+                        clsAddExistingCodes.AddRodEndPinCode(_strPinCodeRE, 1, "EA")
+                    End If
+                    'end
+                    'If _strClipCodeBE.Equals(_strClipCodeRE) Then 'vamsi commented 2-12-2014 
+                    '    clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 4, "EA")
+                    'Else
+                    '    clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 2, "EA")
+                    '    clsAddExistingCodes.AddRodEndClipCode(_strClipCodeRE, 2, "EA")
+                    'End If
                 End If
             Catch ex As Exception
             End Try

@@ -397,65 +397,75 @@ Public Class clsMaterial_CMS
                             strBubbleNumber = "4"
                         ElseIf ObjClsWeldedCylinderFunctionalClass.PistonCodeNumber = oExistingListItems.strPartCode Then
                             strBubbleNumber = "3"
+
                         ElseIf Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_BaseEnd).IndexOf(oExistingListItems.strPartCode & "-") <> -1 OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_RodEnd).IndexOf(oExistingListItems.strPartCode & "-") <> -1 Then
                             strBubbleNumber = "7"
                         ElseIf Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_BaseEnd).IndexOf("-" & oExistingListItems.strPartCode) <> -1 OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_RodEnd).IndexOf("-" & oExistingListItems.strPartCode) <> -1 Then
                             strBubbleNumber = "8"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strRodSealCode_Purchase = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "11"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmPistonDesign._strPistonSealCode_Purchased = oExistingListItems.strPartCode Then
-                            'strBubbleNumber = "12"
-                            strBubbleNumber = "14"      '20_04_2011  RAGAVA as per JINKA
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strSanpInWiperCode_Purchase = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "13"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmPistonDesign._strPistonWearRingCode_Purchased = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "15"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strORINGCode_Purchase = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "10"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strBackupRINGCode_Purchase = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "40"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strWearRingCode_Purchase = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "19"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strInternalWireCodeCode_Purchase = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "20"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strExternalWireRingCode_Purchase = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "21"
-                        ElseIf UCase(oExistingListItems.strDescription).IndexOf("NUT HEX") <> -1 Then
-                            strBubbleNumber = "25"
-                        ElseIf (UCase(oExistingListItems.strDescription).IndexOf("ZDEEPROD") <> -1 OrElse UCase(oExistingListItems.strDescription).IndexOf("SEAL DUAL") <> -1) AndAlso ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.cmbHeadType.Text = "WireRing" Then
-                            strBubbleNumber = "10"
-                        ElseIf oExistingListItems.strPartCode.IndexOf("110702") <> -1 Then
-                            strBubbleNumber = "28"
-                        ElseIf oExistingListItems.strPartCode.IndexOf("110681") <> -1 Then
-                            strBubbleNumber = "29"
-                        ElseIf oExistingListItems.strPartCode.IndexOf("110701") <> -1 Then
-                            strBubbleNumber = "30"
-                        ElseIf oExistingListItems.strPartCode.IndexOf("148231") <> -1 Then
-                            strBubbleNumber = "35"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.Breather > 0 AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPortAccessoryCode_BaseEnd = oExistingListItems.strPartCode OrElse ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPortAccessoryCode_RodEnd = oExistingListItems.strPartCode) Then
-                            strBubbleNumber = "34"
-                        ElseIf UCase(oExistingListItems.strDescription).IndexOf("ADAPTOR") <> -1 OrElse UCase(oExistingListItems.strDescription).IndexOf("THREAD PROTECTOR CAP") <> -1 Then
-                            strBubbleNumber = "36"
-                        ElseIf IsShipping_BaseEnd.IndexOf(oExistingListItems.strPartCode) <> -1 OrElse IsShipping_RodEnd.IndexOf(oExistingListItems.strPartCode) <> -1 Then
-                            strBubbleNumber = "31"
-                        ElseIf UCase(oExistingListItems.strDescription).IndexOf("ROD CLEVIS") <> -1 AndAlso IsRodClevis(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_RodEnd, strBushing) Then
-                            strBubbleNumber = "16"   'set screw
-                            strBubbleNumber = "17"
-                        ElseIf (strBushing <> "" AndAlso strBushing <> "N/A") OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BushingPartCode_RodEnd) = oExistingListItems.strPartCode OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmTubeDetails._strBushingPartNumber_BaseEnd) = oExistingListItems.strPartCode Then
-                            strBubbleNumber = "45"
+                            ' ''ElseIf Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_BaseEnd).IndexOf(oExistingListItems.strPartCode) <> -1 OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_RodEnd).IndexOf(oExistingListItems.strPartCode) <> -1 Then
+                            ' ''    If ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.chkInstallPinAndClips.Checked = True Then
+                            ' ''        strBubbleNumber = "7"
+                            ' ''    End If
+                            ' ''ElseIf Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_BaseEnd).IndexOf(oExistingListItems.strPartCode) <> -1 OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPin_ClipCode_RodEnd).IndexOf(oExistingListItems.strPartCode) <> -1 Then
+                            ' ''    If ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.ChkIncludePinkitPerBom.Checked = True Then
+                            ' ''        strBubbleNumber = "8"
+                            ' ''    End If
 
-                        ElseIf UCase(oExistingListItems.strDescription).IndexOf("MASKWIPERSEAL") <> -1 Then  '  ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter.ToString <> "" Then
-                            strBubbleNumber = "37"
-                        End If
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strRodSealCode_Purchase = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "11"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmPistonDesign._strPistonSealCode_Purchased = oExistingListItems.strPartCode Then
+                                'strBubbleNumber = "12"
+                                strBubbleNumber = "14"      '20_04_2011  RAGAVA as per JINKA
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strSanpInWiperCode_Purchase = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "13"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmPistonDesign._strPistonWearRingCode_Purchased = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "15"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strORINGCode_Purchase = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "10"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strBackupRINGCode_Purchase = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "40"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strWearRingCode_Purchase = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "19"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strInternalWireCodeCode_Purchase = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "20"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strExternalWireRingCode_Purchase = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "21"
+                            ElseIf UCase(oExistingListItems.strDescription).IndexOf("NUT HEX") <> -1 Then
+                                strBubbleNumber = "25"
+                            ElseIf (UCase(oExistingListItems.strDescription).IndexOf("ZDEEPROD") <> -1 OrElse UCase(oExistingListItems.strDescription).IndexOf("SEAL DUAL") <> -1) AndAlso ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.cmbHeadType.Text = "WireRing" Then
+                                strBubbleNumber = "10"
+                            ElseIf oExistingListItems.strPartCode.IndexOf("110702") <> -1 Then
+                                strBubbleNumber = "28"
+                            ElseIf oExistingListItems.strPartCode.IndexOf("110681") <> -1 Then
+                                strBubbleNumber = "29"
+                            ElseIf oExistingListItems.strPartCode.IndexOf("110701") <> -1 Then
+                                strBubbleNumber = "30"
+                            ElseIf oExistingListItems.strPartCode.IndexOf("148231") <> -1 Then
+                                strBubbleNumber = "35"
+                            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.Breather > 0 AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPortAccessoryCode_BaseEnd = oExistingListItems.strPartCode OrElse ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories._strPortAccessoryCode_RodEnd = oExistingListItems.strPartCode) Then
+                                strBubbleNumber = "34"
+                            ElseIf UCase(oExistingListItems.strDescription).IndexOf("ADAPTOR") <> -1 OrElse UCase(oExistingListItems.strDescription).IndexOf("THREAD PROTECTOR CAP") <> -1 Then
+                                strBubbleNumber = "36"
+                            ElseIf IsShipping_BaseEnd.IndexOf(oExistingListItems.strPartCode) <> -1 OrElse IsShipping_RodEnd.IndexOf(oExistingListItems.strPartCode) <> -1 Then
+                                strBubbleNumber = "31"
+                            ElseIf UCase(oExistingListItems.strDescription).IndexOf("ROD CLEVIS") <> -1 AndAlso IsRodClevis(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_RodEnd, strBushing) Then
+                                strBubbleNumber = "16"   'set screw
+                                strBubbleNumber = "17"
+                            ElseIf (strBushing <> "" AndAlso strBushing <> "N/A") OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BushingPartCode_RodEnd) = oExistingListItems.strPartCode OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmTubeDetails._strBushingPartNumber_BaseEnd) = oExistingListItems.strPartCode Then
+                                strBubbleNumber = "45"
+
+                            ElseIf UCase(oExistingListItems.strDescription).IndexOf("MASKWIPERSEAL") <> -1 Then  '  ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter.ToString <> "" Then
+                                strBubbleNumber = "37"
+                            End If
 
 
 
 
-                        'End If
-                        'Till    Here
-                        If strBubbleNumber = "" Then
-                            strBubbleNumber = "0"       '23_08_2010   RAGAVA
-                        End If
+                            'End If
+                            'Till    Here
+                            If strBubbleNumber = "" Then
+                                strBubbleNumber = "0"       '23_08_2010   RAGAVA
+                            End If
                     Catch ex As Exception
                     End Try
                 End If

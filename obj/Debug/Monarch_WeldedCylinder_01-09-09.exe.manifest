@@ -180,7 +180,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vAe//+jhtiJ1r2grBp7o/aTAryU=</dsig:DigestValue>
+        <dsig:DigestValue>OmIwq7untHY3N6Pu3w/cDFp4TzI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -197,14 +197,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monarch_WeldedCylinder_01-09-09.exe" size="3288064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monarch_WeldedCylinder_01-09-09.exe" size="3289088">
       <assemblyIdentity name="Monarch_WeldedCylinder_01-09-09" version="1.0.1.15" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>MPZevgi0GHlJdmIj+Y8kBRej/5I=</dsig:DigestValue>
+        <dsig:DigestValue>jMHnzMNQGL6wwxy8iM64QEgS/0I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

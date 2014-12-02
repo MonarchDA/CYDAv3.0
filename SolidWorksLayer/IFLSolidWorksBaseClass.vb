@@ -495,5 +495,7 @@ Public Class IFLSolidWorksBaseClass
             '_oErrorObject = oException
         End Try
     End Function
+
+  
 #End Region
 End Class
