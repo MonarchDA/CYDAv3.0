@@ -205,9 +205,9 @@ Public Class frmPin_Port_PaintAccessories
 
             'Sunny:09-08-10
             Try
-                ' clsAddExistingCodes.AddExistingCodeToHashTable(
+
                 '06_06_2011  RAGAVA
-                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode <> "" OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode <> "") Then 'changed to true 25-11-14
+                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = False AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode <> "" OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode <> "") Then 'changed to true 25-11-14
                     '05_07_2011   RAGAVA
                     'If ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.chkInstallPinAndClips.Checked = True AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode <> "" OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode <> "") Then
                     If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndKitCode = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRodEndKitCode Then
@@ -223,46 +223,42 @@ Public Class frmPin_Port_PaintAccessories
                     GoTo ESC_Pin_And_clips
                 Else
                     'TILL    HERE
-                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = False Then 'vamsi added 226 if condition 26-11-2014
-                        'If _strPinCodeBE.Equals(_strPinCodeRE) Then  'vamsi commented 2-12-2014    
-                        '    clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 2, "EA")
-                        'Else
-                        '    clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 1, "EA")
-                        '    clsAddExistingCodes.AddRodEndPinCode(_strPinCodeRE, 1, "EA")
-                        'End If
-                        'vamsi 2-12-2014 start  
+                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then
+                        If _strPinCodeBE.Equals(_strPinCodeRE) Then  'vamsi commented 2-12-2014    
+                            clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 2, "EA")
+                        Else
+                            clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 1, "EA")
+                            clsAddExistingCodes.AddRodEndPinCode(_strPinCodeRE, 1, "EA")
+                        End If
+                    End If
+
+                    'vamsi 04-12-2014 start
+                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then
                         If _strClipCodeBE.Equals(_strClipCodeRE) Then
                             clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 4, "EA")
                         Else
                             clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 2, "EA")
                             clsAddExistingCodes.AddRodEndClipCode(_strClipCodeRE, 2, "EA")
                         End If
-                        'end
                     End If
+                    'End
+
                 End If
             Catch ex As Exception
 
             End Try
 
-            Try
-                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then 'vamsi added 240 if condition 26-11-2014
-                    'vamsi 2-12-2014 start  
-                    If _strPinCodeBE.Equals(_strPinCodeRE) Then
-                        clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 2, "EA")
-                    Else
-                        clsAddExistingCodes.AddBaseEndPinCode(_strPinCodeBE, 1, "EA")
-                        clsAddExistingCodes.AddRodEndPinCode(_strPinCodeRE, 1, "EA")
-                    End If
-                    'end
-                    'If _strClipCodeBE.Equals(_strClipCodeRE) Then 'vamsi commented 2-12-2014 
-                    '    clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 4, "EA")
-                    'Else
-                    '    clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 2, "EA")
-                    '    clsAddExistingCodes.AddRodEndClipCode(_strClipCodeRE, 2, "EA")
-                    'End If
-                End If
-            Catch ex As Exception
-            End Try
+            'Try  'vamsi 02-12-2014 commented
+            '    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnInstallPinsandClips_Checked = True Then
+            '        If _strClipCodeBE.Equals(_strClipCodeRE) Then
+            '            clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 4, "EA")
+            '        Else
+            '            clsAddExistingCodes.AddBaseEndClipCode(_strClipCodeBE, 2, "EA")
+            '            clsAddExistingCodes.AddRodEndClipCode(_strClipCodeRE, 2, "EA")
+            '        End If
+            '    End If
+            'Catch ex As Exception
+            'End Try
 ESC_Pin_And_clips:  '06_06_2011    RAGAVA
             '21_10_2010    RAGAVA
             Try

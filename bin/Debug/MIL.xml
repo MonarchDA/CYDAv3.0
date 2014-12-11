@@ -13,7 +13,7 @@
   <frmContractDetails>
     <TabIndex>2</TabIndex>
     <ConName>cmbCustomerName</ConName>
-    <Value>AIR HYDRAULICS</Value>
+    <Value>ALL HYDRAULICS INC.</Value>
   </frmContractDetails>
   <frmPrimaryInputs>
     <TabIndex>109</TabIndex>
@@ -23,7 +23,7 @@
   <frmPrimaryInputs>
     <TabIndex>21</TabIndex>
     <ConName>lvwPistonDetails</ConName>
-    <Value>1-3000</Value>
+    <Value>1 1/8-3000</Value>
   </frmPrimaryInputs>
   <frmPrimaryInputs>
     <TabIndex>20</TabIndex>
@@ -73,7 +73,7 @@
   <frmPrimaryInputs>
     <TabIndex>1</TabIndex>
     <ConName>cmbBoreDiameters</ConName>
-    <Value>3.5</Value>
+    <Value>4</Value>
   </frmPrimaryInputs>
   <frmPrimaryInputs>
     <TabIndex>8</TabIndex>
@@ -108,7 +108,7 @@
   <frmPistonDesign>
     <TabIndex>4</TabIndex>
     <ConName>txtPistonCode</ConName>
-    <Value>258827</Value>
+    <Value>258834</Value>
   </frmPistonDesign>
   <frmPistonDesign>
     <TabIndex>3</TabIndex>
@@ -133,7 +133,7 @@
   <frmHeadDesign>
     <TabIndex>6</TabIndex>
     <ConName>txtCylinderHeadCode</ConName>
-    <Value>259624</Value>
+    <Value>259631</Value>
   </frmHeadDesign>
   <frmHeadDesign>
     <TabIndex>5</TabIndex>
@@ -163,7 +163,7 @@
   <frmHeadDesign>
     <TabIndex>133</TabIndex>
     <ConName>temCylinderHeadCode</ConName>
-    <Value>259624</Value>
+    <Value>259631</Value>
   </frmHeadDesign>
   <frmTubeDetails>
     <TabIndex>30</TabIndex>
@@ -208,7 +208,7 @@
   <frmTubeDetails>
     <TabIndex>178</TabIndex>
     <ConName>txtBaseendPartCode</ConName>
-    <Value>760015</Value>
+    <Value>760017</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>173</TabIndex>
@@ -223,7 +223,7 @@
   <frmTubeDetails>
     <TabIndex>9</TabIndex>
     <ConName>lvwWallThickness</ConName>
-    <Value>0.248-Skived-D--1098</Value>
+    <Value>0.245-Skived-D--1113</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>13</TabIndex>
@@ -238,7 +238,7 @@
   <frmTubeDetails>
     <TabIndex>5</TabIndex>
     <ConName>txtSwingClearance</ConName>
-    <Value>2.090</Value>
+    <Value>1.890</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>2</TabIndex>
@@ -258,7 +258,7 @@
   <frmTubeDetails>
     <TabIndex>9</TabIndex>
     <ConName>txtLugThickness</ConName>
-    <Value>0.630</Value>
+    <Value>0.750</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>11</TabIndex>
@@ -378,12 +378,12 @@
   <frmDLPortInTubeDetails>
     <TabIndex>137</TabIndex>
     <ConName>txtRequiredLugsWidth</ConName>
-    <Value>1.87214285714286</Value>
+    <Value>2.06166666666667</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>134</TabIndex>
     <ConName>txtRequiredLugThickness</ConName>
-    <Value>0.63</Value>
+    <Value>0.75</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>136</TabIndex>
@@ -398,12 +398,12 @@
   <frmDLPortInTubeDetails>
     <TabIndex>133</TabIndex>
     <ConName>txtRequiredSwingClearance</ConName>
-    <Value>2.09</Value>
+    <Value>1.89</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>4</TabIndex>
     <ConName>txtLugThickness</ConName>
-    <Value>0.630</Value>
+    <Value>0.750</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>10</TabIndex>
@@ -423,7 +423,7 @@
   <frmDLPortInTubeDetails>
     <TabIndex>7</TabIndex>
     <ConName>txtLugsWidth</ConName>
-    <Value>2.400</Value>
+    <Value>2.560</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>6</TabIndex>
@@ -438,17 +438,17 @@
   <frmDLPortInTubeDetails>
     <TabIndex>3</TabIndex>
     <ConName>txtSwingClearance</ConName>
-    <Value>2.090</Value>
+    <Value>1.890</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>2</TabIndex>
     <ConName>txtCodeNumber</ConName>
-    <Value>760015</Value>
+    <Value>760017</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>1</TabIndex>
     <ConName>lvwDoubleLugListView</ConName>
-    <Value>760015-END CAP 2LUG 3.50-1.015-0.63-2-7.74180-No-1054</Value>
+    <Value>760017-END CAP 2 LUG  4.00-1.015-0.75-2-7.93650-Yes-1041</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>177</TabIndex>
@@ -658,7 +658,7 @@
   <frmRetractedLengthValidation>
     <TabIndex>32</TabIndex>
     <ConName>txtAdjustSwingClearance_BE</ConName>
-    <Value>2.09</Value>
+    <Value>1.89</Value>
   </frmRetractedLengthValidation>
   <frmRetractedLengthValidation>
     <TabIndex>28</TabIndex>
@@ -713,7 +713,7 @@
   <frmRetractedLengthValidation>
     <TabIndex>38</TabIndex>
     <ConName>txtStickOutDistance</ConName>
-    <Value>2.843</Value>
+    <Value>2.853</Value>
   </frmRetractedLengthValidation>
   <frmPin_Port_PaintAccessories>
     <TabIndex>74</TabIndex>
@@ -758,32 +758,12 @@
   <frmPin_Port_PaintAccessories>
     <TabIndex>42</TabIndex>
     <ConName>cmbPins_RodEnd</ConName>
-    <Value>Yes</Value>
-  </frmPin_Port_PaintAccessories>
-  <frmPin_Port_PaintAccessories>
-    <TabIndex>45</TabIndex>
-    <ConName>cmbPinMaterial_RodEnd</ConName>
-    <Value>Standard</Value>
-  </frmPin_Port_PaintAccessories>
-  <frmPin_Port_PaintAccessories>
-    <TabIndex>46</TabIndex>
-    <ConName>cmbPinClips_RodEnd</ConName>
-    <Value>Cotter Pin</Value>
+    <Value>No</Value>
   </frmPin_Port_PaintAccessories>
   <frmPin_Port_PaintAccessories>
     <TabIndex>41</TabIndex>
     <ConName>cmbPins_BaseEnd</ConName>
-    <Value>Yes</Value>
-  </frmPin_Port_PaintAccessories>
-  <frmPin_Port_PaintAccessories>
-    <TabIndex>43</TabIndex>
-    <ConName>cmbPinMaterial_BaseEnd</ConName>
-    <Value>Standard</Value>
-  </frmPin_Port_PaintAccessories>
-  <frmPin_Port_PaintAccessories>
-    <TabIndex>44</TabIndex>
-    <ConName>cmbPinClips_BaseEnd</ConName>
-    <Value>Cotter Pin</Value>
+    <Value>No</Value>
   </frmPin_Port_PaintAccessories>
   <frmGenerate>
     <TabIndex>130</TabIndex>
@@ -798,12 +778,7 @@
   <frmGenerate>
     <TabIndex>126</TabIndex>
     <ConName>ChkIncludePinkitPerBom</ConName>
-    <Value>True</Value>
-  </frmGenerate>
-  <frmGenerate>
-    <TabIndex>0</TabIndex>
-    <ConName>txtIncludePinkitPerBom</ConName>
-    <Value>4</Value>
+    <Value>False</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>125</TabIndex>
@@ -843,7 +818,7 @@
   <frmGenerate>
     <TabIndex>70</TabIndex>
     <ConName>txtPackagePerSOP</ConName>
-    <Value>5</Value>
+    <Value>4</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>51</TabIndex>

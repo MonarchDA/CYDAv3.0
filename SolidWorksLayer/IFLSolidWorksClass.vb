@@ -764,6 +764,8 @@ Public Class IFLSolidWorksClass
         End Try
     End Sub
 
+  
+
     ''' <summary>
     ''' gets the Auto ballooning for the drawing document.
     ''' </summary>
@@ -2520,6 +2522,25 @@ Public Class IFLSolidWorksClass
                 checkProperty("EXTENDED LENGTH", Math.Round((ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength + ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RetractedLength), 2))      '03_09_2010    RAGAVA
                 UpdateAssemblyDrawing()
 
+                'vamsi 10-12-14 start
+                If Not (ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.chkDoubleLugFabricationRequired.Checked = True OrElse
+                   ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                   ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingYes.chkBHFabricationRequired.Checked = True OrElse
+                   ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                   ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingYes.chkCrossTubeFabricationRequired.Checked = True OrElse
+                   ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                   ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingYes.chkSingleLugFabricationRequired.Checked = True OrElse
+                   ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingNo_PortInTube2.rdbFabrication.Checked = True) Then
+
+
+
+                    DeleteConfiguration("Default1")
+                End If
+
+                'end
+
+
+
                 '16_08_2010    RAGAVA
                 Dim value As String = UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodMaterial)
                 If value.IndexOf("NITRO") <> -1 Then
@@ -2733,6 +2754,8 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
             End If
             'end
 
+           
+
             '26_08_2010   RAGAVA
             If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.DesignType = "New" Then
                 DeleteNote("DetailItem166@Drawing View4", "Drawing View4")
@@ -2795,7 +2818,7 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
                     boolstatus = SolidWorksModel.EditDimensionProperties2(2, Math.Round((ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ToleranceUpperLimit_RodEnd * 0.0254), 3), Math.Round((ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ToleranceLowerLimit_RodEnd * 0.0254), 3), "", "", True, 9, 2, True, 12, 12, "", "<MOD-DIAM>", True, "", "", True)
                     DeleteDimension("D1@ROD_PIN_HOLE_SIZE@WELD_CYLINDER_ASSEMBLY-2@Drawing View2", "Drawing View2")
                 End If
-            Catch ex As Exception
+                Catch ex As Exception
                 'MsgBox("Error in updating Dimension of Weld Cylinder")
                 ObjClsWeldedCylinderFunctionalClass.WriteLogInformation("Error in Updating Dimension of weld Cylinder ")
             End Try
@@ -2825,6 +2848,8 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
                     DeleteView("Drawing View12")
                     DeleteView("Drawing View13")
                 End If
+
+               
 
                 'VAMSI 23-05-14
                 'Try

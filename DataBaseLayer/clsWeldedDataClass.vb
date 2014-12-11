@@ -3340,7 +3340,16 @@ ByVal strSwingClearance As String, ByVal strCrossTubeWidth As String, ByVal strO
                 _strQuery = "select * from welded.PinsDetails where PinDiameter = " + dblPinHoleDiameter.ToString + "  and WorkingLength = " + dblWorkingLength.ToString + " and Hardend = '" + strHardend + "' and ClipsType = '" + strClipsType + "'"
             End If
             GetPinsClips_AccessoriesForm = MonarchConnectionObject.GetTable(_strQuery)
+
+            'If IsNothing(GetPinsClips_AccessoriesForm) OrElse GetPinsClips_AccessoriesForm.Rows.Count <= 0 Then 'vamsi(8 - 12 - 14)
+            '    GetPinsClips_AccessoriesForm = Nothing
+            '    _strErrorMessage = "Data not retrieved from PinsDetails table" + vbCrLf
+            'End If
+
             If IsNothing(GetPinsClips_AccessoriesForm) OrElse GetPinsClips_AccessoriesForm.Rows.Count <= 0 Then
+                _strQuery = "select * from welded.PinsDetails where PinDiameter = " + dblPinHoleDiameter.ToString + " and Hardend = '" + strHardend + "'" + "'order by workinglength asc'"
+                GetPinsClips_AccessoriesForm = MonarchConnectionObject.GetTable(_strQuery)
+            ElseIf IsNothing(GetPinsClips_AccessoriesForm) OrElse GetPinsClips_AccessoriesForm.Rows.Count <= 0 Then
                 GetPinsClips_AccessoriesForm = Nothing
                 _strErrorMessage = "Data not retrieved from PinsDetails table" + vbCrLf
             End If
@@ -3354,7 +3363,8 @@ ByVal strSwingClearance As String, ByVal strCrossTubeWidth As String, ByVal strO
         GetWorkingLength_Pins = 0
         Try
 
-            _strQuery = "select WorkingLength from welded.PinsDetails where WorkingLength >=  " + dblWorkingLength.ToString
+            ' _strQuery = "select WorkingLength from welded.PinsDetails where WorkingLength >=  " + dblWorkingLength.ToString   vamsi 8-12-2014
+            _strQuery = "select WorkingLength from welded.PinsDetails where WorkingLength >=  " + dblWorkingLength.ToString + " order by workinglength asc"
             GetWorkingLength_Pins = MonarchConnectionObject.GetValue(_strQuery)
             If IsNothing(GetWorkingLength_Pins) Then
                 GetWorkingLength_Pins = 0
