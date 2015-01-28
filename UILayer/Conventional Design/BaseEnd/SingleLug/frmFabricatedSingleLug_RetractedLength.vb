@@ -196,7 +196,8 @@ Public Class frmFabricatedSingleLug_RetractedLength
                 'End If
                 'Till  Here
                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationTable = "Welded.BESingleLugDetails"      '15_05_2012   RAGAVA
-                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationPart = "Base_Single_Lug_IFL"        '15_05_2012   RAGAVA
+                'ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationPart = "Base_Single_Lug_IFL"        '15_05_2012   RAGAVA
+                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationPart = "BASE_SINGLE_LUG_IFL"        '15_05_2012   RAGAVA
             End If
             btnClose.Enabled = True
         Catch ex As Exception
@@ -311,7 +312,7 @@ Public Class frmFabricatedSingleLug_RetractedLength
             strFilePart = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.GeneratePath + "\BASE_SINGLE_LUG\Base_Single_Lug_IFL.SLDPRT"
             '27_03_2012   RAGAVA
             'If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strCast_Fabricated_1st = "Fabrication" Then
-            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "Base_Single_Lug_IFL"
+            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "BASE_SINGLE_LUG_IFL"
             'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strCast_Fabricated_1st = "Cast" Then
             '    ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName2 = "Base_Single_Lug_IFL"
             'End If

@@ -3581,6 +3581,56 @@ ByVal strSwingClearance As String, ByVal strCrossTubeWidth As String, ByVal strO
     End Function
 
 
+    'Public Function BEDLCastingWOPortDetails(ByVal strBoreDiameter As String) As DataTable
+    '    BEDLCastingWOPortDetails = Nothing
+    '    _strQuery = " SELECT * FROM Welded.BEDLCastWithOutPort WHERE PartCode =" + strBaseEndPartCode + " AND BoreDiameter = " + strBoreDiameter
+
+    '    BEDLCastingWOPortDetails = MonarchConnectionObject.GetTable(_strQuery)
+
+    '    If IsNothing(BEDLCastingWOPortDetails) OrElse BEDLCastingWOPortDetails.Rows.Count = 0 Then
+    '        BEDLCastingWOPortDetails = Nothing
+    '        _strErrorMessage = "No Matched Row Exist"
+    '    End If
+    'End Function
+
+    'Public Function BEDLCastingWithFlushedPort(ByVal strBaseEndPartCode As String, ByVal strBoreDiameter As String) As DataTable                      'priyanka
+    '    BEDLCastingWithFlushedPort = Nothing
+    '    _strQuery = " SELECT * FROM Welded.BEDLCastWithFlushPort WHERE PartCode =" + strBaseEndPartCode + " AND BoreDiameter = " + strBoreDiameter
+
+    '    BEDLCastingWithFlushedPort = MonarchConnectionObject.GetTable(_strQuery)
+
+    '    If IsNothing(BEDLCastingWithFlushedPort) OrElse BEDLCastingWithFlushedPort.Rows.Count = 0 Then
+    '        BEDLCastingWithFlushedPort = Nothing
+    '        _strErrorMessage = "No Matched Row Exist"
+    '    End If
+    'End Function
+
+    'Public Function BEDLCastingWithRaisedPort(ByVal strBaseEndPartCode As String, ByVal strBoreDiameter As String) As DataTable                      'priyanka
+    '    BEDLCastingWithRaisedPort = Nothing
+    '    _strQuery = " SELECT * FROM BEDLCastWithRaisedPort where partcode =" + strBaseEndPartCode + " AND BoreDiameter = " + strBoreDiameter
+
+
+    '    BEDLCastingWithRaisedPort = MonarchConnectionObject.GetTable(_strQuery)
+
+    '    If IsNothing(BEDLCastingWithRaisedPort) OrElse BEDLCastingWithRaisedPort.Rows.Count = 0 Then
+    '        BEDLCastingWithRaisedPort = Nothing
+    '        _strErrorMessage = "No Matched Row Exist"
+    '    End If
+    'End Function
+
+    'Public Function BEDLCastingWithRaisedPort90(ByVal strBaseEndPartCode As String, ByVal strBoreDiameter As String) As DataTable                      'priyanka
+    '    BEDLCastingWithRaisedPort90 = Nothing
+    '    _strQuery = " SELECT * FROM BEDLCastWithRaisedPort90 WHERE PartCode =" + strBaseEndPartCode + " AND BoreDiameter = " + strBoreDiameter
+
+
+    '    BEDLCastingWithRaisedPort90 = MonarchConnectionObject.GetTable(_strQuery)
+
+    '    If IsNothing(BEDLCastingWithRaisedPort90) OrElse BEDLCastingWithRaisedPort90.Rows.Count = 0 Then
+    '        BEDLCastingWithRaisedPort90 = Nothing
+    '        _strErrorMessage = "No Matched Row Exist"
+    '    End If
+    'End Function
+
 
     'Batch Run Praveen
     Public Sub SaveCodeToBatchRun()

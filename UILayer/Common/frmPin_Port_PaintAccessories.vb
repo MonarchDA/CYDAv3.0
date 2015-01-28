@@ -897,7 +897,7 @@ ESC_Pin_And_clips:  '06_06_2011    RAGAVA
             cmbPinClips_BaseEnd.Enabled = True
             'ANUP 08-11-2010 START
             'Clips_WhichAreToBeSelectedDefault_BaseEnd()    'ANUP 17-08-2010
-            cmbPinClips_BaseEnd.SelectedIndex = 0
+            'cmbPinClips_BaseEnd.SelectedIndex = 0
             Try
                 cmbPinClips_BaseEnd.Text = "Cotter Pin"  '26_07_2011  RAGAVA
             Catch ex As Exception

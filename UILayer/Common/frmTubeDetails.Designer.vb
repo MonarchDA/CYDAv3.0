@@ -64,7 +64,6 @@ Partial Class frmTubeDetails
         Me.cmbPins = New IFLCustomUILayer.IFLComboBox()
         Me.lblPins = New System.Windows.Forms.Label()
         Me.grbTubeSelection = New System.Windows.Forms.GroupBox()
-        Me.lvwWallThickness = New Monarch_WeldedCylinder_01_09_09.clsListViewMIL()
         Me.grbBasePlugDetails = New System.Windows.Forms.GroupBox()
         Me.rdbMilledFlatYes = New System.Windows.Forms.RadioButton()
         Me.rdbMilledFlatNo = New System.Windows.Forms.RadioButton()
@@ -109,6 +108,8 @@ Partial Class frmTubeDetails
         Me.lblGreaseZercs = New System.Windows.Forms.Label()
         Me.LabelGradient7 = New LabelGradient.LabelGradient()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.cmbBaseEndDoubleLugPartCode = New System.Windows.Forms.ComboBox()
+        Me.lvwWallThickness = New Monarch_WeldedCylinder_01_09_09.clsListViewMIL()
         Me.grbPinHoleDetails.SuspendLayout()
         Me.grbBushingDetails.SuspendLayout()
         Me.grbBaseEndSelection.SuspendLayout()
@@ -567,6 +568,7 @@ Partial Class frmTubeDetails
         Me.grbBaseEndSelection.Controls.Add(Me.txtCrossTubeWidth)
         Me.grbBaseEndSelection.Controls.Add(Me.txtLugThickness)
         Me.grbBaseEndSelection.Controls.Add(Me.pnlCrossTube_Thread)
+        Me.grbBaseEndSelection.Controls.Add(Me.cmbBaseEndDoubleLugPartCode)
         Me.grbBaseEndSelection.Location = New System.Drawing.Point(44, 39)
         Me.grbBaseEndSelection.Name = "grbBaseEndSelection"
         Me.grbBaseEndSelection.Size = New System.Drawing.Size(673, 280)
@@ -726,20 +728,6 @@ Partial Class frmTubeDetails
         Me.grbTubeSelection.TabIndex = 17
         Me.grbTubeSelection.TabStop = False
         Me.grbTubeSelection.Text = "Tube Selection"
-        '
-        'lvwWallThickness
-        '
-        Me.lvwWallThickness.FullRowSelect = True
-        Me.lvwWallThickness.GridLines = True
-        Me.lvwWallThickness.HideSelection = False
-        Me.lvwWallThickness.Location = New System.Drawing.Point(6, 17)
-        Me.lvwWallThickness.MultiSelect = False
-        Me.lvwWallThickness.Name = "lvwWallThickness"
-        Me.lvwWallThickness.Scrollable = False
-        Me.lvwWallThickness.Size = New System.Drawing.Size(430, 139)
-        Me.lvwWallThickness.TabIndex = 9
-        Me.lvwWallThickness.UseCompatibleStateImageBehavior = False
-        Me.lvwWallThickness.View = System.Windows.Forms.View.Details
         '
         'grbBasePlugDetails
         '
@@ -1340,6 +1328,30 @@ Partial Class frmTubeDetails
         Me.LabelGradient7.Text = "Grease Zerks"
         Me.LabelGradient7.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'cmbBaseEndDoubleLugPartCode
+        '
+        Me.cmbBaseEndDoubleLugPartCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbBaseEndDoubleLugPartCode.Enabled = False
+        Me.cmbBaseEndDoubleLugPartCode.FormattingEnabled = True
+        Me.cmbBaseEndDoubleLugPartCode.Location = New System.Drawing.Point(342, 53)
+        Me.cmbBaseEndDoubleLugPartCode.Name = "cmbBaseEndDoubleLugPartCode"
+        Me.cmbBaseEndDoubleLugPartCode.Size = New System.Drawing.Size(98, 21)
+        Me.cmbBaseEndDoubleLugPartCode.TabIndex = 181
+        '
+        'lvwWallThickness
+        '
+        Me.lvwWallThickness.FullRowSelect = True
+        Me.lvwWallThickness.GridLines = True
+        Me.lvwWallThickness.HideSelection = False
+        Me.lvwWallThickness.Location = New System.Drawing.Point(6, 17)
+        Me.lvwWallThickness.MultiSelect = False
+        Me.lvwWallThickness.Name = "lvwWallThickness"
+        Me.lvwWallThickness.Scrollable = False
+        Me.lvwWallThickness.Size = New System.Drawing.Size(430, 139)
+        Me.lvwWallThickness.TabIndex = 9
+        Me.lvwWallThickness.UseCompatibleStateImageBehavior = False
+        Me.lvwWallThickness.View = System.Windows.Forms.View.Details
+        '
         'frmTubeDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1467,4 +1479,5 @@ Partial Class frmTubeDetails
     Friend WithEvents LblBaseEndPartCode As System.Windows.Forms.Label
     Friend WithEvents txtBaseendPartCode As IFLCustomUILayer.IFLNumericBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents cmbBaseEndDoubleLugPartCode As System.Windows.Forms.ComboBox
 End Class

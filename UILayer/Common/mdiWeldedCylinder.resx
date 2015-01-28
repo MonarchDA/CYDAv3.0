@@ -263,9 +263,6 @@
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>199, 17</value>
   </metadata>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>199, 17</value>
-  </metadata>
   <data name="btnNext.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhIAAgAIIAAPvtqfXiie3FC6aJAaWIAcDAwAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
@@ -392,8 +389,8 @@
   <data name="picIFLLOGO.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPoAAACDCAYAAACkwQY0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEAAA
-        CxABrSO9dQAA/3lJREFUeF5kvQV0lNnWNNy4u7u7E9zdbWZwdwaHAYbB3d1CiBOBGMRJQkLc3d3dOu7p
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALDwAA
+        Cw8BkvkDpQAA/3lJREFUeF5kvQV0lNnWNNy4u7u7E9zdbWZwdwaHAYbB3d1CiBOBGMRJQkLc3d3dOu7p
         dP11nsz9/nXv22v1TEKfPEf23rWrjrUMKEhUVnaX5xfI5ICN3CW7Vi576Sr3ya3i75DLK3/IGypayVGz
         gb9nyE2jh8qdU1bz53r5ec8yeX+9eHl5bRh/b5CjbrEclXxO/X3+W6x8g/VuuVWKr7ymAfLNP+Xyt2FW
         cijtWLaGZfvKUSHqDJU7ZaTKW73+JLdOrZRX1ENuGOcrzy9eI0fDN34eL88rlMmT8sZIda7/ESFvrhYo

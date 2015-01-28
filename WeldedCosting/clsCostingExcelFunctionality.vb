@@ -347,6 +347,7 @@ Public Class clsCostingExcelFunctionality
             Dim strBaseEndConfig As String = Trim(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfiguration).ToUpper
             If strBaseEndConfig = "SINGLE LUG" Then
                 _strBELugSheetName = oRenamingHashTable("Base_Single_Lug_IFL")
+                ' = oRenamingHashTable("BASE_SINGLE_LUG_IFL")
             ElseIf strBaseEndConfig = "DOUBLE LUG" Then
                 _strBELugSheetName = oRenamingHashTable("BASE_U_LUG_IFL")
             End If

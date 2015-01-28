@@ -1307,8 +1307,8 @@ Public Class clsPlant_Part_Master_CMS
         AddtoHashTable(VariableList.strApprovedSupplierRequired, strApprovedSupplierRequired)
         AddtoHashTable(VariableList.strGenerateCOGS, strGenerateCOGS)
 
-        'strScheduleType = String.Empty   'blank for Cyld & B - components
-        strScheduleType = "B"   '14_04_2011   RAGAVA
+        strScheduleType = String.Empty   'blank for Cyld & B - components
+        'strScheduleType = "B"   '14_04_2011   RAGAVA
 
         AddtoHashTable(VariableList.strScheduleType, strScheduleType)
         strOptimumRun = ObjClsWeldedCylinderFunctionalClass.ObjFrmPrimaryInputs.txtStandardRunQuantity.Text

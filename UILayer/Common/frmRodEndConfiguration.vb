@@ -2046,7 +2046,7 @@ Public Class frmRodEndConfiguration
             cmbPinHoleType.DisplayMember = "PinHoleType"
             cmbPinHoleType.Text = "Standard"
             cmbPinHoleType.Enabled = True
-            cmbPinHoleType.SelectedIndex = 3
+            cmbPinHoleType.SelectedIndex = 2 'changed 3 to 2
         Else
             cmbPinHoleType.Enabled = False
         End If
@@ -2060,8 +2060,8 @@ Public Class frmRodEndConfiguration
                 oDataRow("PinHoleType") = "AUS"
             ElseIf oDataRow("PinHoleType") = "bushing" Then
                 oDataRow("PinHoleType") = "Bushing"
-            ElseIf oDataRow("PinHoleType") = "ind" Then
-                oDataRow("PinHoleType") = "IND"
+                'ElseIf oDataRow("PinHoleType") = "ind" Then
+                '    oDataRow("PinHoleType") = "IND"
             ElseIf oDataRow("PinHoleType") = "std" Then
                 oDataRow("PinHoleType") = "STD"
             End If

@@ -23,7 +23,7 @@
   <frmPrimaryInputs>
     <TabIndex>21</TabIndex>
     <ConName>lvwPistonDetails</ConName>
-    <Value>1 1/8-3000</Value>
+    <Value>1-3000</Value>
   </frmPrimaryInputs>
   <frmPrimaryInputs>
     <TabIndex>20</TabIndex>
@@ -39,6 +39,11 @@
     <TabIndex>13</TabIndex>
     <ConName>chkStopTube</ConName>
     <Value>False</Value>
+  </frmPrimaryInputs>
+  <frmPrimaryInputs>
+    <TabIndex>18</TabIndex>
+    <ConName>txtRecommendedStopTubeLength</ConName>
+    <Value>0.25</Value>
   </frmPrimaryInputs>
   <frmPrimaryInputs>
     <TabIndex>14</TabIndex>
@@ -63,7 +68,7 @@
   <frmPrimaryInputs>
     <TabIndex>6</TabIndex>
     <ConName>txtRetractedLength</ConName>
-    <Value>25</Value>
+    <Value>30</Value>
   </frmPrimaryInputs>
   <frmPrimaryInputs>
     <TabIndex>5</TabIndex>
@@ -73,7 +78,7 @@
   <frmPrimaryInputs>
     <TabIndex>1</TabIndex>
     <ConName>cmbBoreDiameters</ConName>
-    <Value>4</Value>
+    <Value>3.5</Value>
   </frmPrimaryInputs>
   <frmPrimaryInputs>
     <TabIndex>8</TabIndex>
@@ -108,7 +113,7 @@
   <frmPistonDesign>
     <TabIndex>4</TabIndex>
     <ConName>txtPistonCode</ConName>
-    <Value>258834</Value>
+    <Value>258827</Value>
   </frmPistonDesign>
   <frmPistonDesign>
     <TabIndex>3</TabIndex>
@@ -133,7 +138,7 @@
   <frmHeadDesign>
     <TabIndex>6</TabIndex>
     <ConName>txtCylinderHeadCode</ConName>
-    <Value>259631</Value>
+    <Value>259624</Value>
   </frmHeadDesign>
   <frmHeadDesign>
     <TabIndex>5</TabIndex>
@@ -163,7 +168,7 @@
   <frmHeadDesign>
     <TabIndex>133</TabIndex>
     <ConName>temCylinderHeadCode</ConName>
-    <Value>259631</Value>
+    <Value>259624</Value>
   </frmHeadDesign>
   <frmTubeDetails>
     <TabIndex>30</TabIndex>
@@ -208,7 +213,7 @@
   <frmTubeDetails>
     <TabIndex>178</TabIndex>
     <ConName>txtBaseendPartCode</ConName>
-    <Value>760017</Value>
+    <Value>760015</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>173</TabIndex>
@@ -223,7 +228,7 @@
   <frmTubeDetails>
     <TabIndex>9</TabIndex>
     <ConName>lvwWallThickness</ConName>
-    <Value>0.245-Skived-D--1113</Value>
+    <Value>0.248-Skived-D--1098</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>13</TabIndex>
@@ -238,7 +243,7 @@
   <frmTubeDetails>
     <TabIndex>5</TabIndex>
     <ConName>txtSwingClearance</ConName>
-    <Value>1.890</Value>
+    <Value>2.090</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>2</TabIndex>
@@ -258,7 +263,7 @@
   <frmTubeDetails>
     <TabIndex>9</TabIndex>
     <ConName>txtLugThickness</ConName>
-    <Value>0.750</Value>
+    <Value>0.63</Value>
   </frmTubeDetails>
   <frmTubeDetails>
     <TabIndex>11</TabIndex>
@@ -268,7 +273,7 @@
   <frmPortDetails>
     <TabIndex>15</TabIndex>
     <ConName>txtFirstPortOrientationRodEnd</ConName>
-    <Value>0</Value>
+    <Value>90</Value>
   </frmPortDetails>
   <frmPortDetails>
     <TabIndex>10</TabIndex>
@@ -303,7 +308,7 @@
   <frmPortDetails>
     <TabIndex>5</TabIndex>
     <ConName>txtFirstPortOrientationBaseEnd</ConName>
-    <Value>0</Value>
+    <Value>90</Value>
   </frmPortDetails>
   <frmPortDetails>
     <TabIndex>3</TabIndex>
@@ -378,12 +383,12 @@
   <frmDLPortInTubeDetails>
     <TabIndex>137</TabIndex>
     <ConName>txtRequiredLugsWidth</ConName>
-    <Value>2.06166666666667</Value>
+    <Value>1.87214285714286</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>134</TabIndex>
     <ConName>txtRequiredLugThickness</ConName>
-    <Value>0.75</Value>
+    <Value>0.63</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>136</TabIndex>
@@ -398,12 +403,12 @@
   <frmDLPortInTubeDetails>
     <TabIndex>133</TabIndex>
     <ConName>txtRequiredSwingClearance</ConName>
-    <Value>1.89</Value>
+    <Value>2.09</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>4</TabIndex>
     <ConName>txtLugThickness</ConName>
-    <Value>0.750</Value>
+    <Value>0.630</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>10</TabIndex>
@@ -423,7 +428,7 @@
   <frmDLPortInTubeDetails>
     <TabIndex>7</TabIndex>
     <ConName>txtLugsWidth</ConName>
-    <Value>2.560</Value>
+    <Value>2.400</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>6</TabIndex>
@@ -438,22 +443,22 @@
   <frmDLPortInTubeDetails>
     <TabIndex>3</TabIndex>
     <ConName>txtSwingClearance</ConName>
-    <Value>1.890</Value>
+    <Value>2.090</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>2</TabIndex>
     <ConName>txtCodeNumber</ConName>
-    <Value>760017</Value>
+    <Value>760015</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>1</TabIndex>
     <ConName>lvwDoubleLugListView</ConName>
-    <Value>760017-END CAP 2 LUG  4.00-1.015-0.75-2-7.93650-Yes-1041</Value>
+    <Value>760015-END CAP 2LUG 3.50-1.015-0.63-2-7.74180-No-1054</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>177</TabIndex>
     <ConName>chkDoubleLugFabricationRequired</ConName>
-    <Value>False</Value>
+    <Value>True</Value>
   </frmDLPortInTubeDetails>
   <frmDLPortInTubeDetails>
     <TabIndex>16</TabIndex>
@@ -470,6 +475,61 @@
     <ConName>rdbExactMatchYes</ConName>
     <Value>True</Value>
   </frmDLPortInTubeDetails>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>23</TabIndex>
+    <ConName>chkDoubleLug</ConName>
+    <Value>True</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>23</TabIndex>
+    <ConName>chkULug</ConName>
+    <Value>False</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>13</TabIndex>
+    <ConName>lvwSafetyFactor_Weight</ConName>
+    <Value>2-0.63-1.227</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>167</TabIndex>
+    <ConName>chkOptimizer</ConName>
+    <Value>False</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>156</TabIndex>
+    <ConName>txtSafetyFactor_DesignSingleLug</ConName>
+    <Value>2</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>154</TabIndex>
+    <ConName>txtLugThickness_DesignSingleLug</ConName>
+    <Value>0.63</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>142</TabIndex>
+    <ConName>txtLugWidth_DesignSingleLug</ConName>
+    <Value>2.50</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>148</TabIndex>
+    <ConName>txtSwingClearance_DesignSingleLug</ConName>
+    <Value>2.09</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>146</TabIndex>
+    <ConName>txtPinHoleSize_DesignSingleLug</ConName>
+    <Value>1.015</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>2</TabIndex>
+    <ConName>rdbDesignACasting</ConName>
+    <Value>False</Value>
+  </frmDLCastingNo_PortInTube2>
+  <frmDLCastingNo_PortInTube2>
+    <TabIndex>1</TabIndex>
+    <ConName>rdbFabrication</ConName>
+    <Value>True</Value>
+  </frmDLCastingNo_PortInTube2>
   <frmRodEndConfiguration>
     <TabIndex>26</TabIndex>
     <ConName>cmbGreaseZercs_RodEnd</ConName>
@@ -641,6 +701,11 @@
     <Value>False</Value>
   </frmREDLThreaded>
   <frmRetractedLengthValidation>
+    <TabIndex>43</TabIndex>
+    <ConName>txtCounterBoreClevisPlate</ConName>
+    <Value>0.105</Value>
+  </frmRetractedLengthValidation>
+  <frmRetractedLengthValidation>
     <TabIndex>42</TabIndex>
     <ConName>chkCounterBoreClevisPlate</ConName>
     <Value>False</Value>
@@ -658,7 +723,7 @@
   <frmRetractedLengthValidation>
     <TabIndex>32</TabIndex>
     <ConName>txtAdjustSwingClearance_BE</ConName>
-    <Value>1.89</Value>
+    <Value>2.09</Value>
   </frmRetractedLengthValidation>
   <frmRetractedLengthValidation>
     <TabIndex>28</TabIndex>
@@ -703,17 +768,17 @@
   <frmRetractedLengthValidation>
     <TabIndex>41</TabIndex>
     <ConName>txtRequiredRetractedLength</ConName>
-    <Value>25</Value>
+    <Value>30</Value>
   </frmRetractedLengthValidation>
   <frmRetractedLengthValidation>
     <TabIndex>39</TabIndex>
     <ConName>txtRecommendedRetractedLength</ConName>
-    <Value>25</Value>
+    <Value>30</Value>
   </frmRetractedLengthValidation>
   <frmRetractedLengthValidation>
     <TabIndex>38</TabIndex>
     <ConName>txtStickOutDistance</ConName>
-    <Value>2.853</Value>
+    <Value>7.843</Value>
   </frmRetractedLengthValidation>
   <frmPin_Port_PaintAccessories>
     <TabIndex>74</TabIndex>
@@ -758,12 +823,32 @@
   <frmPin_Port_PaintAccessories>
     <TabIndex>42</TabIndex>
     <ConName>cmbPins_RodEnd</ConName>
-    <Value>No</Value>
+    <Value>Yes</Value>
+  </frmPin_Port_PaintAccessories>
+  <frmPin_Port_PaintAccessories>
+    <TabIndex>45</TabIndex>
+    <ConName>cmbPinMaterial_RodEnd</ConName>
+    <Value>Standard</Value>
+  </frmPin_Port_PaintAccessories>
+  <frmPin_Port_PaintAccessories>
+    <TabIndex>46</TabIndex>
+    <ConName>cmbPinClips_RodEnd</ConName>
+    <Value>Cotter Pin</Value>
   </frmPin_Port_PaintAccessories>
   <frmPin_Port_PaintAccessories>
     <TabIndex>41</TabIndex>
     <ConName>cmbPins_BaseEnd</ConName>
-    <Value>No</Value>
+    <Value>Yes</Value>
+  </frmPin_Port_PaintAccessories>
+  <frmPin_Port_PaintAccessories>
+    <TabIndex>43</TabIndex>
+    <ConName>cmbPinMaterial_BaseEnd</ConName>
+    <Value>Standard</Value>
+  </frmPin_Port_PaintAccessories>
+  <frmPin_Port_PaintAccessories>
+    <TabIndex>44</TabIndex>
+    <ConName>cmbPinClips_BaseEnd</ConName>
+    <Value>Cotter Pin</Value>
   </frmPin_Port_PaintAccessories>
   <frmGenerate>
     <TabIndex>130</TabIndex>
@@ -778,7 +863,12 @@
   <frmGenerate>
     <TabIndex>126</TabIndex>
     <ConName>ChkIncludePinkitPerBom</ConName>
-    <Value>False</Value>
+    <Value>True</Value>
+  </frmGenerate>
+  <frmGenerate>
+    <TabIndex>0</TabIndex>
+    <ConName>txtIncludePinkitPerBom</ConName>
+    <Value>5</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>125</TabIndex>
@@ -818,21 +908,26 @@
   <frmGenerate>
     <TabIndex>70</TabIndex>
     <ConName>txtPackagePerSOP</ConName>
-    <Value>4</Value>
+    <Value>6</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>51</TabIndex>
     <ConName>txtAffixLabel</ConName>
-    <Value>3</Value>
+    <Value>4</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>49</TabIndex>
     <ConName>txtPaint</ConName>
-    <Value>2</Value>
+    <Value>3</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>47</TabIndex>
     <ConName>txtPrime</ConName>
+    <Value>2</Value>
+  </frmGenerate>
+  <frmGenerate>
+    <TabIndex>68</TabIndex>
+    <ConName>txtMaskPerBOM</ConName>
     <Value>1</Value>
   </frmGenerate>
   <frmGenerate>
@@ -883,12 +978,22 @@
   <frmGenerate>
     <TabIndex>69</TabIndex>
     <ConName>chkMaskPerBOM</ConName>
-    <Value>False</Value>
+    <Value>True</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>54</TabIndex>
     <ConName>chkInstallPinAndClips</ConName>
     <Value>False</Value>
+  </frmGenerate>
+  <frmGenerate>
+    <TabIndex>77</TabIndex>
+    <ConName>txtAirTest</ConName>
+    <Value>5</Value>
+  </frmGenerate>
+  <frmGenerate>
+    <TabIndex>78</TabIndex>
+    <ConName>chk100AirTest</ConName>
+    <Value>True</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>75</TabIndex>
@@ -913,7 +1018,7 @@
   <frmGenerate>
     <TabIndex>13</TabIndex>
     <ConName>txtOilTest</ConName>
-    <Value>5</Value>
+    <Value>6</Value>
   </frmGenerate>
   <frmGenerate>
     <TabIndex>5</TabIndex>

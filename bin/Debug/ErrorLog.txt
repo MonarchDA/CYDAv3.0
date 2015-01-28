@@ -1,20 +1,4 @@
-Error 1 :   Error occured in ValidLugThickness of frmSLFabrication There is no row at position 0.   Time : 10/29/2014 12:00:00 AM
+Error 1 :   Unable to close Documents Some files are not saved Properly .System Generated Error: Object reference not set to an instance of an object.   Time : 1/28/2015 12:00:00 AM
   
-Error 2 :   Unable to close Documents Some files are not saved Properly .System Generated Error: Object reference not set to an instance of an object.   Time : 10/29/2014 12:00:00 AM
-  
-Error 3 :   Error in Deleting Notes    Time : 10/29/2014 12:00:00 AM
-  
-Error 4 :   Error in Deleting Dimensions    Time : 10/29/2014 12:00:00 AM
-  
-Error 5 :   Error in Deleting Dimensions    Time : 10/29/2014 12:00:00 AM
-  
-Error 6 :   Error in Deleting Dimensions    Time : 10/29/2014 12:00:00 AM
-  
-Error 7 :   Error in Deleting Dimensions    Time : 10/29/2014 12:00:00 AM
-  
-Error 8 :   Error in Deleting Dimensions    Time : 10/29/2014 12:00:00 AM
-  
-Error 9 :   Error in Deleting Dimensions    Time : 10/29/2014 12:00:00 AM
-  
-Error 10 :   Error in Deleting Dimensions    Time : 10/29/2014 12:00:00 AM
+Error 2 :   Unable to close Documents Some files are not saved Properly .System Generated Error: Object reference not set to an instance of an object.   Time : 1/28/2015 12:00:00 AM
   

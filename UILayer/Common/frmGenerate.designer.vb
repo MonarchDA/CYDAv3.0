@@ -167,6 +167,8 @@ Partial Class frmGenerate
         Me.txtRodMaterialNitroSteel = New IFLCustomUILayer.IFLNumericBox()
         Me.txtCushionsOnExtension = New IFLCustomUILayer.IFLNumericBox()
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
+        Me.txtAirTest = New IFLCustomUILayer.IFLNumericBox()
+        Me.chk100AirTest = New System.Windows.Forms.CheckBox()
         Me.txtStampCustomerPart = New IFLCustomUILayer.IFLNumericBox()
         Me.chkStampCustomerPartOnTube = New System.Windows.Forms.CheckBox()
         Me.BackgroundWorker_Notification = New System.ComponentModel.BackgroundWorker()
@@ -218,7 +220,7 @@ Partial Class frmGenerate
         Me.LabelGradient3.GradientColorTwo = System.Drawing.Color.Honeydew
         Me.LabelGradient3.Location = New System.Drawing.Point(0, 19)
         Me.LabelGradient3.Name = "LabelGradient3"
-        Me.LabelGradient3.Size = New System.Drawing.Size(20, 880)
+        Me.LabelGradient3.Size = New System.Drawing.Size(20, 914)
         Me.LabelGradient3.TabIndex = 82
         Me.LabelGradient3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -230,7 +232,7 @@ Partial Class frmGenerate
         Me.LabelGradient2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.LabelGradient2.GradientColorOne = System.Drawing.Color.Olive
         Me.LabelGradient2.GradientColorTwo = System.Drawing.Color.Honeydew
-        Me.LabelGradient2.Location = New System.Drawing.Point(20, 889)
+        Me.LabelGradient2.Location = New System.Drawing.Point(20, 923)
         Me.LabelGradient2.Name = "LabelGradient2"
         Me.LabelGradient2.Size = New System.Drawing.Size(1029, 10)
         Me.LabelGradient2.TabIndex = 83
@@ -246,7 +248,7 @@ Partial Class frmGenerate
         Me.LabelGradient4.GradientColorTwo = System.Drawing.Color.Honeydew
         Me.LabelGradient4.Location = New System.Drawing.Point(1027, 19)
         Me.LabelGradient4.Name = "LabelGradient4"
-        Me.LabelGradient4.Size = New System.Drawing.Size(22, 870)
+        Me.LabelGradient4.Size = New System.Drawing.Size(22, 904)
         Me.LabelGradient4.TabIndex = 84
         Me.LabelGradient4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -1622,7 +1624,7 @@ Partial Class frmGenerate
         Me.chkByPass.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkByPass.AutoSize = True
         Me.chkByPass.Enabled = False
-        Me.chkByPass.Location = New System.Drawing.Point(118, 202)
+        Me.chkByPass.Location = New System.Drawing.Point(118, 227)
         Me.chkByPass.Name = "chkByPass"
         Me.chkByPass.Size = New System.Drawing.Size(107, 17)
         Me.chkByPass.TabIndex = 14
@@ -1633,7 +1635,7 @@ Partial Class frmGenerate
         '
         Me.ChkStampCountryOfOrigin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkStampCountryOfOrigin.AutoSize = True
-        Me.ChkStampCountryOfOrigin.Location = New System.Drawing.Point(118, 550)
+        Me.ChkStampCountryOfOrigin.Location = New System.Drawing.Point(118, 575)
         Me.ChkStampCountryOfOrigin.Name = "ChkStampCountryOfOrigin"
         Me.ChkStampCountryOfOrigin.Size = New System.Drawing.Size(228, 17)
         Me.ChkStampCountryOfOrigin.TabIndex = 26
@@ -1645,7 +1647,7 @@ Partial Class frmGenerate
         Me.chkInstallBreather.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkInstallBreather.AutoSize = True
         Me.chkInstallBreather.Enabled = False
-        Me.chkInstallBreather.Location = New System.Drawing.Point(118, 381)
+        Me.chkInstallBreather.Location = New System.Drawing.Point(118, 406)
         Me.chkInstallBreather.Name = "chkInstallBreather"
         Me.chkInstallBreather.Size = New System.Drawing.Size(132, 17)
         Me.chkInstallBreather.TabIndex = 20
@@ -1656,7 +1658,7 @@ Partial Class frmGenerate
         '
         Me.ChkInstallHardenedBushings.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkInstallHardenedBushings.AutoSize = True
-        Me.ChkInstallHardenedBushings.Location = New System.Drawing.Point(118, 430)
+        Me.ChkInstallHardenedBushings.Location = New System.Drawing.Point(118, 455)
         Me.ChkInstallHardenedBushings.Name = "ChkInstallHardenedBushings"
         Me.ChkInstallHardenedBushings.Size = New System.Drawing.Size(193, 17)
         Me.ChkInstallHardenedBushings.TabIndex = 30
@@ -1667,7 +1669,7 @@ Partial Class frmGenerate
         '
         Me.ChkHardenedBushingsRodEnd.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkHardenedBushingsRodEnd.AutoSize = True
-        Me.ChkHardenedBushingsRodEnd.Location = New System.Drawing.Point(118, 453)
+        Me.ChkHardenedBushingsRodEnd.Location = New System.Drawing.Point(118, 478)
         Me.ChkHardenedBushingsRodEnd.Name = "ChkHardenedBushingsRodEnd"
         Me.ChkHardenedBushingsRodEnd.Size = New System.Drawing.Size(249, 17)
         Me.ChkHardenedBushingsRodEnd.TabIndex = 32
@@ -1678,7 +1680,7 @@ Partial Class frmGenerate
         '
         Me.chkStampCustomerPartandDate.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkStampCustomerPartandDate.AutoSize = True
-        Me.chkStampCustomerPartandDate.Location = New System.Drawing.Point(118, 501)
+        Me.chkStampCustomerPartandDate.Location = New System.Drawing.Point(118, 526)
         Me.chkStampCustomerPartandDate.Name = "chkStampCustomerPartandDate"
         Me.chkStampCustomerPartandDate.Size = New System.Drawing.Size(311, 17)
         Me.chkStampCustomerPartandDate.TabIndex = 22
@@ -1689,7 +1691,7 @@ Partial Class frmGenerate
         '
         Me.ChkHardenedBushingsBaseEnd.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkHardenedBushingsBaseEnd.AutoSize = True
-        Me.ChkHardenedBushingsBaseEnd.Location = New System.Drawing.Point(118, 477)
+        Me.ChkHardenedBushingsBaseEnd.Location = New System.Drawing.Point(118, 502)
         Me.ChkHardenedBushingsBaseEnd.Name = "ChkHardenedBushingsBaseEnd"
         Me.ChkHardenedBushingsBaseEnd.Size = New System.Drawing.Size(253, 17)
         Me.ChkHardenedBushingsBaseEnd.TabIndex = 34
@@ -1712,7 +1714,7 @@ Partial Class frmGenerate
         'chkAssemblyNotes
         '
         Me.chkAssemblyNotes.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.chkAssemblyNotes.Location = New System.Drawing.Point(0, -1)
+        Me.chkAssemblyNotes.Location = New System.Drawing.Point(0, 8)
         Me.chkAssemblyNotes.Name = "chkAssemblyNotes"
         Me.chkAssemblyNotes.Size = New System.Drawing.Size(16, 22)
         Me.chkAssemblyNotes.TabIndex = 38
@@ -1722,9 +1724,9 @@ Partial Class frmGenerate
         '
         Me.RichTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RichTextBox1.BackColor = System.Drawing.Color.Ivory
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 19)
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 33)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(375, 61)
+        Me.RichTextBox1.Size = New System.Drawing.Size(375, 62)
         Me.RichTextBox1.TabIndex = 39
         Me.RichTextBox1.Text = ""
         '
@@ -1736,9 +1738,9 @@ Partial Class frmGenerate
         Me.LabelGradient17.ForeColor = System.Drawing.SystemColors.ControlText
         Me.LabelGradient17.GradientColorOne = System.Drawing.Color.Olive
         Me.LabelGradient17.GradientColorTwo = System.Drawing.Color.Honeydew
-        Me.LabelGradient17.Location = New System.Drawing.Point(9, 2)
+        Me.LabelGradient17.Location = New System.Drawing.Point(9, 11)
         Me.LabelGradient17.Name = "LabelGradient17"
-        Me.LabelGradient17.Size = New System.Drawing.Size(365, 14)
+        Me.LabelGradient17.Size = New System.Drawing.Size(365, 19)
         Me.LabelGradient17.TabIndex = 40
         Me.LabelGradient17.Text = "Add New"
         Me.LabelGradient17.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1747,7 +1749,7 @@ Partial Class frmGenerate
         '
         Me.ChkAssemblyStopTube.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkAssemblyStopTube.AutoSize = True
-        Me.ChkAssemblyStopTube.Location = New System.Drawing.Point(118, 574)
+        Me.ChkAssemblyStopTube.Location = New System.Drawing.Point(118, 599)
         Me.ChkAssemblyStopTube.Name = "ChkAssemblyStopTube"
         Me.ChkAssemblyStopTube.Size = New System.Drawing.Size(222, 17)
         Me.ChkAssemblyStopTube.TabIndex = 36
@@ -1847,7 +1849,7 @@ Partial Class frmGenerate
         Me.ChkRephaseRetraction.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkRephaseRetraction.AutoSize = True
         Me.ChkRephaseRetraction.Enabled = False
-        Me.ChkRephaseRetraction.Location = New System.Drawing.Point(118, 246)
+        Me.ChkRephaseRetraction.Location = New System.Drawing.Point(118, 271)
         Me.ChkRephaseRetraction.Name = "ChkRephaseRetraction"
         Me.ChkRephaseRetraction.Size = New System.Drawing.Size(169, 17)
         Me.ChkRephaseRetraction.TabIndex = 18
@@ -1859,7 +1861,7 @@ Partial Class frmGenerate
         Me.chkOrifice.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkOrifice.AutoSize = True
         Me.chkOrifice.Enabled = False
-        Me.chkOrifice.Location = New System.Drawing.Point(118, 336)
+        Me.chkOrifice.Location = New System.Drawing.Point(118, 361)
         Me.chkOrifice.Name = "chkOrifice"
         Me.chkOrifice.Size = New System.Drawing.Size(115, 17)
         Me.chkOrifice.TabIndex = 18
@@ -1883,7 +1885,7 @@ Partial Class frmGenerate
         Me.chkPlugBreatherForPainting.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkPlugBreatherForPainting.AutoSize = True
         Me.chkPlugBreatherForPainting.Enabled = False
-        Me.chkPlugBreatherForPainting.Location = New System.Drawing.Point(118, 359)
+        Me.chkPlugBreatherForPainting.Location = New System.Drawing.Point(118, 384)
         Me.chkPlugBreatherForPainting.Name = "chkPlugBreatherForPainting"
         Me.chkPlugBreatherForPainting.Size = New System.Drawing.Size(229, 17)
         Me.chkPlugBreatherForPainting.TabIndex = 18
@@ -1895,7 +1897,7 @@ Partial Class frmGenerate
         Me.ChkRephaseExtension.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkRephaseExtension.AutoSize = True
         Me.ChkRephaseExtension.Enabled = False
-        Me.ChkRephaseExtension.Location = New System.Drawing.Point(118, 224)
+        Me.ChkRephaseExtension.Location = New System.Drawing.Point(118, 249)
         Me.ChkRephaseExtension.Name = "ChkRephaseExtension"
         Me.ChkRephaseExtension.Size = New System.Drawing.Size(161, 17)
         Me.ChkRephaseExtension.TabIndex = 16
@@ -1907,7 +1909,7 @@ Partial Class frmGenerate
         Me.chkInstallAdaptorFitting.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkInstallAdaptorFitting.AutoSize = True
         Me.chkInstallAdaptorFitting.Enabled = False
-        Me.chkInstallAdaptorFitting.Location = New System.Drawing.Point(118, 314)
+        Me.chkInstallAdaptorFitting.Location = New System.Drawing.Point(118, 339)
         Me.chkInstallAdaptorFitting.Name = "chkInstallAdaptorFitting"
         Me.chkInstallAdaptorFitting.Size = New System.Drawing.Size(314, 17)
         Me.chkInstallAdaptorFitting.TabIndex = 16
@@ -1992,7 +1994,7 @@ Partial Class frmGenerate
         Me.txtByPass.InvalidInputCharacters = ""
         Me.txtByPass.IsAllowNegative = False
         Me.txtByPass.LengthValue = 10
-        Me.txtByPass.Location = New System.Drawing.Point(72, 200)
+        Me.txtByPass.Location = New System.Drawing.Point(72, 225)
         Me.txtByPass.MaximumValue = 999.0R
         Me.txtByPass.MinimumValue = 0.0R
         Me.txtByPass.Name = "txtByPass"
@@ -2036,7 +2038,7 @@ Partial Class frmGenerate
         Me.txtRephaseOnExtension.InvalidInputCharacters = ""
         Me.txtRephaseOnExtension.IsAllowNegative = False
         Me.txtRephaseOnExtension.LengthValue = 10
-        Me.txtRephaseOnExtension.Location = New System.Drawing.Point(72, 222)
+        Me.txtRephaseOnExtension.Location = New System.Drawing.Point(72, 247)
         Me.txtRephaseOnExtension.MaximumValue = 999.0R
         Me.txtRephaseOnExtension.MinimumValue = 0.0R
         Me.txtRephaseOnExtension.Name = "txtRephaseOnExtension"
@@ -2058,7 +2060,7 @@ Partial Class frmGenerate
         Me.txtInstallAdaptorFitting.InvalidInputCharacters = ""
         Me.txtInstallAdaptorFitting.IsAllowNegative = False
         Me.txtInstallAdaptorFitting.LengthValue = 10
-        Me.txtInstallAdaptorFitting.Location = New System.Drawing.Point(72, 312)
+        Me.txtInstallAdaptorFitting.Location = New System.Drawing.Point(72, 337)
         Me.txtInstallAdaptorFitting.MaximumValue = 999.0R
         Me.txtInstallAdaptorFitting.MinimumValue = 0.0R
         Me.txtInstallAdaptorFitting.Name = "txtInstallAdaptorFitting"
@@ -2146,7 +2148,7 @@ Partial Class frmGenerate
         Me.txtRephaseOnRetraction.InvalidInputCharacters = ""
         Me.txtRephaseOnRetraction.IsAllowNegative = False
         Me.txtRephaseOnRetraction.LengthValue = 10
-        Me.txtRephaseOnRetraction.Location = New System.Drawing.Point(72, 244)
+        Me.txtRephaseOnRetraction.Location = New System.Drawing.Point(72, 269)
         Me.txtRephaseOnRetraction.MaximumValue = 999.0R
         Me.txtRephaseOnRetraction.MinimumValue = 0.0R
         Me.txtRephaseOnRetraction.Name = "txtRephaseOnRetraction"
@@ -2168,7 +2170,7 @@ Partial Class frmGenerate
         Me.txtOrifice.InvalidInputCharacters = ""
         Me.txtOrifice.IsAllowNegative = False
         Me.txtOrifice.LengthValue = 10
-        Me.txtOrifice.Location = New System.Drawing.Point(72, 334)
+        Me.txtOrifice.Location = New System.Drawing.Point(72, 359)
         Me.txtOrifice.MaximumValue = 999.0R
         Me.txtOrifice.MinimumValue = 0.0R
         Me.txtOrifice.Name = "txtOrifice"
@@ -2190,7 +2192,7 @@ Partial Class frmGenerate
         Me.txtPlugBreatherForPainting.InvalidInputCharacters = ""
         Me.txtPlugBreatherForPainting.IsAllowNegative = False
         Me.txtPlugBreatherForPainting.LengthValue = 10
-        Me.txtPlugBreatherForPainting.Location = New System.Drawing.Point(72, 357)
+        Me.txtPlugBreatherForPainting.Location = New System.Drawing.Point(72, 382)
         Me.txtPlugBreatherForPainting.MaximumValue = 999.0R
         Me.txtPlugBreatherForPainting.MinimumValue = 0.0R
         Me.txtPlugBreatherForPainting.Name = "txtPlugBreatherForPainting"
@@ -2212,7 +2214,7 @@ Partial Class frmGenerate
         Me.txtInstallBreather.InvalidInputCharacters = ""
         Me.txtInstallBreather.IsAllowNegative = False
         Me.txtInstallBreather.LengthValue = 10
-        Me.txtInstallBreather.Location = New System.Drawing.Point(72, 379)
+        Me.txtInstallBreather.Location = New System.Drawing.Point(72, 404)
         Me.txtInstallBreather.MaximumValue = 999.0R
         Me.txtInstallBreather.MinimumValue = 0.0R
         Me.txtInstallBreather.Name = "txtInstallBreather"
@@ -2234,7 +2236,7 @@ Partial Class frmGenerate
         Me.txtStampCustomerPartandDate.InvalidInputCharacters = ""
         Me.txtStampCustomerPartandDate.IsAllowNegative = False
         Me.txtStampCustomerPartandDate.LengthValue = 10
-        Me.txtStampCustomerPartandDate.Location = New System.Drawing.Point(72, 499)
+        Me.txtStampCustomerPartandDate.Location = New System.Drawing.Point(72, 524)
         Me.txtStampCustomerPartandDate.MaximumValue = 999.0R
         Me.txtStampCustomerPartandDate.MinimumValue = 0.0R
         Me.txtStampCustomerPartandDate.Name = "txtStampCustomerPartandDate"
@@ -2256,7 +2258,7 @@ Partial Class frmGenerate
         Me.txtStampCountry.InvalidInputCharacters = ""
         Me.txtStampCountry.IsAllowNegative = False
         Me.txtStampCountry.LengthValue = 10
-        Me.txtStampCountry.Location = New System.Drawing.Point(72, 548)
+        Me.txtStampCountry.Location = New System.Drawing.Point(72, 573)
         Me.txtStampCountry.MaximumValue = 999.0R
         Me.txtStampCountry.MinimumValue = 0.0R
         Me.txtStampCountry.Name = "txtStampCountry"
@@ -2278,7 +2280,7 @@ Partial Class frmGenerate
         Me.txtInstallHardenedBushingsRodEnd.InvalidInputCharacters = ""
         Me.txtInstallHardenedBushingsRodEnd.IsAllowNegative = False
         Me.txtInstallHardenedBushingsRodEnd.LengthValue = 10
-        Me.txtInstallHardenedBushingsRodEnd.Location = New System.Drawing.Point(72, 451)
+        Me.txtInstallHardenedBushingsRodEnd.Location = New System.Drawing.Point(72, 476)
         Me.txtInstallHardenedBushingsRodEnd.MaximumValue = 999.0R
         Me.txtInstallHardenedBushingsRodEnd.MinimumValue = 0.0R
         Me.txtInstallHardenedBushingsRodEnd.Name = "txtInstallHardenedBushingsRodEnd"
@@ -2300,7 +2302,7 @@ Partial Class frmGenerate
         Me.txtInstallSteelPlugs.InvalidInputCharacters = ""
         Me.txtInstallSteelPlugs.IsAllowNegative = False
         Me.txtInstallSteelPlugs.LengthValue = 10
-        Me.txtInstallSteelPlugs.Location = New System.Drawing.Point(72, 428)
+        Me.txtInstallSteelPlugs.Location = New System.Drawing.Point(72, 453)
         Me.txtInstallSteelPlugs.MaximumValue = 999.0R
         Me.txtInstallSteelPlugs.MinimumValue = 0.0R
         Me.txtInstallSteelPlugs.Name = "txtInstallSteelPlugs"
@@ -2322,7 +2324,7 @@ Partial Class frmGenerate
         Me.txtInstallHardenedBushingsBaseEnd.InvalidInputCharacters = ""
         Me.txtInstallHardenedBushingsBaseEnd.IsAllowNegative = False
         Me.txtInstallHardenedBushingsBaseEnd.LengthValue = 10
-        Me.txtInstallHardenedBushingsBaseEnd.Location = New System.Drawing.Point(72, 475)
+        Me.txtInstallHardenedBushingsBaseEnd.Location = New System.Drawing.Point(72, 500)
         Me.txtInstallHardenedBushingsBaseEnd.MaximumValue = 999.0R
         Me.txtInstallHardenedBushingsBaseEnd.MinimumValue = 0.0R
         Me.txtInstallHardenedBushingsBaseEnd.Name = "txtInstallHardenedBushingsBaseEnd"
@@ -2344,7 +2346,7 @@ Partial Class frmGenerate
         Me.txtAssemblyStopTube.InvalidInputCharacters = ""
         Me.txtAssemblyStopTube.IsAllowNegative = False
         Me.txtAssemblyStopTube.LengthValue = 10
-        Me.txtAssemblyStopTube.Location = New System.Drawing.Point(72, 572)
+        Me.txtAssemblyStopTube.Location = New System.Drawing.Point(72, 597)
         Me.txtAssemblyStopTube.MaximumValue = 999.0R
         Me.txtAssemblyStopTube.MinimumValue = 0.0R
         Me.txtAssemblyStopTube.Name = "txtAssemblyStopTube"
@@ -2359,7 +2361,7 @@ Partial Class frmGenerate
         Me.chkCushionsOnRetraction.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkCushionsOnRetraction.AutoSize = True
         Me.chkCushionsOnRetraction.Enabled = False
-        Me.chkCushionsOnRetraction.Location = New System.Drawing.Point(118, 292)
+        Me.chkCushionsOnRetraction.Location = New System.Drawing.Point(118, 317)
         Me.chkCushionsOnRetraction.Name = "chkCushionsOnRetraction"
         Me.chkCushionsOnRetraction.Size = New System.Drawing.Size(174, 17)
         Me.chkCushionsOnRetraction.TabIndex = 71
@@ -2378,7 +2380,7 @@ Partial Class frmGenerate
         Me.txtCusionsOnRetraction.InvalidInputCharacters = ""
         Me.txtCusionsOnRetraction.IsAllowNegative = False
         Me.txtCusionsOnRetraction.LengthValue = 10
-        Me.txtCusionsOnRetraction.Location = New System.Drawing.Point(72, 290)
+        Me.txtCusionsOnRetraction.Location = New System.Drawing.Point(72, 315)
         Me.txtCusionsOnRetraction.MaximumValue = 999.0R
         Me.txtCusionsOnRetraction.MinimumValue = 0.0R
         Me.txtCusionsOnRetraction.Name = "txtCusionsOnRetraction"
@@ -2393,7 +2395,7 @@ Partial Class frmGenerate
         Me.chkCushionsonExtension.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkCushionsonExtension.AutoSize = True
         Me.chkCushionsonExtension.Enabled = False
-        Me.chkCushionsonExtension.Location = New System.Drawing.Point(118, 269)
+        Me.chkCushionsonExtension.Location = New System.Drawing.Point(118, 294)
         Me.chkCushionsonExtension.Name = "chkCushionsonExtension"
         Me.chkCushionsonExtension.Size = New System.Drawing.Size(166, 17)
         Me.chkCushionsonExtension.TabIndex = 73
@@ -2404,7 +2406,7 @@ Partial Class frmGenerate
         '
         Me.ChkRodMaterial.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ChkRodMaterial.AutoSize = True
-        Me.ChkRodMaterial.Location = New System.Drawing.Point(118, 405)
+        Me.ChkRodMaterial.Location = New System.Drawing.Point(118, 430)
         Me.ChkRodMaterial.Name = "ChkRodMaterial"
         Me.ChkRodMaterial.Size = New System.Drawing.Size(240, 17)
         Me.ChkRodMaterial.TabIndex = 75
@@ -2423,7 +2425,7 @@ Partial Class frmGenerate
         Me.txtRodMaterialNitroSteel.InvalidInputCharacters = ""
         Me.txtRodMaterialNitroSteel.IsAllowNegative = False
         Me.txtRodMaterialNitroSteel.LengthValue = 10
-        Me.txtRodMaterialNitroSteel.Location = New System.Drawing.Point(72, 403)
+        Me.txtRodMaterialNitroSteel.Location = New System.Drawing.Point(72, 428)
         Me.txtRodMaterialNitroSteel.MaximumValue = 999.0R
         Me.txtRodMaterialNitroSteel.MinimumValue = 0.0R
         Me.txtRodMaterialNitroSteel.Name = "txtRodMaterialNitroSteel"
@@ -2445,7 +2447,7 @@ Partial Class frmGenerate
         Me.txtCushionsOnExtension.InvalidInputCharacters = ""
         Me.txtCushionsOnExtension.IsAllowNegative = False
         Me.txtCushionsOnExtension.LengthValue = 10
-        Me.txtCushionsOnExtension.Location = New System.Drawing.Point(72, 267)
+        Me.txtCushionsOnExtension.Location = New System.Drawing.Point(72, 292)
         Me.txtCushionsOnExtension.MaximumValue = 999.0R
         Me.txtCushionsOnExtension.MinimumValue = 0.0R
         Me.txtCushionsOnExtension.Name = "txtCushionsOnExtension"
@@ -2458,6 +2460,8 @@ Partial Class frmGenerate
         'GroupBox14
         '
         Me.GroupBox14.BackColor = System.Drawing.Color.Ivory
+        Me.GroupBox14.Controls.Add(Me.txtAirTest)
+        Me.GroupBox14.Controls.Add(Me.chk100AirTest)
         Me.GroupBox14.Controls.Add(Me.txtCushionsOnExtension)
         Me.GroupBox14.Controls.Add(Me.txtRodMaterialNitroSteel)
         Me.GroupBox14.Controls.Add(Me.ChkRodMaterial)
@@ -2516,6 +2520,39 @@ Partial Class frmGenerate
         Me.GroupBox14.TabIndex = 110
         Me.GroupBox14.TabStop = False
         '
+        'txtAirTest
+        '
+        Me.txtAirTest.AcceptEnterKeyAsTab = True
+        Me.txtAirTest.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtAirTest.ApplyIFLColor = True
+        Me.txtAirTest.AssociateLabel = Nothing
+        Me.txtAirTest.DecimalValue = 0
+        Me.txtAirTest.Enabled = False
+        Me.txtAirTest.IFLDataTag = Nothing
+        Me.txtAirTest.InvalidInputCharacters = ""
+        Me.txtAirTest.IsAllowNegative = False
+        Me.txtAirTest.LengthValue = 10
+        Me.txtAirTest.Location = New System.Drawing.Point(73, 201)
+        Me.txtAirTest.MaximumValue = 999.0R
+        Me.txtAirTest.MinimumValue = 0.0R
+        Me.txtAirTest.Name = "txtAirTest"
+        Me.txtAirTest.Size = New System.Drawing.Size(40, 20)
+        Me.txtAirTest.StatusMessage = Nothing
+        Me.txtAirTest.StatusObject = Nothing
+        Me.txtAirTest.TabIndex = 77
+        Me.txtAirTest.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'chk100AirTest
+        '
+        Me.chk100AirTest.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chk100AirTest.AutoSize = True
+        Me.chk100AirTest.Location = New System.Drawing.Point(119, 203)
+        Me.chk100AirTest.Name = "chk100AirTest"
+        Me.chk100AirTest.Size = New System.Drawing.Size(104, 17)
+        Me.chk100AirTest.TabIndex = 78
+        Me.chk100AirTest.Text = "100% AIR TEST"
+        Me.chk100AirTest.UseVisualStyleBackColor = True
+        '
         'txtStampCustomerPart
         '
         Me.txtStampCustomerPart.AcceptEnterKeyAsTab = True
@@ -2528,7 +2565,7 @@ Partial Class frmGenerate
         Me.txtStampCustomerPart.InvalidInputCharacters = ""
         Me.txtStampCustomerPart.IsAllowNegative = False
         Me.txtStampCustomerPart.LengthValue = 10
-        Me.txtStampCustomerPart.Location = New System.Drawing.Point(72, 523)
+        Me.txtStampCustomerPart.Location = New System.Drawing.Point(72, 548)
         Me.txtStampCustomerPart.MaximumValue = 999.0R
         Me.txtStampCustomerPart.MinimumValue = 0.0R
         Me.txtStampCustomerPart.Name = "txtStampCustomerPart"
@@ -2542,7 +2579,7 @@ Partial Class frmGenerate
         '
         Me.chkStampCustomerPartOnTube.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.chkStampCustomerPartOnTube.AutoSize = True
-        Me.chkStampCustomerPartOnTube.Location = New System.Drawing.Point(118, 525)
+        Me.chkStampCustomerPartOnTube.Location = New System.Drawing.Point(118, 550)
         Me.chkStampCustomerPartOnTube.Name = "chkStampCustomerPartOnTube"
         Me.chkStampCustomerPartOnTube.Size = New System.Drawing.Size(220, 17)
         Me.chkStampCustomerPartOnTube.TabIndex = 24
@@ -2558,7 +2595,7 @@ Partial Class frmGenerate
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(1036, 916)
+        Me.ClientSize = New System.Drawing.Size(1036, 950)
         Me.Controls.Add(Me.GroupBox15)
         Me.Controls.Add(Me.GroupBox14)
         Me.Controls.Add(Me.LabelGradient1)
@@ -2733,4 +2770,6 @@ Partial Class frmGenerate
     Friend WithEvents chkSingleActingPushApplication As System.Windows.Forms.CheckBox
     Friend WithEvents chkSingleActingPullAppliction As System.Windows.Forms.CheckBox
     Friend WithEvents LabelGradient19 As LabelGradient.LabelGradient
+    Friend WithEvents txtAirTest As IFLCustomUILayer.IFLNumericBox
+    Friend WithEvents chk100AirTest As System.Windows.Forms.CheckBox
 End Class

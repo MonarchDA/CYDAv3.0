@@ -110,8 +110,8 @@ Public Class frmGenerate
         ChkExtendedLength.Enabled = False
         ChkRodDiameter.Checked = True
         ChkRodDiameter.Enabled = False
-        'chk100AirTest.Checked = True
-        'chk100AirTest.Enabled = False
+        chk100AirTest.Checked = True
+        chk100AirTest.Enabled = False
         chk100OilTest.Checked = True
         chk100OilTest.Enabled = False
 
@@ -133,8 +133,8 @@ Public Class frmGenerate
         ChkExtendedLength.Enabled = False
         ChkRodDiameter.Checked = True
         ChkRodDiameter.Enabled = False
-        'chk100AirTest.Checked = True
-        'chk100AirTest.Enabled = False
+        chk100AirTest.Checked = True
+        chk100AirTest.Enabled = False
         chk100OilTest.Checked = True
         chk100OilTest.Enabled = False
         If Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPortDetails.txtFirstPortOrientationRodEnd.Text) = Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmPortDetails.txtFirstPortOrientationBaseEnd.Text) Then
@@ -1317,14 +1317,14 @@ Public Class frmGenerate
                 HT_AssemblyNotes.Add(iNotes.ToString & ".0", UCase(chkGreaseZerc.Text))
             End If
             'Till   Here
-            'If chk100AirTest.Checked = True Then
-            '    If Trim(txtAirTest.Text) <> "" Then
-            '        iNotes = Val(txtAirTest.Text)
-            '    Else
-            '        iNotes += 1
-            '    End If
-            '    HT_AssemblyNotes.Add(iNotes.ToString & ".0", UCase(chk100AirTest.Text))
-            'End If
+            If chk100AirTest.Checked = True Then
+                If Trim(txtAirTest.Text) <> "" Then
+                    iNotes = Val(txtAirTest.Text)
+                Else
+                    iNotes += 1
+                End If
+                HT_AssemblyNotes.Add(iNotes.ToString & ".0", UCase(chk100AirTest.Text))
+            End If
             If chk100OilTest.Checked = True Then
                 If Trim(txtOilTest.Text) <> "" Then
                     iNotes = Val(txtOilTest.Text)
@@ -1814,12 +1814,12 @@ Public Class frmGenerate
             End If
             'Till   Here
 
-            'If chk100AirTest.Checked = True Then
-            '    txtAirTest.Text = iCount.ToString
-            '    iCount += 1
-            'Else
-            '    txtAirTest.Clear()
-            'End If
+            If chk100AirTest.Checked = True Then
+                txtAirTest.Text = iCount.ToString
+                iCount += 1
+            Else
+                txtAirTest.Clear()
+            End If
             If chk100OilTest.Checked = True Then
                 txtOilTest.Text = iCount.ToString
                 iCount += 1
@@ -2239,16 +2239,14 @@ Public Class frmGenerate
             txtSetScrew.Clear()
         End If
     End Sub
-    'vamsi 12-09-14
-    'Private Sub chk100AirTest_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    If sender.Checked = True Then
-    '        txtAirTest.Enabled = True
-    '    Else
-    '        txtAirTest.Enabled = False
-    '        txtAirTest.Clear()
-    '    End If
-    'End Sub
-    'vamsi 12-09-14
+ Private Sub chk100AirTest_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chk100AirTest.CheckedChanged
+        If sender.Checked = True Then
+            txtAirTest.Enabled = True
+        Else
+            txtAirTest.Enabled = False
+            txtAirTest.Clear()
+        End If
+    End Sub
 
     Private Sub chk100OilTest_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chk100OilTest.CheckedChanged
         If sender.Checked = True Then
@@ -2974,9 +2972,5 @@ Public Class frmGenerate
         Me.ToolTip1.ToolTipIcon = ToolTipIcon.Info
         Me.ToolTip1.SetToolTip(ChkbxBatchRun, "Check to enable BatchRun controls")
     End Sub
-
-
-    
-   
 End Class
 

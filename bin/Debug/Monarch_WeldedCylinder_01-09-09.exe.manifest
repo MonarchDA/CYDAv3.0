@@ -197,14 +197,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monarch_WeldedCylinder_01-09-09.exe" size="3289600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monarch_WeldedCylinder_01-09-09.exe" size="3291136">
       <assemblyIdentity name="Monarch_WeldedCylinder_01-09-09" version="1.0.1.15" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4jG7x1iUEz2MoeY8t0pIoaSTwdc=</dsig:DigestValue>
+        <dsig:DigestValue>1gieFcivhEpOxUO/1N4Wttti1cg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

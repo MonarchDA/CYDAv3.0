@@ -583,8 +583,8 @@ Public Class frmSLFabrication
             Dim strFilePartDesignTableExcel As String = ""
             strFilePart = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.GeneratePath + "\BASE_SINGLE_LUG\Base_Single_Lug_IFL.SLDPRT"
             '24_02_2010 Aruna  single Line Start
-            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "Base_Single_Lug_IFL"
-            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationPart = "Base_Single_Lug_IFL"        '18_07_2012   RAGAVA
+            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "BASE_SINGLE_LUG_IFL"
+            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationPart = "BASE_SINGLE_LUG_IFL"        '18_07_2012   RAGAVA
             strFilePartDesignTableExcel = "C:\WELD_DESIGN_TABLES\BASE_SINGLE_LUG.xls"
             ObjClsWeldedCylinderFunctionalClass.Design_New_Part(strFilePart, strFilePartDesignTableExcel, "NewSingleLugFabrication")
             Dim dblWeight As Double = ObjClsWeldedCylinderFunctionalClass.GetCustomPropertyValue("Weight")
@@ -783,10 +783,10 @@ Public Class frmSLFabrication
                         If oSelectedULugDataRow("PartType").ToString.Contains("IFL_PART") Then
                             ' ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfigurationDesign = "IFL_Designed_Existing"
                             ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfigurationDesign = "NewDesign"
-                            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "Base_Single_Lug_IFL"
+                            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "BASE_SINGLE_LUG_IFL"
                         Else
                             ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfigurationDesign = "Existing"
-                            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "Base_Lug_single"
+                            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "BASE_SINGLE_LUG_IFL"
                         End If
                         '24_02_2010 Aruna End
 

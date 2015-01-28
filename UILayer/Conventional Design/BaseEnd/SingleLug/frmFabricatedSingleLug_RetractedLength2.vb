@@ -206,7 +206,7 @@ Public Class frmFabricatedSingleLug_RetractedLength2
                 'End If
                 'Till   Here
                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationTable = "Welded.BESingleLugDetails"      '15_05_2012   RAGAVA
-                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationPart = "Base_Single_Lug_IFL"        '15_05_2012   RAGAVA
+                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strBaseEndFabricationPart = "BASE_SINGLE_LUG_IFL"        '15_05_2012   RAGAVA
             End If
             btnClose.Enabled = True
         Catch ex As Exception
@@ -353,7 +353,7 @@ Public Class frmFabricatedSingleLug_RetractedLength2
             'If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strCast_Fabricated_1st = "Fabrication" Then
             '    ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName = "Base_Single_Lug_IFL"
             'ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strCast_Fabricated_1st = "Cast" Then
-            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName2 = "Base_Single_Lug_IFL"
+            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndPartName2 = "BASE_SINGLE_LUG_IFL"
             'End If
             'Till  Here
             strFilePartDesignTableExcel = "C:\WELD_DESIGN_TABLES\BASE_SINGLE_LUG.xls"

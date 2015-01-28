@@ -2960,13 +2960,14 @@ Public Class frmTubeDetails
         Catch ex As Exception
         End Try
     End Sub
-    'ANUP 11-10-2010 TILL START
+
 
     Private Sub ChkBEPartCode_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ChkBEPartCode.CheckedChanged
         Try
             If ChkBEPartCode.Checked = True Then
                 txtBaseendPartCode.Enabled = True
                 txtBaseendPartCode.BackColor = Color.White
+                'cmbBaseEndDoubleLugPartCode.Enabled = True
                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.blnPrtNumChkd = True
                 txtSwingClearance.Enabled = False
                 txtSwingClearance.Clear()
@@ -3037,6 +3038,30 @@ Public Class frmTubeDetails
                 End If
             End If
         End If
+        'If cmbDesignType.Text = "Conventional" Then
+        '    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfiguration = "Double Lug" Then
+        '        If ObjClsWeldedCylinderFunctionalClass.IsPortIntegral_or_PortInTube = "Port In Tube" Then
+        '            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.BEDLCastingWOPortDetails(BaseendPartCode, Boredia)
+        '        ElseIf ObjClsWeldedCylinderFunctionalClass.IsPortIntegral_or_PortInTube = "Port Integral" AndAlso UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PortInsertion) = "FLUSHED" Then
+        '            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.BEDLCastingWithFlushedPort(BaseendPartCode, Boredia)
+        '        End If
+        '    End If
+        'ElseIf cmbDesignType.Text = "WR Cylinder" Then
+        '    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BaseEndConfiguration = "Double Lug" Then
+        '        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "GROOVE" AndAlso UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PortInsertion) = "FLUSHED" Then
+        '            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.BEDLCastingWithFlushedPort(BaseendPartCode, Boredia)
+        '        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.WeldType = "FILLET" AndAlso UCase(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PortInsertion) = "RAISED" Then
+        '            ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.BEDLCastingWithRaisedPort(BaseendPartCode, Boredia)
+        '            If IsNothing(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data) AndAlso ObjClsWeldedCylinderFunctionalClass.ObjFrmPrimaryInputs.chkRephasing.Checked = False Then
+        '                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.BEDLCastingWithRaisedPort90(BaseendPartCode, Boredia)
+        '                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strPortAngle = "90"
+        '            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data.Rows.Count > 0 Then
+        '                ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strPortAngle = "Straight"
+        '            End If
+        '        End If
+        '    End If
+        'End If
+
         If IsNothing(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data) OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.Data.Rows.Count = 0 Then
             ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.ErrorMessage10 = "Please enter a valid part code"
             MessageBox.Show(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedDataClass.ErrorMessage10)
@@ -3093,4 +3118,5 @@ Public Class frmTubeDetails
     End Sub
 
 
+  
 End Class

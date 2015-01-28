@@ -40,10 +40,10 @@ Partial Class mdiWeldedCylinder
         Me.btnHome = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.pnlBottom = New System.Windows.Forms.Panel()
+        Me.prb = New System.Windows.Forms.ProgressBar()
         Me.btnExcel = New System.Windows.Forms.Button()
         Me.picIFLLOGO = New System.Windows.Forms.PictureBox()
         Me.timerCurrentDateAndTime = New System.Windows.Forms.Timer(Me.components)
-        Me.prb = New System.Windows.Forms.ProgressBar()
         Me.pnlInformationArea.SuspendLayout()
         CType(Me.picCommonBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlMonarchLogo.SuspendLayout()
@@ -68,7 +68,7 @@ Partial Class mdiWeldedCylinder
         'picCommonBox
         '
         Me.picCommonBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.picCommonBox.BackColor = System.Drawing.Color.WhiteSmoke
         Me.picCommonBox.Location = New System.Drawing.Point(2, 241)
         Me.picCommonBox.Name = "picCommonBox"
@@ -93,8 +93,8 @@ Partial Class mdiWeldedCylinder
         'lvwGeneralInformation
         '
         Me.lvwGeneralInformation.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lvwGeneralInformation.BackgroundImage = CType(resources.GetObject("lvwGeneralInformation.BackgroundImage"), System.Drawing.Image)
         Me.lvwGeneralInformation.BackgroundImageTiled = True
         Me.lvwGeneralInformation.GridLines = True
@@ -122,8 +122,8 @@ Partial Class mdiWeldedCylinder
         'picMIL_Image
         '
         Me.picMIL_Image.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.picMIL_Image.Location = New System.Drawing.Point(0, 23)
         Me.picMIL_Image.Name = "picMIL_Image"
         Me.picMIL_Image.Size = New System.Drawing.Size(1026, 122)
@@ -191,8 +191,8 @@ Partial Class mdiWeldedCylinder
         'pnlChildFormArea
         '
         Me.pnlChildFormArea.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pnlChildFormArea.AutoScroll = True
         Me.pnlChildFormArea.BackColor = System.Drawing.SystemColors.Control
         Me.pnlChildFormArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -253,6 +253,17 @@ Partial Class mdiWeldedCylinder
         Me.pnlBottom.Size = New System.Drawing.Size(715, 128)
         Me.pnlBottom.TabIndex = 13
         '
+        'prb
+        '
+        Me.prb.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.prb.ForeColor = System.Drawing.Color.GreenYellow
+        Me.prb.Location = New System.Drawing.Point(260, 22)
+        Me.prb.Name = "prb"
+        Me.prb.Size = New System.Drawing.Size(449, 23)
+        Me.prb.TabIndex = 0
+        Me.prb.UseWaitCursor = True
+        Me.prb.Visible = False
+        '
         'btnExcel
         '
         Me.btnExcel.Anchor = System.Windows.Forms.AnchorStyles.Right
@@ -267,8 +278,8 @@ Partial Class mdiWeldedCylinder
         'picIFLLOGO
         '
         Me.picIFLLOGO.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.picIFLLOGO.BackColor = System.Drawing.Color.Transparent
         Me.picIFLLOGO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.picIFLLOGO.Image = CType(resources.GetObject("picIFLLOGO.Image"), System.Drawing.Image)
@@ -281,17 +292,6 @@ Partial Class mdiWeldedCylinder
         'timerCurrentDateAndTime
         '
         Me.timerCurrentDateAndTime.Enabled = True
-        '
-        'prb
-        '
-        Me.prb.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.prb.ForeColor = System.Drawing.Color.GreenYellow
-        Me.prb.Location = New System.Drawing.Point(260, 22)
-        Me.prb.Name = "prb"
-        Me.prb.Size = New System.Drawing.Size(449, 23)
-        Me.prb.TabIndex = 0
-        Me.prb.UseWaitCursor = True
-        Me.prb.Visible = False
         '
         'mdiWeldedCylinder
         '

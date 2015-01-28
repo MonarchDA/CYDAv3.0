@@ -1823,9 +1823,9 @@ Public Class IFLSolidWorksClass
                         Try
                             oIflBaseSolidWorksClass.SaveAndCloseAllDocuments()       '02_09_2009   ragava
                             '07_06_2011   ragava  vamsi 25-11-2014 start
-                            'If arrAsmFileEntries(intCount).IndexOf("TUBE_WELDMENT") <> -1 OrElse arrAsmFileEntries(intCount).IndexOf("ROD_WELDMENT") <> -1 Then
-                            '    oIflBaseSolidWorksClass.SaveAndCloseAllDocuments()
-                            'End If
+                            If arrAsmFileEntries(intCount).IndexOf("TUBE_WELDMENT") <> -1 OrElse arrAsmFileEntries(intCount).IndexOf("ROD_WELDMENT") <> -1 Then
+                                oIflBaseSolidWorksClass.SaveAndCloseAllDocuments()
+                            End If
                             'TILL   HERE  25-11-2014
                         Catch ex As Exception
                         End Try
@@ -2505,7 +2505,7 @@ Public Class IFLSolidWorksClass
                 Else
                     '09_07_2011  RAGAVA
                     'checkProperty("Cylinder Note", Math.Round(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter * 10, 2).ToString + "WD" + Format(Math.Round(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength, 2), "00.00") + "-" + (Math.Round(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter, 2) * 100).ToString)      '07_07_2010    RAGAVA
-                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength = 8 OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength = 16 Then
+                    If ObjClsWeldedCylinderFunctionalClass.ObjFrmPrimaryInputs.ChkASAE.Checked = True AndAlso (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength = 8 OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength = 16) Then
                         checkProperty("Cylinder Note", Math.Round(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter * 10, 2).ToString + "WPC" + (Math.Round(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength, 2)).ToString + "-" + (Math.Round(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter, 2) * 100).ToString + "ASAE")  'changed WD to WPC 25th June 2013
                     Else 'If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strRephasingType=
 
@@ -2522,22 +2522,20 @@ Public Class IFLSolidWorksClass
                 checkProperty("EXTENDED LENGTH", Math.Round((ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength + ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RetractedLength), 2))      '03_09_2010    RAGAVA
                 UpdateAssemblyDrawing()
 
-                'vamsi 10-12-14 start
-                If Not (ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.chkDoubleLugFabricationRequired.Checked = True OrElse
-                   ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
-                   ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingYes.chkBHFabricationRequired.Checked = True OrElse
-                   ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
-                   ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingYes.chkCrossTubeFabricationRequired.Checked = True OrElse
-                   ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
-                   ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingYes.chkSingleLugFabricationRequired.Checked = True OrElse
-                   ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingNo_PortInTube2.rdbFabrication.Checked = True) Then
+                ''vamsi 10-12-14 start
+                'If Not (ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.chkDoubleLugFabricationRequired.Checked = True OrElse
+                '   ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                '   ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingYes.chkBHFabricationRequired.Checked = True OrElse
+                '   ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                '   ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingYes.chkCrossTubeFabricationRequired.Checked = True OrElse
+                '   ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                '   ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingYes.chkSingleLugFabricationRequired.Checked = True OrElse
+                '   ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingNo_PortInTube2.rdbFabrication.Checked = True) Then
 
+                '    DeleteConfiguration("Default1")
+                'End If
 
-
-                    DeleteConfiguration("Default1")
-                End If
-
-                'end
+                ''end
 
 
 
@@ -2741,20 +2739,22 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
             'Till    Here
 
             'vamsi 06/06/2014 start 
+          
+
             If Not (ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingYes.chkDoubleLugFabricationRequired.Checked = True OrElse
-                    ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
-                    ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingYes.chkBHFabricationRequired.Checked = True OrElse
-                    ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
-                    ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingYes.chkCrossTubeFabricationRequired.Checked = True OrElse
-                    ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
-                    ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingYes.chkSingleLugFabricationRequired.Checked = True OrElse
-                    ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingNo_PortInTube2.rdbFabrication.Checked = True) Then
+                ObjClsWeldedCylinderFunctionalClass.ObjFrmDLCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingYes.chkBHFabricationRequired.Checked = True OrElse
+                ObjClsWeldedCylinderFunctionalClass.ObjFrmBHCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingYes.chkCrossTubeFabricationRequired.Checked = True OrElse
+                ObjClsWeldedCylinderFunctionalClass.ObjFrmCTCastingNo_PortInTube2.rdbFabrication.Checked = True OrElse
+                ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingYes.chkSingleLugFabricationRequired.Checked = True OrElse
+                ObjClsWeldedCylinderFunctionalClass.ObjFrmSLCastingNo_PortInTube2.rdbFabrication.Checked = True) Then
 
                 DeleteView("Drawing View12")
             End If
             'end
 
-           
+
 
             '26_08_2010   RAGAVA
             If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.DesignType = "New" Then
@@ -2818,7 +2818,7 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
                     boolstatus = SolidWorksModel.EditDimensionProperties2(2, Math.Round((ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ToleranceUpperLimit_RodEnd * 0.0254), 3), Math.Round((ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ToleranceLowerLimit_RodEnd * 0.0254), 3), "", "", True, 9, 2, True, 12, 12, "", "<MOD-DIAM>", True, "", "", True)
                     DeleteDimension("D1@ROD_PIN_HOLE_SIZE@WELD_CYLINDER_ASSEMBLY-2@Drawing View2", "Drawing View2")
                 End If
-                Catch ex As Exception
+            Catch ex As Exception
                 'MsgBox("Error in updating Dimension of Weld Cylinder")
                 ObjClsWeldedCylinderFunctionalClass.WriteLogInformation("Error in Updating Dimension of weld Cylinder ")
             End Try
@@ -2849,7 +2849,7 @@ OrElse ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndCon
                     DeleteView("Drawing View13")
                 End If
 
-               
+
 
                 'VAMSI 23-05-14
                 'Try
