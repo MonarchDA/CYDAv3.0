@@ -198,10 +198,12 @@ Public Class frmRodEndConfiguration
                     strQuery = "select SetScrew,Bushing from Welded.REDLThreaded where partCode = '" & strRodEndConfigurationCode_Purchase & "'"
                     Dim dr As DataRow = MonarchConnectionObject.GetDataRow(strQuery)
                     If Not dr Is Nothing Then
-                        '20_04_2011   RAGAVA  'All our offshore castings are now coming in with set screws
-                        'If dr("SetScrew").ToString <> "" AndAlso dr("SetScrew").ToString <> "N/A" Then
-                        '    clsAddExistingCodes.AddExistingCodeToHashTable("Rod End Set Screw", dr("SetScrew").ToString, 1, "EA")
-                        'End If
+                        '20_04_2011   RAGAVA  'All our offshore castings are now coming in with set screws  'vamsi 02-02-2015 uncommented
+                        If dr("SetScrew").ToString <> "" AndAlso dr("SetScrew").ToString <> "N/A" Then
+                            clsAddExistingCodes.AddExistingCodeToHashTable("Rod End Set Screw", dr("SetScrew").ToString, 1, "EA")
+                        End If
+                        'till here 02-02-2015
+
                         If dr("Bushing").ToString <> "" AndAlso dr("Bushing").ToString <> "N/A" Then
                             clsAddExistingCodes.AddExistingCodeToHashTable("Rod End Bushing", dr("Bushing").ToString, 1, "EA")
                         End If

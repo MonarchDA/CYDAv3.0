@@ -605,6 +605,8 @@ Public Class clsWeldedGlobalVariables
     Public blnPrtNumChkd As Boolean = False                        'Priyanka
     Public tmpPinholesize As String                                 'priyanka
 
+
+
     Public blnInstallPinsandClips As Boolean = True                '06_06_2011   RAGAVA
     Public blnInstallPinsandClips_Checked As Boolean = False       '06_06_2011   RAGAVA
     Public blnIncludepinKitPerBom_Checked As Boolean = False        '06-09-2014 priyanka
@@ -626,6 +628,7 @@ Public Class clsWeldedGlobalVariables
     Public strRodEndCastingTableName As String = String.Empty             '07_02_2011     RAGAVA
     Public strRodEndCastingCodeNumber As String = String.Empty             '07_02_2011     RAGAVA
     Public strRodEndCastingCodeNumber2 As String = String.Empty             '24_07_2012     RAGAVA
+ 
 
     Public Property RevisionContractNo() As String
         Get

@@ -50,13 +50,16 @@ Public Class MTHL_CylinderProcess
             oToolList.Add("WI09-E-11")        '08_11_2010    RAGAVA
             '06_07_2011  RAGAVA
 
-            'vamsi 12th august 2013
-            'If ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.chkPackCylinderInPlasticBag.Checked = True Then
-            '    oToolList.Add("275010")  
-            'Else
-            'oToolList.Add("275254")
-            'End If
-            'Till  Here  121th august
+
+            If ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.rbYesBagRequired.Checked = True Then
+                oToolList.Add("275010")
+            Else
+                oToolList.Add("275254")
+            End If
+            If ObjClsWeldedCylinderFunctionalClass.ObjFrmGenerate.rbYesLabelRequired.Checked = True Then
+                oToolList.Add("275009")
+            End If
+
             If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWeldCylinderWeight > 40 Then
                 oToolList.Add("CAUTION WEIGHT")
             End If
@@ -102,15 +105,31 @@ Public Class MTHL_CylinderProcess
                 oToolList.Add("CYLINDER STYLE 4")
                 oToolList.Add("REPHASING FLOW HIGH")
                 oToolList.Add("CYL TEST PRESSURE 2")
+                oToolList.Add("275246") 'vamsi 30-1-2015
+                If (ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories.chkPaint.Checked = False) Then
+                    oToolList.Add("275063")
+                End If
+
             Else
                 oToolList.Add("WI10-E-48")
                 oToolList.Add("CYLINDER STYLE 1")
                 oToolList.Add("CYL TEST PRESSURE 2")
+                'vamsi 30-1-2015 start
+                If (ObjClsWeldedCylinderFunctionalClass.ObjFrmPistonDesign.cmbPistonSeal.Text) = "GLYD-P SEAL" Then
+                    oToolList.Add("275246")
+                End If
+                If (ObjClsWeldedCylinderFunctionalClass.ObjFrmPin_Port_PaintAccessories.chkPaint.Checked = False) Then
+                    oToolList.Add("275063")
+                End If
             End If
-            'oToolList.Add("WI10-E-48")
-            'oToolList.Add("CYLINDER STYLE 1")
-            'oToolList.Add("CYL TEST PRESSURE 2")
-            'Till   Here
+            'end
+
+
+            'vamsi 28-1-2015
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWeldCylinderWeight > 40 Then
+                oToolList.Add("CAUTION WEIGHT")
+            End If
+
             Dim nCount As Int16
             For i As Integer = 0 To SequenceCount.Count - 1
                 nCount = nCount + SequenceCount(i)
@@ -121,12 +140,192 @@ Public Class MTHL_CylinderProcess
 
         End Try
     End Sub
+    'Private Sub GetTools_CylinderNew()  'vamsi 30-01-2015 commented
+    '    Try
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objApp = Nothing
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.checkExcelInstance()
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objApp.Workbooks.Open(System.Environment.CurrentDirectory & "\CMS_Tooling_WeldedAssembly.xls")
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook.Worksheets("Lookup")
+
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B1")
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.CodeNumber
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B2")
+
+    '        Dim dblpinHoleSize, dblpinHoleSize_Rod As Double
+    '        If (Val(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PinHoleSize) Mod 0.125) <> 0 Then
+    '            dblpinHoleSize = Math.Round(Val(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PinHoleSize) / 0.125)
+    '            dblpinHoleSize = dblpinHoleSize * 0.125
+    '        End If
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = dblpinHoleSize
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B3")
+    '        If (Val(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PinHoleSize_RodEnd) Mod 0.125) <> 0 Then
+    '            dblpinHoleSize_Rod = Math.Round(Val(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PinHoleSize_RodEnd) / 0.125)
+    '            dblpinHoleSize_Rod = dblpinHoleSize_Rod * 0.125
+    '        End If
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = dblpinHoleSize_Rod
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B4")
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strCH_CylinderHeadCode
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B5")
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonNutSizeInDecimals
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B6")
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B7")
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B8")
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"      'PTFE piston seal... always new seal is used..!
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B9")
+    '        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConnectionType = "Threaded" Then
+    '            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
+    '        Else
+    '            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
+    '        End If
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B10")
+    '        If UCase(ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.cmbHeadType.Text) = "WIRERING" Then
+    '            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
+    '        Else
+    '            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
+    '        End If
+    '        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook.Save()
+    '        For i As Int16 = 11 To 24     '01_11_2010   RAGAVA   '24
+    '            '30_12_2011   RAGAVA
+    '            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC622" Then
+    '                If i = 13 OrElse i = 15 OrElse i = 16 OrElse i = 17 OrElse i = 18 OrElse i = 19 Then
+    '                    Continue For
+    '                End If
+    '            End If
+    '            If i = 19 AndAlso UCase(ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.cmbHeadType.Text) = "WIRERING" Then
+    '                Dim strTool As String = String.Empty
+    '                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter >= 0.5 AndAlso _
+    '             ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter <= 2.5 AndAlso _
+    '             ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodLength <= 44 AndAlso _
+    '             ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodLength >= 10.75 _
+    '             AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.OriginalTubeLength >= 14.06 _
+    '             AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.OriginalTubeLength <= 54 AndAlso _
+    '              ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter >= 1.5 AndAlso _
+    '                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter <= 3.0 AndAlso _
+    '             ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength >= 8 Then
+    '                    strTool = ""
+    '                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
+    '                        strTool = "501142"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.75 Then
+    '                        strTool = "501143"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2 Then
+    '                        strTool = "501144"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.25 Then
+    '                        strTool = "501145"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.5 Then
+    '                        strTool = "501146"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
+    '                        strTool = "501147"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
+    '                        strTool = "501148"
+    '                    End If
+    '                ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.DesignType = "New" Then
+    '                    strTool = ""
+    '                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.25 Then
+    '                        strTool = "501222"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
+    '                        strTool = "501223"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.75 Then
+    '                        strTool = "501224"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2 Then
+    '                        strTool = "501225"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.25 Then
+    '                        strTool = "501226"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.5 Then
+    '                        strTool = "501227"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
+    '                        strTool = "501228"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
+    '                        strTool = "501229"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.25 Then
+    '                        strTool = "501230"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.5 Then
+    '                        strTool = "501231"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.75 Then
+    '                        strTool = "501232"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4 Then
+    '                        strTool = "501233"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.25 Then
+    '                        strTool = "501234"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.5 Then
+    '                        strTool = "501235"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.75 Then
+    '                        strTool = "501236"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 5 Then
+    '                        strTool = "501237"
+    '                    End If
+    '                ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.DesignType = "Conventional" Then
+    '                    strTool = ""
+    '                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.25 Then
+    '                        strTool = "500798"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
+    '                        strTool = "500723"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.75 Then
+    '                        strTool = "500724"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2 Then
+    '                        strTool = "500725"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.25 Then
+    '                        strTool = "500726"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.5 Then
+    '                        strTool = "500727"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
+    '                        strTool = "500728"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
+    '                        strTool = "500729"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.25 Then
+    '                        strTool = "500874"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.5 Then
+    '                        strTool = "500875"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.75 Then
+    '                        strTool = "500876"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4 Then
+    '                        strTool = "500877"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.25 Then
+    '                        strTool = "500878"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.5 Then
+    '                        strTool = "500879"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.75 Then
+    '                        strTool = "500880"
+    '                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 5 Then
+    '                        strTool = "500881"
+    '                    End If
+    '                End If
+    '                If strTool <> "" Then
+    '                    ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B" & i.ToString)
+    '                    oToolList.Add(strTool)
+    '                    Continue For
+    '                End If
+    '            End If
+    '            'Till   Here
+    '            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B" & i.ToString)
+    '            If Trim(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value) <> "" AndAlso ((ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString <> "0") AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.StartsWith("-") = False Then 'AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.IndexOf("#N/A") <> -1 Then          '14_10_2010  RAGAVA   '-' condition added
+    '                oToolList.Add(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value)
+    '            End If
+    '        Next
+
+    '        'vamsi 28-01-2015 start
+    '        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWeldCylinderWeight > 40 Then
+    '            oToolList.Add("CAUTION WEIGHT")
+    '        End If
+    '        SequenceCount.Add(oToolList.Count)   '07_10_2010   RAGAVA
+    '    Catch ex As Exception
+
+    '    End Try
+    'End Sub
+
+
     Private Sub GetTools_Cylinder()
         Try
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objApp = Nothing
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.checkExcelInstance()
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objApp.Workbooks.Open(System.Environment.CurrentDirectory & "\CMS_Tooling_WeldedAssembly.xls")
-            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook.Worksheets("Lookup")
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC619" Then
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook.Worksheets("Lookup for 619")
+            ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC622" Then
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook.Worksheets("Lookup for 622")
+            End If
+
 
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B1")
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.CodeNumber
@@ -138,156 +337,117 @@ Public Class MTHL_CylinderProcess
                 dblpinHoleSize = dblpinHoleSize * 0.125
             End If
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = dblpinHoleSize
+
+
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B3")
             If (Val(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PinHoleSize_RodEnd) Mod 0.125) <> 0 Then
                 dblpinHoleSize_Rod = Math.Round(Val(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PinHoleSize_RodEnd) / 0.125)
                 dblpinHoleSize_Rod = dblpinHoleSize_Rod * 0.125
             End If
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = dblpinHoleSize_Rod
+
+
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B4")
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign._strCH_CylinderHeadCode
+
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B5")
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.PistonNutSizeInDecimals
+
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B6")
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter
+
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B7")
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter
-            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B8")
-            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"      'PTFE piston seal... always new seal is used..!
+
+            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B8") 'glynd seal
+            If (ObjClsWeldedCylinderFunctionalClass.ObjFrmPistonDesign.cmbPistonSeal.Text) = "GLYD-P SEAL" Then
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
+            Else
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
+            End If
+
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B9")
+            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"      'PTFE piston seal... always new seal is used..!
+
+            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B10")
             If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConnectionType = "Threaded" Then
                 ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
             Else
                 ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
             End If
-            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B10")
+
+            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B11")
             If UCase(ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.cmbHeadType.Text) = "WIRERING" Then
                 ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
             Else
                 ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
             End If
+
+            ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B12") '148000  Set Screw Used
+            If (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodEndConfiguration = "Double Lug" AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConnectionType = "Threaded") Then
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
+            Else
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
+            End If
+
+
+
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC619" Then
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B13") 'weight
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWeldCylinderWeight
+
+            Else
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B13") 'Head End Collar
+                If UCase(ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.cmbHeadType.Text) = "WIRERING" Then
+                    ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
+                Else
+                    ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
+                End If
+            End If
+
+
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC622" Then
+
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B14") 'Weight
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWeldCylinderWeight
+
+                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B15") 'Rod assembly in WC619
+
+                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter >= 0.5 AndAlso _
+           ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter <= 2.5 AndAlso _
+           ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodLength <= 44 AndAlso _
+           (ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodLength - ObjClsWeldedCylinderFunctionalClass.ObjFrmRetractedLengthValidation.Dim8FromPistonEndofRod) >= 10.75 Then
+                    ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "y"
+                Else
+                    ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value = "n"
+                End If
+            End If
+
             ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objBook.Save()
-            For i As Int16 = 11 To 24     '01_11_2010   RAGAVA   '24
-                '30_12_2011   RAGAVA
-                If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC622" Then
-                    If i = 13 OrElse i = 15 OrElse i = 16 OrElse i = 17 OrElse i = 18 OrElse i = 19 Then
-                        Continue For
+
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC619" Then
+                For i As Int16 = 14 To 31
+                    ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B" & i.ToString)
+                    If Trim(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value) <> "" AndAlso ((ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString <> "0") AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.StartsWith("-") = False Then 'AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.IndexOf("#N/A") <> -1 Then          '14_10_2010  RAGAVA   '-' condition added
+                        oToolList.Add(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value)
                     End If
-                End If
-                If i = 19 AndAlso UCase(ObjClsWeldedCylinderFunctionalClass.ObjFrmHeadDesign.cmbHeadType.Text) = "WIRERING" Then
-                    Dim strTool As String = String.Empty
-                    If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter >= 0.5 AndAlso _
-                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodDiameter <= 2.5 AndAlso _
-                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodLength <= 44 AndAlso _
-                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.RodLength >= 10.75 _
-                 AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.OriginalTubeLength >= 14.06 _
-                 AndAlso ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.OriginalTubeLength <= 54 AndAlso _
-                  ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter >= 1.5 AndAlso _
-                     ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter <= 3.0 AndAlso _
-                 ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrokeLength >= 8 Then
-                        strTool = ""
-                        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
-                            strTool = "501142"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.75 Then
-                            strTool = "501143"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2 Then
-                            strTool = "501144"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.25 Then
-                            strTool = "501145"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.5 Then
-                            strTool = "501146"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
-                            strTool = "501147"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
-                            strTool = "501148"
-                        End If
-                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.DesignType = "New" Then
-                        strTool = ""
-                        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.25 Then
-                            strTool = "501222"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
-                            strTool = "501223"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.75 Then
-                            strTool = "501224"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2 Then
-                            strTool = "501225"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.25 Then
-                            strTool = "501226"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.5 Then
-                            strTool = "501227"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
-                            strTool = "501228"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
-                            strTool = "501229"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.25 Then
-                            strTool = "501230"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.5 Then
-                            strTool = "501231"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.75 Then
-                            strTool = "501232"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4 Then
-                            strTool = "501233"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.25 Then
-                            strTool = "501234"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.5 Then
-                            strTool = "501235"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.75 Then
-                            strTool = "501236"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 5 Then
-                            strTool = "501237"
-                        End If
-                    ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.DesignType = "Conventional" Then
-                        strTool = ""
-                        If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.25 Then
-                            strTool = "500798"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.5 Then
-                            strTool = "500723"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 1.75 Then
-                            strTool = "500724"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2 Then
-                            strTool = "500725"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.25 Then
-                            strTool = "500726"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.5 Then
-                            strTool = "500727"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 2.75 Then
-                            strTool = "500728"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3 Then
-                            strTool = "500729"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.25 Then
-                            strTool = "500874"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.5 Then
-                            strTool = "500875"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 3.75 Then
-                            strTool = "500876"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4 Then
-                            strTool = "500877"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.25 Then
-                            strTool = "500878"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.5 Then
-                            strTool = "500879"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 4.75 Then
-                            strTool = "500880"
-                        ElseIf ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BoreDiameter = 5 Then
-                            strTool = "500881"
-                        End If
+                Next
+            End If
+
+            If ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.strWC_619_622 = "WC622" Then
+                For i As Int16 = 16 To 25
+                    ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B" & i.ToString)
+                    If Trim(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value) <> "" AndAlso ((ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString <> "0") AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.StartsWith("-") = False Then 'AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.IndexOf("#N/A") <> -1 Then          '14_10_2010  RAGAVA   '-' condition added
+                        oToolList.Add(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value)
                     End If
-                    If strTool <> "" Then
-                        ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B" & i.ToString)
-                        oToolList.Add(strTool)
-                        Continue For
-                    End If
-                End If
-                'Till   Here
-                ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange = ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objSheet.Range("B" & i.ToString)
-                If Trim(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value) <> "" AndAlso ((ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString <> "0") AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.StartsWith("-") = False Then 'AndAlso (ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value).ToString.IndexOf("#N/A") <> -1 Then          '14_10_2010  RAGAVA   '-' condition added
-                    oToolList.Add(ObjClsWeldedCylinderFunctionalClass._oClsExcelClass.objrange.Value)
-                End If
-            Next
-            SequenceCount.Add(oToolList.Count)   '07_10_2010   RAGAVA
-        Catch ex As Exception
+                Next
+            End If
+
+            SequenceCount.Add(oToolList.Count)
+           Catch ex As Exception
 
         End Try
+
     End Sub
 
     Private Function DoEachRowProcess(ByVal intSequence As Integer, ByVal oItem As String, ByVal icount As Integer)

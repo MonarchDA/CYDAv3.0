@@ -39,7 +39,7 @@ Partial Class frmSLCastingNo_PortInTube
         Me.plnFabrication_Casting.Controls.Add(Me.btnRadioButtonsSelectionMessage)
         Me.plnFabrication_Casting.Location = New System.Drawing.Point(6, 53)
         Me.plnFabrication_Casting.Name = "plnFabrication_Casting"
-        Me.plnFabrication_Casting.Size = New System.Drawing.Size(583, 451)
+        Me.plnFabrication_Casting.Size = New System.Drawing.Size(583, 528)
         Me.plnFabrication_Casting.TabIndex = 22
         '
         'btnRadioButtonsSelectionMessage
@@ -101,7 +101,7 @@ Partial Class frmSLCastingNo_PortInTube
         Me.lblBackGround.GradientColorTwo = System.Drawing.Color.Honeydew
         Me.lblBackGround.Location = New System.Drawing.Point(12, 9)
         Me.lblBackGround.Name = "lblBackGround"
-        Me.lblBackGround.Size = New System.Drawing.Size(618, 552)
+        Me.lblBackGround.Size = New System.Drawing.Size(618, 632)
         Me.lblBackGround.TabIndex = 108
         Me.lblBackGround.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -139,14 +139,14 @@ Partial Class frmSLCastingNo_PortInTube
         Me.grbCastingNotMatched.Controls.Add(Me.rdbFabrication)
         Me.grbCastingNotMatched.Location = New System.Drawing.Point(24, 18)
         Me.grbCastingNotMatched.Name = "grbCastingNotMatched"
-        Me.grbCastingNotMatched.Size = New System.Drawing.Size(595, 536)
+        Me.grbCastingNotMatched.Size = New System.Drawing.Size(595, 610)
         Me.grbCastingNotMatched.TabIndex = 107
         Me.grbCastingNotMatched.TabStop = False
         '
         'chkSingleLugFabricationRequired
         '
         Me.chkSingleLugFabricationRequired.AutoSize = True
-        Me.chkSingleLugFabricationRequired.Location = New System.Drawing.Point(465, 511)
+        Me.chkSingleLugFabricationRequired.Location = New System.Drawing.Point(465, 587)
         Me.chkSingleLugFabricationRequired.Name = "chkSingleLugFabricationRequired"
         Me.chkSingleLugFabricationRequired.Size = New System.Drawing.Size(124, 17)
         Me.chkSingleLugFabricationRequired.TabIndex = 179
@@ -159,7 +159,7 @@ Partial Class frmSLCastingNo_PortInTube
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(900, 650)
+        Me.ClientSize = New System.Drawing.Size(900, 681)
         Me.Controls.Add(Me.grbCastingNotMatched)
         Me.Controls.Add(Me.lblBackGround)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

@@ -26,10 +26,10 @@ Partial Class frmSLCastingNo_PortIntegral
         Me.btnDisplayPortInTube = New System.Windows.Forms.Button()
         Me.rdbPortInTube = New System.Windows.Forms.RadioButton()
         Me.grbCastingNotMatched = New System.Windows.Forms.GroupBox()
+        Me.chkSingleLugFabricationRequired = New System.Windows.Forms.CheckBox()
         Me.cmbLugInTubeDiameter = New IFLCustomUILayer.IFLComboBox()
         Me.lblLugWithInTubeDiameter = New System.Windows.Forms.Label()
         Me.rdbFabricated = New System.Windows.Forms.RadioButton()
-        Me.chkSingleLugFabricationRequired = New System.Windows.Forms.CheckBox()
         Me.grbCastingNotMatched.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +63,7 @@ Partial Class frmSLCastingNo_PortIntegral
         Me.plnPortInTube_Casting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.plnPortInTube_Casting.Location = New System.Drawing.Point(6, 95)
         Me.plnPortInTube_Casting.Name = "plnPortInTube_Casting"
-        Me.plnPortInTube_Casting.Size = New System.Drawing.Size(583, 447)
+        Me.plnPortInTube_Casting.Size = New System.Drawing.Size(583, 478)
         Me.plnPortInTube_Casting.TabIndex = 22
         '
         'lblBackGround
@@ -75,7 +75,7 @@ Partial Class frmSLCastingNo_PortIntegral
         Me.lblBackGround.GradientColorTwo = System.Drawing.Color.Honeydew
         Me.lblBackGround.Location = New System.Drawing.Point(12, 9)
         Me.lblBackGround.Name = "lblBackGround"
-        Me.lblBackGround.Size = New System.Drawing.Size(618, 606)
+        Me.lblBackGround.Size = New System.Drawing.Size(618, 632)
         Me.lblBackGround.TabIndex = 121
         Me.lblBackGround.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -115,9 +115,19 @@ Partial Class frmSLCastingNo_PortIntegral
         Me.grbCastingNotMatched.Controls.Add(Me.rdbDesignACasting)
         Me.grbCastingNotMatched.Location = New System.Drawing.Point(24, 25)
         Me.grbCastingNotMatched.Name = "grbCastingNotMatched"
-        Me.grbCastingNotMatched.Size = New System.Drawing.Size(595, 578)
+        Me.grbCastingNotMatched.Size = New System.Drawing.Size(595, 602)
         Me.grbCastingNotMatched.TabIndex = 120
         Me.grbCastingNotMatched.TabStop = False
+        '
+        'chkSingleLugFabricationRequired
+        '
+        Me.chkSingleLugFabricationRequired.AutoSize = True
+        Me.chkSingleLugFabricationRequired.Location = New System.Drawing.Point(465, 579)
+        Me.chkSingleLugFabricationRequired.Name = "chkSingleLugFabricationRequired"
+        Me.chkSingleLugFabricationRequired.Size = New System.Drawing.Size(124, 17)
+        Me.chkSingleLugFabricationRequired.TabIndex = 179
+        Me.chkSingleLugFabricationRequired.Text = "Fabrication Required"
+        Me.chkSingleLugFabricationRequired.UseVisualStyleBackColor = True
         '
         'cmbLugInTubeDiameter
         '
@@ -152,16 +162,6 @@ Partial Class frmSLCastingNo_PortIntegral
         Me.rdbFabricated.TabStop = True
         Me.rdbFabricated.Text = "Fabrication"
         Me.rdbFabricated.UseVisualStyleBackColor = True
-        '
-        'chkSingleLugFabricationRequired
-        '
-        Me.chkSingleLugFabricationRequired.AutoSize = True
-        Me.chkSingleLugFabricationRequired.Location = New System.Drawing.Point(463, 551)
-        Me.chkSingleLugFabricationRequired.Name = "chkSingleLugFabricationRequired"
-        Me.chkSingleLugFabricationRequired.Size = New System.Drawing.Size(124, 17)
-        Me.chkSingleLugFabricationRequired.TabIndex = 179
-        Me.chkSingleLugFabricationRequired.Text = "Fabrication Required"
-        Me.chkSingleLugFabricationRequired.UseVisualStyleBackColor = True
         '
         'frmSLCastingNo_PortIntegral
         '

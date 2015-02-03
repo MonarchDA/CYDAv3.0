@@ -453,8 +453,13 @@ Public Class clsMaterial_CMS
                         strBubbleNumber = "36"
                     ElseIf IsShipping_BaseEnd.IndexOf(oExistingListItems.strPartCode) <> -1 OrElse IsShipping_RodEnd.IndexOf(oExistingListItems.strPartCode) <> -1 Then
                         strBubbleNumber = "31"
-                    ElseIf UCase(oExistingListItems.strDescription).IndexOf("ROD CLEVIS") <> -1 AndAlso IsRodClevis(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_RodEnd, strBushing) Then
+                        'ElseIf UCase(oExistingListItems.strDescription).IndexOf("ROD CLEVIS") <> -1 AndAlso IsRodClevis(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_RodEnd, strBushing) Then
+                        '    strBubbleNumber = "16"   'set screw
+                        '    strBubbleNumber = "17"
+                    ElseIf oExistingListItems.strPartCode.IndexOf("148000") <> -1 Then
                         strBubbleNumber = "16"   'set screw
+
+                    ElseIf UCase(oExistingListItems.strDescription).IndexOf("ROD CLEVIS") <> -1 AndAlso IsRodClevis(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.ConfigurationCode_RodEnd, strBushing) Then
                         strBubbleNumber = "17"
                     ElseIf (strBushing <> "" AndAlso strBushing <> "N/A") OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.BushingPartCode_RodEnd) = oExistingListItems.strPartCode OrElse Trim(ObjClsWeldedCylinderFunctionalClass.ObjFrmTubeDetails._strBushingPartNumber_BaseEnd) = oExistingListItems.strPartCode Then
                         strBubbleNumber = "45"

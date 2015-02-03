@@ -19,21 +19,21 @@ Partial Class frmPistonDesign
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.LabelGradient5 = New LabelGradient.LabelGradient
-        Me.LabelGradient4 = New LabelGradient.LabelGradient
-        Me.LabelGradient3 = New LabelGradient.LabelGradient
-        Me.LabelGradient2 = New LabelGradient.LabelGradient
-        Me.cmbPistonWearRing = New IFLCustomUILayer.IFLComboBox
-        Me.cmbPistonSeal = New IFLCustomUILayer.IFLComboBox
-        Me.lblPistonWearRing = New System.Windows.Forms.Label
-        Me.lblWearRingQty = New System.Windows.Forms.Label
-        Me.lblPistonSeal = New System.Windows.Forms.Label
-        Me.grbPistonDesign = New System.Windows.Forms.GroupBox
-        Me.txtPistonCode = New IFLCustomUILayer.IFLNumericBox
-        Me.lblPistonCode = New System.Windows.Forms.Label
-        Me.cmbWearRingQuantity = New IFLCustomUILayer.IFLComboBox
-        Me.lblPistonDesignIndex = New LabelGradient.LabelGradient
-        Me.lblPistonDesign = New LabelGradient.LabelGradient
+        Me.LabelGradient5 = New LabelGradient.LabelGradient()
+        Me.LabelGradient4 = New LabelGradient.LabelGradient()
+        Me.LabelGradient3 = New LabelGradient.LabelGradient()
+        Me.LabelGradient2 = New LabelGradient.LabelGradient()
+        Me.cmbPistonWearRing = New IFLCustomUILayer.IFLComboBox()
+        Me.cmbPistonSeal = New IFLCustomUILayer.IFLComboBox()
+        Me.lblPistonWearRing = New System.Windows.Forms.Label()
+        Me.lblWearRingQty = New System.Windows.Forms.Label()
+        Me.lblPistonSeal = New System.Windows.Forms.Label()
+        Me.grbPistonDesign = New System.Windows.Forms.GroupBox()
+        Me.txtPistonCode = New IFLCustomUILayer.IFLNumericBox()
+        Me.lblPistonCode = New System.Windows.Forms.Label()
+        Me.cmbWearRingQuantity = New IFLCustomUILayer.IFLComboBox()
+        Me.lblPistonDesignIndex = New LabelGradient.LabelGradient()
+        Me.lblPistonDesign = New LabelGradient.LabelGradient()
         Me.grbPistonDesign.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -178,9 +178,9 @@ Partial Class frmPistonDesign
         Me.txtPistonCode.IsAllowNegative = False
         Me.txtPistonCode.LengthValue = 5
         Me.txtPistonCode.Location = New System.Drawing.Point(94, 80)
-        Me.txtPistonCode.MaximumValue = 1000000
+        Me.txtPistonCode.MaximumValue = 1000000.0R
         Me.txtPistonCode.MaxLength = 10
-        Me.txtPistonCode.MinimumValue = 6
+        Me.txtPistonCode.MinimumValue = 6.0R
         Me.txtPistonCode.Name = "txtPistonCode"
         Me.txtPistonCode.Size = New System.Drawing.Size(98, 20)
         Me.txtPistonCode.StatusMessage = ""

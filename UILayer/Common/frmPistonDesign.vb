@@ -103,6 +103,9 @@ Public Class frmPistonDesign
     Public _strPistonSealCode_Purchased As String = String.Empty
     'ANUP 06-10-2010 TILL HERE
 
+
+
+
 #End Region
 
 #Region "Properties"
@@ -116,6 +119,9 @@ Public Class frmPistonDesign
         End Set
     End Property
 
+   
+
+
     Public ReadOnly Property ControlsData() As ArrayList
         Get
             ControlsData = New ArrayList
@@ -125,6 +131,12 @@ Public Class frmPistonDesign
             ControlsData.Add(New Object(3) {"GUI", "PI_Piston Wear Ring", "F4", cmbPistonWearRing.Text})
             ControlsData.Add(New Object(3) {"GUI", "PI_Wear Ring Quantity", "F5", cmbWearRingQuantity.Text})
             ControlsData.Add(New Object(3) {"DB", "PI_Piston Design", "F28", _strIsExistingorNewDesign})
+
+            Try
+
+            Catch ex As Exception
+
+            End Try
 
             'ANUP 06-10-2010 START
 
@@ -208,6 +220,7 @@ Public Class frmPistonDesign
                     'Dim strPartCode As String = PartCode_Purchased_Validation(_oRow("PistonCode"))
                     'If Not String.IsNullOrEmpty(strPartCode) Then
                     ObjClsWeldedCylinderFunctionalClass.AddGeneralInformationValues("Piston Code", _strPistonCode_Purchased)
+                    'ObjClsWeldedCylinderFunctionalClass.ObjClsWeldedGlobalVariables.StrPistonSeal = cmbPistonSeal.Text  'vamsi 29-1-2015
                     '    _strPistonCode_Purchased = strPartCode
                     'Else
                     '    ObjClsWeldedCylinderFunctionalClass.AddGeneralInformationValues("Piston Code", _oRow("PistonCode"))

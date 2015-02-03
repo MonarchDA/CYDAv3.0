@@ -19,16 +19,16 @@ Partial Class frmSLCastingNo_PortIntegral2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblCastingNotMatched = New LabelGradient.LabelGradient
-        Me.rdbDesignACasting = New System.Windows.Forms.RadioButton
-        Me.plnPortInTube_Casting = New System.Windows.Forms.Panel
-        Me.lblBackGround = New LabelGradient.LabelGradient
-        Me.btnDisplayPortInTube = New System.Windows.Forms.Button
-        Me.rdbPortInTube = New System.Windows.Forms.RadioButton
-        Me.grbCastingNotMatched = New System.Windows.Forms.GroupBox
-        Me.cmbLugInTubeDiameter = New IFLCustomUILayer.IFLComboBox
-        Me.lblLugWithInTubeDiameter = New System.Windows.Forms.Label
-        Me.rdbFabricated = New System.Windows.Forms.RadioButton
+        Me.lblCastingNotMatched = New LabelGradient.LabelGradient()
+        Me.rdbDesignACasting = New System.Windows.Forms.RadioButton()
+        Me.plnPortInTube_Casting = New System.Windows.Forms.Panel()
+        Me.lblBackGround = New LabelGradient.LabelGradient()
+        Me.btnDisplayPortInTube = New System.Windows.Forms.Button()
+        Me.rdbPortInTube = New System.Windows.Forms.RadioButton()
+        Me.grbCastingNotMatched = New System.Windows.Forms.GroupBox()
+        Me.cmbLugInTubeDiameter = New IFLCustomUILayer.IFLComboBox()
+        Me.lblLugWithInTubeDiameter = New System.Windows.Forms.Label()
+        Me.rdbFabricated = New System.Windows.Forms.RadioButton()
         Me.grbCastingNotMatched.SuspendLayout()
         Me.SuspendLayout()
         '
